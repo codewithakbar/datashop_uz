@@ -21,6 +21,8 @@ import s4 from '../texnoimg/s4.png'
 import s5 from '../texnoimg/s5.png'
 import s6 from '../texnoimg/s6.png'
 import mainFooterImg from '../texnoimg/mainFooterImg.png'
+import googlepaly from '../media/googleplay.svg'
+import appeicon from '../media/apppleicon.svg'
 
 function Main() {
     const [openShopBtn ,setopenShopBtn] = useState('goShopBtnClose')
@@ -280,6 +282,22 @@ function Main() {
                     <img src={mainFooterImg} alt="" />
                     <div className="mobilAppinfo">
                         <h1>Tez kunda DataShop mobil ilovasi</h1>
+                        <div className="mobilAppinfoIcons">
+                            <button>
+                                <img src={googlepaly} alt="" />
+                                <span>
+                                    <h5>GET IT ON</h5>
+                                    <h3>Google PLay</h3>
+                                </span>
+                            </button>
+                            <button>
+                                <img src={appeicon} alt="" />
+                                <span>
+                                    <h5>Downoload on the</h5>
+                                    <h3>App Store</h3>
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
         </main>
