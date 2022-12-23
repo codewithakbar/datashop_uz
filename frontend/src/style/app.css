@@ -20,6 +20,13 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 1440px) {
+  .container {
+    margin: auto;
+    width: 1140px;
+  }
+}
 /* width */
 ::-webkit-scrollbar {
     width: 5px;

@@ -81,7 +81,11 @@ main {
 }
 
 .laptop:hover img {
+<<<<<<< HEAD
     transition: all 0.5s ease;
+=======
+    transition: transform 0.3s ease-in-out;
+>>>>>>> muhammad
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -242,13 +246,13 @@ main {
 
 @keyframes btnAnim {
     0% {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
     }   
     50% {
         transform: translateY(0px);
     }
     100% {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
     }
 }
 
@@ -293,4 +297,19 @@ main {
 
 .mobilAppinfoIcons button h5 {
     font-weight: 300;
+}
+
+@media screen and (max-width: 1440px) {
+    .mainlaptops {
+        width: 1140px;
+    }
+    .brandTitle {
+        width: 1140px;
+    }
+    .joys {
+        width: 1440px;
+    }
+    .services {
+        width: 1140px;
+    }
 }

@@ -96,3 +96,9 @@ footer {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
+
+@media screen and (max-width: 1440px) {
+    .footerCon {
+        width: 1140px;
+    }
+}
