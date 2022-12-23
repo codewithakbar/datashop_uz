@@ -11,10 +11,6 @@ footer {
     gap: 30px;
 }
 
-.Footerlogo {
-
-}
-
 .footerInfo {
     display: flex;
     align-items: flex-start;

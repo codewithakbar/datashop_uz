@@ -77,7 +77,7 @@ nav {
     justify-content: center;
     gap: 10px;
     border: none;
-    background-color: #e81d1c;
+    background-color: #ff2627;
     color: #FFFFFF;
     font-weight: 400;
     font-size: 14px;
@@ -113,7 +113,7 @@ nav {
     height: 35px;
     border: none;
     cursor: pointer;
-    background-color: #e81d1c;
+    background-color: #ff2627;
 }
 
 .navBtns {
@@ -190,7 +190,7 @@ nav {
 }
 
 .ctMenu li:hover {
-    background-color: #E81D1C;
+    background-color: #ff2627;
 }
 
 .ctMenu li:hover .ctIcon,
