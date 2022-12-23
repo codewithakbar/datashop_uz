@@ -35,15 +35,22 @@ header {
 
   #sw1 {
     background-color: #45997B;
+    border-radius: 10px;
   }
   #sw2 {
     background-color: #E81D1C;
+    border-radius: 10px;
+
   }
   #sw3 {
     background: linear-gradient(180deg, #6B3C81 0%, #AC44A2 100%);
+    border-radius: 10px;
+
   }
   #sw4 {
     background: linear-gradient(180deg, #47BEE3 0%, rgba(0, 26, 255, 0.39) 100%);
+    border-radius: 10px;
+
   }
   
   .swiper-slide img {
