@@ -9,6 +9,7 @@ header {
 /* swiber */
 
 .swiper {
+<<<<<<< HEAD
     width: 1440px;
     height: 392px;
   }
@@ -49,6 +50,11 @@ header {
     display: block;
     object-fit: cover;
   }
+=======
+  width: 1440px;
+  height: 392px;
+}
+>>>>>>> alibek
 
   .headTexnoInfo {
     display: flex;
@@ -74,6 +80,7 @@ header {
     color: #353535;
   }
 
+<<<<<<< HEAD
   .swiper-button-next ,
   .swiper-button-prev {
     color: black;
@@ -84,6 +91,14 @@ header {
     border-radius: 50%;
     display: none;
   }
+=======
+.headTexnoInfo-name {
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 68px;
+  color: white;
+}
+>>>>>>> alibek
 
   .swiper-button-next::after,
   .swiper-button-prev::after {
