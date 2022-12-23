@@ -167,7 +167,7 @@ main {
 .brandLogos {
     width: 100%;
     height: 248px;
-    background-color: #E81D1C;
+    background-color: #ff2627;
     display: flex;
 }
 
@@ -212,7 +212,7 @@ main {
 .mainFooterLine {
     width: 100%;
     height: 307px;
-    background-color: #E81D1C;
+    background-color: #ff2627;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;   
