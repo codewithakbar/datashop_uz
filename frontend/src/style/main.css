@@ -57,6 +57,7 @@ main {
 }
 
 .laptop {
+    transition: all 0.3s ease;
     width: 240px;
     min-height: 301px;
     display: flex;
@@ -69,11 +70,11 @@ main {
 
 .laptop:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+    transform: translateY(-3px);
 }
 
 .laptop:hover img {
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
     transform: scale(1.1);
     cursor: pointer;
 }
