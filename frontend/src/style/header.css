@@ -5,6 +5,14 @@ header {
   gap: 22px;
 }
 
+
+/* swiber */
+
+.swiper {
+  width: 1440px;
+  height: 392px;
+}
+
 .swiper-slide {
   font-size: 18px;
   background: #fff;
@@ -48,6 +56,12 @@ header {
   width: 40%;
 }
 
+.headTexnoInfo-name {
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 68px;
+  color: white;
+}
 
 .headTexnoInfo-info {
   font-weight: 400;
