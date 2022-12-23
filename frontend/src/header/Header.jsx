@@ -88,28 +88,28 @@ function Header() {
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper">     
-                <SwiperSlide>
+                <SwiperSlide id="sw1">
                     <img src={victusHead} alt="" />
                     <div className="headTexnoInfo">
                         <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>
                         <span className="headTexnoInfo-info">СОЗДАН ДЛЯ <span className="text-blacGren">ПРОФЕССИОНАЛОВ</span> ОТ ПРОФЕССИОНАЛОВ</span>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide id="sw2">
                     <img src={victusHead} alt="" />
                     <div className="headTexnoInfo">
                         <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>
                         <span className="headTexnoInfo-info">СОЗДАН ДЛЯ <span className="text-blacGren">ПРОФЕССИОНАЛОВ</span> ОТ ПРОФЕССИОНАЛОВ</span>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide id="sw3">
                     <img src={victusHead} alt="" />
                     <div className="headTexnoInfo">
                         <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>
                         <span className="headTexnoInfo-info">СОЗДАН ДЛЯ <span className="text-blacGren">ПРОФЕССИОНАЛОВ</span> ОТ ПРОФЕССИОНАЛОВ</span>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide id="sw4">
                     <img src={victusHead} alt="" />
                     <div className="headTexnoInfo">
                         <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>

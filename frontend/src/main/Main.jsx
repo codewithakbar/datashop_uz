@@ -279,7 +279,7 @@ function Main() {
                 </div>
             </div>
                 <div className="mainFooterLine">
-                    <img src={mainFooterImg} alt="" />
+                    <img className='immgLIne' src={mainFooterImg} alt="" />
                     <div className="mobilAppinfo">
                         <h1>Tez kunda DataShop mobil ilovasi</h1>
                         <div className="mobilAppinfoIcons">

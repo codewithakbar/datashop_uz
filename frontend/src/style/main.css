@@ -209,7 +209,39 @@ main {
     flex-direction: row-reverse;
     align-items: center;   
     justify-content: center;
-    gap: 100px;
+    gap: 180px;
+}
+
+.mainFooterLine .immgLIne{
+    animation: anim 3s infinite;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateX(30px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(30px);
+    }
+}
+
+.mobilAppinfoIcons button {
+    animation: btnAnim 3s infinite;
+}
+
+@keyframes btnAnim {
+    0% {
+        transform: translateY(-10px);
+    }   
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
 .mobilAppinfo {
@@ -242,6 +274,7 @@ main {
     justify-content: center;
     gap: 7px;
     cursor: pointer;
+    border: 1px solid #ffffff;
 }
 
 .mobilAppinfoIcons button span {
