@@ -198,6 +198,10 @@ nav {
     color: white;
 }
 
+.ctMenuOn {
+   border: 1px solid #E81D1C;
+}
+
 .ctMenu li span {
     display: flex;
     flex-direction: row;
@@ -207,4 +211,41 @@ nav {
     font-size: 14px;
     line-height: 15px;
     color: #666363;
+}
+
+@media screen and (max-width: 1440px ){
+    .navBottom {
+        width: 1140px;
+    }
+    .categoryCon {
+        width: 1140px;
+    }
+}
+
+.prMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.prMenu h1 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.prMenu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.prMenu ul li {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #666363;
+    cursor: pointer;
 }

@@ -4,21 +4,27 @@ import Main from './main/Main';
 import Navbar from './navbar/Navbar'
 import snowLogo from './christmas-snowflake-winter-free-png.png'
 import Snowfall from 'react-snowfall'
+import {BrowserRouter , Route , Routes, useNavigate } from 'react-router-dom'
+import WebMenu from './WebMenu';
+import Shop from './shop/Shop';
 
 const snowFlake = document.createElement('img') 
 snowFlake.src = snowLogo
 
 function App() {
+
   const images = [snowFlake]
+
   return (
     <>
-    <Snowfall 
+      <BrowserRouter>
+        <Snowfall 
           style={{ 
             position: 'fixed', 
             width: '100vw', 
             height: '100vh', 
             zIndex: 999999 
- 
+          
           }} 
           snowflakeCount={200} 
           radius={[10, 20]} 
@@ -27,10 +33,13 @@ function App() {
           images={images} 
           rotationSpeed={[-1, 1]} 
         />
-      <Navbar/>
-      <Header/>
-      <Main/>
-      <Footer/>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<WebMenu/>}/>
+          <Route path='/shop' element={<Shop/>}/> 
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
     </>
   );
 }

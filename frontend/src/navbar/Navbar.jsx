@@ -12,10 +12,12 @@ import {BsTv} from 'react-icons/bs'
 import {AiOutlineCustomerService} from 'react-icons/ai'
 import {MdOutlineNavigateNext} from 'react-icons/md'
 import Pr from './Pr'
+import {Link} from 'react-router-dom'
 
 
 
 function Navbar() {
+
 
     const [trm , setTrm] = useState(1000)
     const [icon , setIcon] = useState(<BiCategory size='27px' color='#ffffff'/>)
@@ -34,7 +36,6 @@ function Navbar() {
             }, 100);
         }
     }
-
     return (
         <nav>
             <div className="navTop">
@@ -56,7 +57,7 @@ function Navbar() {
             </div>
             <div className="nav-b" style={{boxShadow: noneBorder}}>
                 <div className="navBottom">
-                    <img className='dataLogo' src={DataLogo} />
+                    <Link to='/'><img className='dataLogo' src={DataLogo} /></Link>
                     <button onClick={addCategory} className="CategoryBtn">{icon} Категория</button>
                     <div className="navSearch">
                         <input type="text" placeholder='Введите запрос...'/>

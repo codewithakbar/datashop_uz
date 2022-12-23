@@ -124,3 +124,12 @@ header {
 .headerCategory-img img {
   width: 180px;
 }
+
+@media screen and (max-width: 1440px){
+  .swiper {
+    width: 1140px;
+  }
+  .headerCategory {
+    width: 1140px;
+  }
+}
