@@ -64,7 +64,18 @@ main {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    
+}
+
+.laptop:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.laptop:hover img {
+    transition: transform 0.3s;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .laptopInfo {
@@ -198,5 +209,47 @@ main {
     flex-direction: row-reverse;
     align-items: center;   
     justify-content: center;
-    
+    gap: 100px;
+}
+
+.mobilAppinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 380px;
+}
+
+.mobilAppinfo h1 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+}
+
+.mobilAppinfoIcons {
+    display: flex;
+    gap: 22px;
+}
+
+.mobilAppinfoIcons button {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    background-color: black;
+    border-radius: 5px;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.mobilAppinfoIcons button span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mobilAppinfoIcons button h5 {
+    font-weight: 300;
 }

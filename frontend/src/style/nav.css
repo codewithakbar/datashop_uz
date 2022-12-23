@@ -13,6 +13,7 @@ nav {
     padding: 10px 0px;
     background-color: #ff201f;
     color: #FFFFFF;
+    z-index: 100;
 }
 
 .navTopRight {
@@ -52,6 +53,7 @@ nav {
 .nav-b {
     width: 100%;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.104);
+    z-index: 100;
 }
 
 .navBottom {
@@ -132,4 +134,77 @@ nav {
     border: none;
     background-color: transparent;
     cursor: pointer;
+}
+
+
+.category {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    z-index: 9;
+    background-color: white;
+    top: 95px;
+    -webkit-box-shadow: 4px 36px 30px -5px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 4px 36px 30px -5px rgba(0, 0, 0, 0.11);
+    box-shadow: 4px 36px 30px -5px rgba(0, 0, 0, 0.11);
+    transition: transform 0.3s ;
+}
+
+.categoryCon {
+    margin: auto;
+    width: 1440px;
+    height: 100%;
+    padding-top: 10px;
+    display: flex;
+    gap: 68px;
+}
+
+.ctMenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.ctMenu li {
+    width: 231px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 6px;
+    cursor: pointer;
+}
+
+.ctMenu li button {
+    width: 231px;
+    height: 32px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.ctIcon {
+    color: #666363;
+}
+
+.ctMenu li:hover {
+    background-color: #E81D1C;
+}
+
+.ctMenu li:hover .ctIcon,
+.ctMenu li:hover span {
+    color: white;
+}
+
+.ctMenu li span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: #666363;
 }
