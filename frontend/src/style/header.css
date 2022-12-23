@@ -145,10 +145,7 @@ header {
 }
 
 .headerCategory-img img {
-<<<<<<< HEAD
     width: 180px;
-=======
-  width: 180px;
 }
 
 @media screen and (max-width: 1440px){
@@ -158,5 +155,5 @@ header {
   .headerCategory {
     width: 1140px;
   }
->>>>>>> muhammad
+
 }

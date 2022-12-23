@@ -81,11 +81,9 @@ main {
 }
 
 .laptop:hover img {
-<<<<<<< HEAD
+
     transition: all 0.5s ease;
-=======
     transition: transform 0.3s ease-in-out;
->>>>>>> muhammad
     transform: scale(1.1);
     cursor: pointer;
 }
