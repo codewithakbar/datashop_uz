@@ -84,6 +84,9 @@ header {
   .text-blacGren {
     color: #353535;
   }
+  .headerCategory-card{
+    border-radius: 10px;
+  }
 
 
   .swiper-button-next ,
