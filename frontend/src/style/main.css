@@ -213,18 +213,18 @@ main {
 }
 
 .mainFooterLine .immgLIne{
-    animation: anim 3s infinite;
+    animation: anim 5s infinite;
 }
 
 @keyframes anim {
     0% {
-        transform: translateX(30px);
+        transform: translateY(20px);
     }
     50% {
-        transform: translateX(0px);
+        transform: translateY(0px);
     }
     100% {
-        transform: translateX(30px);
+        transform: translateY(20px);
     }
 }
 
