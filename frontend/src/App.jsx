@@ -11,6 +11,7 @@ import { useState } from 'react';
 import tufGamingPng from './texnoimg/tufgaming.png'
 import victus from './texnoimg/victus.png'
 import aser from './texnoimg/acer.png'
+import Laptop from './shop/Laptop';
 
 const snowFlake = document.createElement('img') 
 snowFlake.src = snowLogo
@@ -107,6 +108,8 @@ const [addLaptop , setAddLaptop] = useState([
         <Routes>
           <Route path='/' element={<WebMenu laptops={laptops}/>}/>
           <Route path='/shop' element={<Shop laptops={laptops} addLaptop={addLaptop}/>}/> 
+          <Route path='/laptop' element={
+          <Laptop laptops={laptops} addLaptop={addLaptop} /> } />
         </Routes>
         <Footer/>
       </BrowserRouter>

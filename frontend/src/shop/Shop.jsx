@@ -1,6 +1,7 @@
 import {IoIosArrowDown} from 'react-icons/io'
 import {AiFillStar , AiOutlineStar , AiOutlineCustomerService} from 'react-icons/ai'
 import {FiShoppingCart} from 'react-icons/fi'
+import {Link} from 'react-router-dom'
 import { useState } from 'react'
 
 function Shop({laptops}) {
@@ -101,7 +102,7 @@ function Shop({laptops}) {
                         laptops.map(laptop => (
                             <div className="laptop">
                                 <div className="laptopImg">
-                                    <img src={laptop.img} alt="" />
+                                <Link to='/laptop'>  <img src={laptop.img} alt="" /> </Link>
                                     <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
                                 </div>
                                 <div className="laptopInfo">
