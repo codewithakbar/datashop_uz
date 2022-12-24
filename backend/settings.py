@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'ckeditor_uploader', # CKEditor media uploader
 
     'apps.account',
+
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -147,3 +149,12 @@ CKEDITOR_CONFIGS = {
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_RESTRICT_BY_USER = True
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
