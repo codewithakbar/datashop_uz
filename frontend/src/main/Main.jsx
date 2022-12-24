@@ -1,7 +1,7 @@
 import {BsLaptop} from 'react-icons/bs'
 import {GrFormNextLink} from 'react-icons/gr'
 import {AiFillStar , AiOutlineStar , AiOutlineCustomerService} from 'react-icons/ai'
-
+import {Link} from 'react-router-dom'
 import {FiShoppingCart} from 'react-icons/fi'
 import { useState } from 'react'
 import { useRef } from 'react'
@@ -90,7 +90,7 @@ function Main({laptops}) {
                         laptops.map(laptop => (
                             <div className="laptop">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
-                                    <img src={laptop.img} alt="" />
+                                <Link to='/laptop'>  <img src={laptop.img} alt="" /> </Link>
                                     <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
                                 </div>
                                 <div className="laptopInfo">
