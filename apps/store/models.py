@@ -2,8 +2,8 @@ from io import BytesIO
 from django.core.files import File
 from django.db import models
 from PIL import Image
-from ckeditor_uploader.fields import RichTextUploadingField 
-from ckeditor.fields import RichTextField
+# from ckeditor_uploader.fields import RichTextUploadingField 
+# from ckeditor.fields import RichTextField
 
 
 
@@ -31,8 +31,10 @@ class Product(models.Model):
     
     # description = models.TextField(blank=True, null=True)
     sotuvfda_mavjud = models.CharField(max_length=45, verbose_name='Sotuvda Mavjudmi?')
-    description = RichTextUploadingField(verbose_name="Qisqacha malumot")
-    maxsulot_haqida = RichTextUploadingField(blank=True, null=True)
+    # description = RichTextUploadingField(verbose_name="Qisqacha malumot")
+    # maxsulot_haqida = RichTextUploadingField(blank=True, null=True)
+    description = models.TextField(verbose_name="Qisqacha malumot")
+    maxsulot_haqida = models.TextField(blank=True, null=True)
     # xususiyatlari = RichTextUploadingField(blank=True, null=True, verbose_name="Maxsulot Xususiyatlari")
     num_visits = models.IntegerField(default=0)
     last_visit = models.DateTimeField(blank=True, null=True)
@@ -67,9 +69,11 @@ class BannerHome(models.Model):
     title = models.CharField(max_length=255)
     chegirma = models.CharField(max_length=13)
     foyiz = models.IntegerField(verbose_name='Narxi:')
-    title_des = RichTextUploadingField(verbose_name="Qisqacha ma'lumot")
+    title_des = models.TextField(verbose_name="Qisqacha ma'lumot")
+    # title_des = RichTextUploadingField(verbose_name="Qisqacha ma'lumot")
     bg_image = models.ImageField(upload_to='banners/')
     image = models.ImageField(upload_to='banners/', blank=True, null=True)
+    
 
     def __str__(self):
         return self.title

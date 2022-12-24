@@ -39,10 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
 
-    'ckeditor', # CKEditor config
-    'ckeditor_uploader', # CKEditor media uploader
+    # 'ckeditor', # CKEditor config
+    # 'ckeditor_uploader', # CKEditor media uploader
 
     'apps.account',
+    'apps.store',
 
     'rest_framework',
 
@@ -144,14 +145,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # CKEDITOR CONFIGS
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'full',
-    },
-}
+# CKEDITOR_CONFIGS = {
+#     'default': {
+#         'toolbar': 'full',
+#     },
+# }
 
-CKEDITOR_UPLOAD_PATH = "uploads/"
-CKEDITOR_RESTRICT_BY_USER = True
+# CKEDITOR_UPLOAD_PATH = "uploads/"
+# CKEDITOR_RESTRICT_BY_USER = True
 
 
 REST_FRAMEWORK = {
