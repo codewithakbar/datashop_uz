@@ -76,6 +76,7 @@
 
 .shopMainS {
     display: flex;
+    gap: 100px;
 }
 
 .shopMenuAside {
@@ -257,3 +258,10 @@ input[type=range] {
     background: #FF201F;
   }
   
+
+  .shopMenuCon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 36px;
+    grid-row-gap: 36px;
+  }

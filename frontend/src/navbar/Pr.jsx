@@ -1,18 +1,20 @@
 import {Link} from 'react-router-dom'
 
 
-function Pr({setSt ,st}) {
+function Pr({setSt ,st , addCategory , setAddLaptop}) {
+
+
     if (st == 'laptop') {
         return (
             <div className="prMenu">
                 <Link to='/shop'>
-                    <h1>Ноутбуки</h1>
+                    <h1 onClick={addCategory}>Ноутбуки</h1>
                 </Link>
                 <ul>
-                    <Link to='/shop'>  <li>Hp</li></Link>    
-                    <Link to='/shop'><li>Asus</li></Link>
-                    <Link to='/shop'><li>Acer</li></Link>
-                    <Link to='/shop'> <li>MSI</li></Link>
+                    <Link to='/shop' onClick={addCategory}>  <li>Hp</li></Link>    
+                    <Link to='/shop' onClick={addCategory}><li>Asus</li></Link>
+                    <Link to='/shop' onClick={addCategory}><li>Acer</li></Link>
+                    <Link to='/shop' onClick={addCategory}> <li>MSI</li></Link>
                 </ul>
             </div>
         )   
@@ -20,14 +22,14 @@ function Pr({setSt ,st}) {
     if (st == 'phone') {
         return (
             <div className="prMenu">
-                <Link to='/shop'>
+                <Link to='/shop' onClick={addCategory}>
                     <h1>Смартфоны</h1>
                 </Link>
                 <ul>
-                    <Link to='/shop'> <li>Samsung</li></Link>
-                    <Link to='/shop'>   <li>Apple</li></Link>
-                    <Link to='/shop'>   <li>Xiomi</li></Link>
-                    <Link to='/shop'>    <li>Vivo</li></Link>
+                    <Link to='/shop' onClick={addCategory}> <li>Samsung</li></Link>
+                    <Link to='/shop' onClick={addCategory}>   <li>Apple</li></Link>
+                    <Link to='/shop' onClick={addCategory}>   <li>Xiomi</li></Link>
+                    <Link to='/shop' onClick={addCategory}>    <li>Vivo</li></Link>
                 </ul>
             </div>
         )   
@@ -35,14 +37,14 @@ function Pr({setSt ,st}) {
     if (st == 'monitor') {
         return (
             <div className="prMenu">
-                <Link to='/shop'>
+                <Link to='/shop' onClick={addCategory}>
                     <h1>Мониторы</h1>
                 </Link>
                 <ul>
-                    <Link to='/shop'><li>Gigabyte</li></Link>
-                    <Link to='/shop'><li>Asus</li></Link>
-                    <Link to='/shop'><li>Samsung</li></Link>
-                    <Link to='/shop'><li>LG</li></Link>
+                    <Link to='/shop' onClick={addCategory}><li>Gigabyte</li></Link>
+                    <Link to='/shop' onClick={addCategory}><li>Asus</li></Link>
+                    <Link to='/shop' onClick={addCategory}><li>Samsung</li></Link>
+                    <Link to='/shop' onClick={addCategory}><li>LG</li></Link>
                 </ul>
             </div>
         )   
@@ -50,12 +52,12 @@ function Pr({setSt ,st}) {
     if (st == 'acsesuar') {
         return (
             <div className="prMenu">
-                <Link to='/shop'>
+                <Link to='/shop' onClick={addCategory}>
                     <h1>Аксессуары</h1>
                 </Link>
                 <ul>
-                    <Link to='/shop'><li>Earphone</li></Link>
-                    <Link to='/shop'><li>Microphone</li></Link>
+                    <Link to='/shop' onClick={addCategory}><li>Earphone</li></Link>
+                    <Link to='/shop' onClick={addCategory}><li>Microphone</li></Link>
                 </ul>
             </div>
         )   

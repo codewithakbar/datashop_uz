@@ -1,6 +1,10 @@
 import {IoIosArrowDown} from 'react-icons/io'
+import {AiFillStar , AiOutlineStar , AiOutlineCustomerService} from 'react-icons/ai'
+import {FiShoppingCart} from 'react-icons/fi'
+import { useState } from 'react'
 
-function Shop() {
+function Shop({laptops}) {
+
     return (
         <div className="shop">
             <ul className="linkCategory">
@@ -93,7 +97,27 @@ function Shop() {
                         </div>
                     </div>
                     <div className="shopMenuCon">
-                        
+                    {
+                        laptops.map(laptop => (
+                            <div className="laptop">
+                                <div className="laptopImg">
+                                    <img src={laptop.img} alt="" />
+                                    <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
+                                </div>
+                                <div className="laptopInfo">
+                                    <span>{laptop.name}</span>
+                                    <div className="eva">
+                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
+                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
+                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
+                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
+                                        <AiOutlineStar className='evaCompanent'  color='#E81D1C'/>
+                                    </div>
+                                    <span className='price'>{laptop.prise}00 000 UZS</span>
+                                </div>
+                            </div>
+                       ))
+                    }
                     </div>
                 </div>
             </div>

@@ -1,12 +1,10 @@
 import {BsLaptop} from 'react-icons/bs'
 import {GrFormNextLink} from 'react-icons/gr'
 import {AiFillStar , AiOutlineStar , AiOutlineCustomerService} from 'react-icons/ai'
-import tufGamingPng from '../texnoimg/tufgaming.png'
+
 import {FiShoppingCart} from 'react-icons/fi'
 import { useState } from 'react'
 import { useRef } from 'react'
-import aser from '../texnoimg/acer.png'
-import victus from '../texnoimg/victus.png'
 import m1 from '../texnoimg/m1.png'
 import m2 from '../texnoimg/m2.png'
 import m3 from '../texnoimg/m3.png'
@@ -24,70 +22,9 @@ import mainFooterImg from '../texnoimg/mainFooterImg.png'
 import googlepaly from '../media/googleplay.svg'
 import appeicon from '../media/apppleicon.svg'
 
-function Main() {
+function Main({laptops}) {
     const [openShopBtn ,setopenShopBtn] = useState('goShopBtnClose')
-    const [laptops , setLaptops] = useState([
-        {   
-            id: 1 ,
-            img: tufGamingPng ,
-            name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-            prise: 14.500
-        },     
-        {
-            id: 2 ,
-            img: aser ,
-            name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-            prise: 14.500
-        },
-        {
-            id: 3,
-            img: victus ,
-            name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-            prise: 14.500
-        },
-        {
-            id: 4,
-            img: tufGamingPng ,
-            name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-            prise: 14.500
-        },
-        {
-            id: 5,
-            img: aser ,
-            name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-            prise: 14.500
-        },
-        {
-            id: 6,
-            img: victus ,
-            name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-            prise: 14.500
-        },
-        {
-            id: 7,
-            img: tufGamingPng ,
-            name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-            prise: 14.500
-        },
-        {
-            id: 8,
-            img: aser ,
-            name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-            prise: 14.500
-        },
-        {
-            id: 9,
-            img: victus ,
-            name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-            prise: 14.500
-        },
-        {
-            id: 10,
-            img: tufGamingPng ,
-            name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-            prise: 14.500
-        },
-    ])
+
     const [monitors , setMonitors] = useState([
         {
             img: m1 ,

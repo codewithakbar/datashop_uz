@@ -16,9 +16,7 @@ import {Link} from 'react-router-dom'
 
 
 
-function Navbar() {
-
-
+function Navbar({setAddLaptop}) {
     const [trm , setTrm] = useState(1000)
     const [icon , setIcon] = useState(<BiCategory size='27px' color='#ffffff'/>)
     const [noneBorder , setNoneBoreder] = useState('')
@@ -36,6 +34,9 @@ function Navbar() {
             }, 100);
         }
     }
+
+
+
     return (
         <nav>
             <div className="navTop">
@@ -78,7 +79,7 @@ function Navbar() {
                         <li onClick={() => setSt('acsesuar')}><button>  <span><AiOutlineCustomerService className='ctIcon'  size='26px'/> <span>Аксессуары</span></span> <MdOutlineNavigateNext className='ctIcon'size='22px' /></button></li>
                     </ul>
                     <div className="ctInfo">
-                        <Pr st={st} setSt={setSt}/>
+                        <Pr st={st} setSt={setSt} addCategory={addCategory} setAddLaptop={setAddLaptop}/>
                     </div>
                 </div>
             </div>
