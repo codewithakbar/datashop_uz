@@ -11,12 +11,27 @@ import { useState } from 'react';
 import tufGamingPng from './texnoimg/tufgaming.png'
 import victus from './texnoimg/victus.png'
 import aser from './texnoimg/acer.png'
-
-const snowFlake = document.createElement('img') 
-snowFlake.src = snowLogo
+import axios from 'axios'
 
 
 function App() {
+
+
+
+  // snow animate 
+  const snowFlake = document.createElement('img') 
+  snowFlake.src = snowLogo
+  const images = [snowFlake]
+  // snow animate
+
+
+ async function GetTack() {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+    console.log(response.data);
+ }
+
+ GetTack()
+
   const [laptops , setLaptops] = useState([
     {   
         id: 1 ,
@@ -83,7 +98,6 @@ const [addLaptop , setAddLaptop] = useState([
         
 ])
 
-  const images = [snowFlake]
 
   return (
     <>
