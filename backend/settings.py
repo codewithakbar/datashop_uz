@@ -45,9 +45,8 @@ INSTALLED_APPS = [
     # 'ckeditor_uploader', # CKEditor media uploader
 
 
-    'apps.account',
+    'apps.api',
     'apps.store',
-
     'corsheaders', # new
 
 ]

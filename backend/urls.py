@@ -15,31 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework import routers, serializers, viewsets
 
-from apps.store.models import Product
 from . import views
 
 
-# Serializers define the API representation.
-class ProductSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Product
-        fields = ['title', 'sotuvfda_mavjud', 'description', 'maxsulot_haqida', 'price', 'image']
-
-# ViewSets define the view behavior.
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
-
-# Routers provide an easy way of automatically determining the URL conf.
-router = routers.DefaultRouter()
-router.register(r'Products', UserViewSet)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api/', include('api.urls')), # new
     path('', views.index),
-    path('', include(router.urls)),
+
 ]
