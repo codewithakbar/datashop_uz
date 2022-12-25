@@ -23,7 +23,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')), # new
+    # path('api/', include('api.urls')), # new
     path('', views.index),
 
 ]

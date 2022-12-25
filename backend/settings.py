@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'rest_framework',
+    'corsheaders', # new
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,14 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
-    # 'ckeditor', # CKEditor config
-    # 'ckeditor_uploader', # CKEditor media uploader
-
-
     'apps.api',
     'apps.store',
-    'corsheaders', # new
 
 ]
 
