@@ -216,25 +216,29 @@ function Main({laptops}) {
                 </div>
             </div>
                 <div className="mainFooterLine">
-                    <img className='immgLIne' src={mainFooterImg} alt="" />
-                    <div className="mobilAppinfo">
-                        <h1>Tez kunda DataShop mobil ilovasi</h1>
-                        <div className="mobilAppinfoIcons">
-                            <button>
-                                <img src={googlepaly} alt="" />
-                                <span>
-                                    <h5>GET IT ON</h5>
-                                    <h3>Google PLay</h3>
-                                </span>
-                            </button>
-                            <button>
-                                <img src={appeicon} alt="" />
-                                <span>
-                                    <h5>Downoload on the</h5>
-                                    <h3>App Store</h3>
-                                </span>
-                            </button>
+                    <div className="mainFooterLineCon">
+                        <div className="imLineCon">
+                            <img className='immgLIne' src={mainFooterImg} alt="" />
                         </div>
+                        <div className="mobilAppinfo">
+                            <h1>Tez kunda DataShop mobil ilovasi</h1>
+                            <div className="mobilAppinfoIcons">
+                                <button>
+                                    <img src={googlepaly} alt="" />
+                                    <span>
+                                        <h5>GET IT ON</h5>
+                                        <h3>Google PLay</h3>
+                                    </span>
+                                </button>
+                                <button>
+                                    <img src={appeicon} alt="" />
+                                    <span>
+                                        <h5>Downoload on the</h5>
+                                        <h3>App Store</h3>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>              
                     </div>
                 </div>
         </main>

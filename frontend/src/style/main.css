@@ -226,6 +226,29 @@ main {
     animation: anim 5s infinite;
 }
 
+.immgLineCon {
+    width: 50%;
+}
+
+.mainFooterLineCon {
+    width: 1440px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 180px;
+}
+
+@media screen and (max-width: 1440px) {
+    .mainFooterLineCon {
+        width: 1140px;
+        gap: 0;
+        justify-content: space-between;
+        padding-left: 100px;
+    }
+    
+}
+
 @keyframes anim {
     0% {
         transform: translateY(20px);
@@ -255,6 +278,7 @@ main {
 }
 
 .mobilAppinfo {
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -305,7 +329,7 @@ main {
         width: 1140px;
     }
     .joys {
-        width: 1440px;
+        width: 1140px;
     }
     .services {
         width: 1140px;
