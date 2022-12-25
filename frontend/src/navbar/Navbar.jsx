@@ -15,8 +15,7 @@ import Pr from './Pr'
 import {Link} from 'react-router-dom'
 
 
-
-function Navbar({setAddLaptop}) {
+function Navbar({AddLaptop , AddMonitor , AddSmartfon , AddAksesuar}) {
     const [trm , setTrm] = useState(1000)
     const [icon , setIcon] = useState(<BiCategory size='27px' color='#ffffff'/>)
     const [noneBorder , setNoneBoreder] = useState('')
@@ -35,8 +34,7 @@ function Navbar({setAddLaptop}) {
         }
     }
 
-
-
+    
     return (
         <nav>
             <div className="navTop">
@@ -79,7 +77,7 @@ function Navbar({setAddLaptop}) {
                         <li onClick={() => setSt('acsesuar')}><button>  <span><AiOutlineCustomerService className='ctIcon'  size='26px'/> <span>Аксессуары</span></span> <MdOutlineNavigateNext className='ctIcon'size='22px' /></button></li>
                     </ul>
                     <div className="ctInfo">
-                        <Pr st={st} setSt={setSt} addCategory={addCategory} setAddLaptop={setAddLaptop}/>
+                        <Pr AddSmartfon={AddSmartfon} AddAksesuar={AddAksesuar} AddMonitor={AddMonitor} st={st} setSt={setSt} addCategory={addCategory} AddLaptop={AddLaptop}/>
                     </div>
                 </div>
             </div>

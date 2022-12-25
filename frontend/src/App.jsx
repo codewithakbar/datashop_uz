@@ -12,6 +12,10 @@ import aser from './texnoimg/acer.png'
 import axios from 'axios'
 import Laptop from './shop/Laptop';
 import { useEffect } from 'react';
+import m1 from './texnoimg/m1.png'
+import m2 from './texnoimg/m2.png'
+import m3 from './texnoimg/m3.png'
+import m4 from './texnoimg/m4.png'
 
 
 
@@ -24,15 +28,6 @@ function App() {
   const images = [snowFlake]
   // snow animate
 
-
- async function GetTack() {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
-    console.log(response.data);
- }
-
-useEffect(() => {
-  GetTack()
-} , [])
 
 
   fetch("https://akbar2day.pythonanywhere.com/api/?format=json")
@@ -105,9 +100,95 @@ useEffect(() => {
         prise: 14.500
     },
 ])
-const [addLaptop , setAddLaptop] = useState([
-        
+const [monitors , setMonitors] = useState([
+  {
+      img: m1 ,
+      name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
+      prise: 14.500
+  },
+  {
+      img: m2 ,
+      name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
+      prise: 14.500
+  },
+  {
+      img: m3 ,
+      name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
+      prise: 14.500
+  },
+  {
+      img: m4 ,
+      name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
+      prise: 14.500
+  },
+  {
+      img: m1 ,
+      name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
+      prise: 14.500
+  },
+  {
+      img: m2 ,
+      name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
+      prise: 14.500
+  },
+  {
+      img: m3 ,
+      name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
+      prise: 14.500
+  },
+  {
+      img: m4 ,
+      name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
+      prise: 14.500
+  },
+  {
+      img: m1 ,
+      name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
+      prise: 14.500
+  },
+  {
+      img: m2 ,
+      name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
+      prise: 14.500
+  }
 ])
+
+const [smartfon , setSmartfon] = useState([
+  {
+    img: 'https://www.tescomobile.com/media/catalog/product/i/p/iphone_14_pro_max_space_black_pdp_image_position-3__gben.png?width=290&height=430&canvas=290:430&optimize=low&fit=bounds' ,
+    name: 'Iphone 14 Pro Max' ,
+    prise: '14.500'
+  }
+])
+
+const [aksesuar , setAksesuar] = useState([
+  {
+    img: 'https://img.cgaxis.com/2021/11/airpods_max_silver_a.webp' ,
+    name: 'AirPods Max' ,
+    prise: '14.500'
+  }
+])
+
+
+// Shop ichindagi productlani chiqishini taminlidi
+const [shops , setShops] = useState([])  // Shop ichindagi productlani chiqishini taminlidi
+// Shop ichindagi productlani chiqishini taminlidi
+
+
+// shop qismina produqtlani nomina qarab yubaradi ===============
+function AddLaptop() {
+  setShops(laptops)
+}
+function AddMonitor() {
+  setShops(monitors)
+}                                                               // shop qismina produqtlani nomina qarab yubaradi ===============
+function AddSmartfon() {
+  setShops(smartfon)
+}
+function AddAksesuar() {
+  setShops(aksesuar)
+}
+// shop qismina produqtlani nomina qarab yubaradi ===============
 
 
   return (
@@ -128,12 +209,11 @@ const [addLaptop , setAddLaptop] = useState([
           images={images} 
           rotationSpeed={[-1, 1]} 
         />
-        <Navbar setAddLaptop={setAddLaptop}/>
+        <Navbar AddLaptop={AddLaptop} AddMonitor={AddMonitor} AddSmartfon={AddSmartfon} AddAksesuar={AddAksesuar}/>
         <Routes>
-          <Route path='/' element={<WebMenu laptops={laptops}/>}/>
-          <Route path='/shop' element={<Shop laptops={laptops} addLaptop={addLaptop}/>}/> 
-          <Route path='/laptop' element={
-          <Laptop laptops={laptops} addLaptop={addLaptop} /> } />
+          <Route path='/' element={<WebMenu laptops={laptops} monitors={monitors}/>}/>
+          <Route path='/shop' element={<Shop shops={shops} />}/> 
+          <Route path='/laptop' element={<Laptop />} />
         </Routes>
         <Footer/>
       </BrowserRouter>

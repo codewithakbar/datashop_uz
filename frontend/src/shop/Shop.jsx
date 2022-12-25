@@ -4,7 +4,8 @@ import {FiShoppingCart} from 'react-icons/fi'
 import {Link} from 'react-router-dom'
 import { useState } from 'react'
 
-function Shop({laptops}) {
+function Shop({shops}) {
+
 
     return (
         <div className="shop">
@@ -99,14 +100,14 @@ function Shop({laptops}) {
                     </div>
                     <div className="shopMenuCon">
                     {
-                        laptops.map(laptop => (
+                        shops.map(shop => (
                             <div className="laptop">
                                 <div className="laptopImg">
-                                <Link to='/laptop'>  <img src={laptop.img} alt="" /> </Link>
+                                <Link to='/laptop'>  <img src={shop.img} alt="" /> </Link>
                                     <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
                                 </div>
                                 <div className="laptopInfo">
-                                    <span>{laptop.name}</span>
+                                    <span>{shop.name}</span>
                                     <div className="eva">
                                         <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
                                         <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
@@ -114,7 +115,7 @@ function Shop({laptops}) {
                                         <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
                                         <AiOutlineStar className='evaCompanent'  color='#E81D1C'/>
                                     </div>
-                                    <span className='price'>{laptop.prise}00 000 UZS</span>
+                                    <span className='price'>{shop.prise}00 000 UZS</span>
                                 </div>
                             </div>
                        ))
