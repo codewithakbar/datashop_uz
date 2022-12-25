@@ -139,14 +139,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
-if not DEBUG:
-    STATIC_ROOT = 'frontend/build/static'
     
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'frontend/build/static'
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'frontend/build/static'
+# ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'frontend/build/static')
 
