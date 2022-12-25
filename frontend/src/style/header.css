@@ -155,5 +155,14 @@ header {
   .headerCategory {
     width: 1140px;
   }
+  .headerCategory-img {
+    width: 100px;
+  }
+  .headerCategory-card {
+    width: 270px;
+    height: 120px;
+    justify-content: space-between;
+  }
+
 
 }

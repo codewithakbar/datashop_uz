@@ -64,10 +64,11 @@ MIDDLEWARE = [
 ]
 
 # new
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
-    'http://localhost:8080',
-)
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:3000',
+#     'http://localhost:8080',
+# )
 
 
 ROOT_URLCONF = 'backend.urls'
@@ -139,14 +140,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
-if not DEBUG:
-    STATIC_ROOT = 'frontend/build/static'
     
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'frontend/build/static'
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'frontend/build/static'
+# ]
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'frontend/build/static')
 

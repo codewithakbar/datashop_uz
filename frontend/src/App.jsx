@@ -1,5 +1,4 @@
 import Footer from './footer/Footer';
-
 import Navbar from './navbar/Navbar'
 import snowLogo from './christmas-snowflake-winter-free-png.png'
 import Snowfall from 'react-snowfall'
@@ -10,16 +9,30 @@ import { useState } from 'react';
 import tufGamingPng from './texnoimg/tufgaming.png'
 import victus from './texnoimg/victus.png'
 import aser from './texnoimg/acer.png'
+import axios from 'axios'
 import Laptop from './shop/Laptop';
-
-const snowFlake = document.createElement('img') 
-snowFlake.src = snowLogo
+import { useEffect } from 'react';
 
 
 
 function App() {
 
 
+  // snow animate 
+  const snowFlake = document.createElement('img') 
+  snowFlake.src = snowLogo
+  const images = [snowFlake]
+  // snow animate
+
+
+ async function GetTack() {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+    console.log(response.data);
+ }
+
+useEffect(() => {
+  GetTack()
+} , [])
 
 
   fetch("https://akbar2day.pythonanywhere.com/api/?format=json")
@@ -96,7 +109,6 @@ const [addLaptop , setAddLaptop] = useState([
         
 ])
 
-  const images = [snowFlake]
 
   return (
     <>
