@@ -140,6 +140,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+if not DEBUG:
+    STATIC_ROOT = 'frontend/build/static'
+    
+
 STATICFILES_DIRS = [
     BASE_DIR / 'frontend/build/static'
 ]
