@@ -1,10 +1,9 @@
 import Footer from './footer/Footer';
-import Header from './header/Header';
-import Main from './main/Main';
+
 import Navbar from './navbar/Navbar'
 import snowLogo from './christmas-snowflake-winter-free-png.png'
 import Snowfall from 'react-snowfall'
-import {BrowserRouter , Route , Routes, useNavigate } from 'react-router-dom'
+import {BrowserRouter , Route , Routes } from 'react-router-dom'
 import WebMenu from './WebMenu';
 import Shop from './shop/Shop';
 import { useState } from 'react';
@@ -17,8 +16,21 @@ const snowFlake = document.createElement('img')
 snowFlake.src = snowLogo
 
 
+
 function App() {
-  const [laptops , setLaptops] = useState([
+
+
+
+
+  fetch("https://akbar2day.pythonanywhere.com/api/?format=json")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    });
+
+
+
+  const [laptops] = useState([
     {   
         id: 1 ,
         img: tufGamingPng ,
