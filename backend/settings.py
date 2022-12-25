@@ -146,7 +146,7 @@ STATIC_URL = 'static/'
 #     BASE_DIR / 'frontend/build/static'
 # ]
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'frontend/build/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'frontend/build/static')
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
