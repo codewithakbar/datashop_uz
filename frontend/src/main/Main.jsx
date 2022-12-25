@@ -4,11 +4,6 @@ import {AiFillStar , AiOutlineStar , AiOutlineCustomerService} from 'react-icons
 import {Link} from 'react-router-dom'
 import {FiShoppingCart} from 'react-icons/fi'
 import { useState } from 'react'
-import { useRef } from 'react'
-import m1 from '../texnoimg/m1.png'
-import m2 from '../texnoimg/m2.png'
-import m3 from '../texnoimg/m3.png'
-import m4 from '../texnoimg/m4.png'
 import {FiMonitor} from 'react-icons/fi'
 import asusLogo from '../texnoimg/asusLogo.png'
 import {BiCategoryAlt} from 'react-icons/bi'
@@ -22,62 +17,10 @@ import mainFooterImg from '../texnoimg/mainFooterImg.png'
 import googlepaly from '../media/googleplay.svg'
 import appeicon from '../media/apppleicon.svg'
 
-function Main({laptops}) {
+function Main({laptops , monitors}) {
     const [openShopBtn ,setopenShopBtn] = useState('goShopBtnClose')
 
-    const [monitors , setMonitors] = useState([
-        {
-            img: m1 ,
-            name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-            prise: 14.500
-        },
-        {
-            img: m2 ,
-            name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-            prise: 14.500
-        },
-        {
-            img: m3 ,
-            name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-            prise: 14.500
-        },
-        {
-            img: m4 ,
-            name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-            prise: 14.500
-        },
-        {
-            img: m1 ,
-            name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-            prise: 14.500
-        },
-        {
-            img: m2 ,
-            name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-            prise: 14.500
-        },
-        {
-            img: m3 ,
-            name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-            prise: 14.500
-        },
-        {
-            img: m4 ,
-            name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-            prise: 14.500
-        },
-        {
-            img: m1 ,
-            name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-            prise: 14.500
-        },
-        {
-            img: m2 ,
-            name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-            prise: 14.500
-        }
-    ])
-
+   
     return (
         <main>
             <div className="mainlaptops">
@@ -216,29 +159,25 @@ function Main({laptops}) {
                 </div>
             </div>
                 <div className="mainFooterLine">
-                    <div className="mainFooterLineCon">
-                        <div className="imLineCon">
-                            <img className='immgLIne' src={mainFooterImg} alt="" />
+                    <img className='immgLIne' src={mainFooterImg} alt="" />
+                    <div className="mobilAppinfo">
+                        <h1>Tez kunda DataShop mobil ilovasi</h1>
+                        <div className="mobilAppinfoIcons">
+                            <button>
+                                <img src={googlepaly} alt="" />
+                                <span>
+                                    <h5>GET IT ON</h5>
+                                    <h3>Google PLay</h3>
+                                </span>
+                            </button>
+                            <button>
+                                <img src={appeicon} alt="" />
+                                <span>
+                                    <h5>Downoload on the</h5>
+                                    <h3>App Store</h3>
+                                </span>
+                            </button>
                         </div>
-                        <div className="mobilAppinfo">
-                            <h1>Tez kunda DataShop mobil ilovasi</h1>
-                            <div className="mobilAppinfoIcons">
-                                <button>
-                                    <img src={googlepaly} alt="" />
-                                    <span>
-                                        <h5>GET IT ON</h5>
-                                        <h3>Google PLay</h3>
-                                    </span>
-                                </button>
-                                <button>
-                                    <img src={appeicon} alt="" />
-                                    <span>
-                                        <h5>Downoload on the</h5>
-                                        <h3>App Store</h3>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>              
                     </div>
                 </div>
         </main>

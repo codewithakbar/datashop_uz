@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 
 
-export default function Laptop({laptops , addLaptop}) {
+export default function Laptop() {
 
     const [borger, setBorder] = useState('non')
     const [borgerr, setBorderr] = useState('non')
