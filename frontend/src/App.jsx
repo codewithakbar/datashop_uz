@@ -190,6 +190,7 @@ function AddAksesuar() {
 }
 // shop qismina produqtlani nomina qarab yubaradi ===============
 
+  const [adds, add ]= useState([])
 
   return (
     <>
@@ -211,9 +212,9 @@ function AddAksesuar() {
         />
         <Navbar AddLaptop={AddLaptop} AddMonitor={AddMonitor} AddSmartfon={AddSmartfon} AddAksesuar={AddAksesuar}/>
         <Routes>
-          <Route path='/' element={<WebMenu laptops={laptops} monitors={monitors}/>}/>
+          <Route path='/' element={<WebMenu laptops={laptops} monitors={monitors} add={add}/> }/>
           <Route path='/shop' element={<Shop shops={shops} />}/> 
-          <Route path='/laptop' element={<Laptop />} />
+          <Route path='/laptop' element={<Laptop adds={adds} />} />
         </Routes>
         <Footer/>
       </BrowserRouter>
