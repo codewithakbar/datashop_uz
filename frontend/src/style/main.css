@@ -96,6 +96,9 @@ main {
     justify-content: center;
     padding: 0px 22px;
 }
+.laptopInfo span{
+    color: #000000;
+}
 
 .goShopBtn {    
     display: flex;

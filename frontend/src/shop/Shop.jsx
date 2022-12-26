@@ -102,8 +102,8 @@ function Shop({laptops}) {
                         laptops.map(laptop => (
                             <div className="laptop">
                                 <div className="laptopImg">
-                                <Link to='/laptop'>  <img src={laptop.img} alt="" /> </Link>
-                                    <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
+                                 <img src={laptop.img} alt="" />
+                                <Link to='/laptop'> <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button> </Link>
                                 </div>
                                 <div className="laptopInfo">
                                     <span>{laptop.name}</span>
