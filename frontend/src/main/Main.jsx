@@ -37,7 +37,7 @@ function Main({ laptops, monitors, add }) {
                                     <Link to='/laptop' onClick={() => add({ img: laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
                                 </div>
                                 <div className="laptopInfo">
-                                    <Link to='/laptop' onClick={() => add({ img: laptop.img })}> <span>{laptop.name}</span> </Link>
+                                    <span>{laptop.name}</span>
                                     <div className="eva">
                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
