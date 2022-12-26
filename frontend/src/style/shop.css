@@ -484,3 +484,17 @@ input[type=range] {
     align-items: center;
     gap: 15px;
   }
+  .goShopBtnClose{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+  }
+  .laptopImg{
+    position: relative;
+  }
+  .laptopImg:hover .goShopBtnClose{
+    display: flex;
+    justify-content: center;
+    align-items: flex-;
+  }
