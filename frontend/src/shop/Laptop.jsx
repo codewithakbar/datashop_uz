@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 
 
-export default function Laptop() {
+export default function Laptop({adds}) {
 
     const [borger, setBorder] = useState('non')
     const [borgerr, setBorderr] = useState('non')
@@ -57,7 +57,7 @@ export default function Laptop() {
                 <div className="LaptopTovar">
                     <div className="LaptopImage">
                         <div className="LaptopImgg">
-                            <img className='laptopImgg' src={imgg} alt="" />
+                            <img className='laptopImgg' src={adds.img} alt="" />
                         </div>
                         <div className="ImagesMini">
                             <div onClick={border} className={`miniBorder  ${borger}`}>

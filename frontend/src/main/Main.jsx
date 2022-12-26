@@ -17,7 +17,7 @@ import mainFooterImg from '../texnoimg/mainFooterImg.png'
 import googlepaly from '../media/googleplay.svg'
 import appeicon from '../media/apppleicon.svg'
 
-function Main({laptops , monitors}) {
+function Main({laptops , monitors , add}) {
     const [openShopBtn ,setopenShopBtn] = useState('goShopBtnClose')
 
    
@@ -33,7 +33,7 @@ function Main({laptops , monitors}) {
                         laptops.map(laptop => (
                             <div className="laptop">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
-                                <Link to='/laptop'>  <img src={laptop.img} alt="" /> </Link>
+                                <Link to='/laptop' onClick={() => add({img :laptop.img})}>  <img src={laptop.img} alt="" /> </Link>
                                     <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
                                 </div>
                                 <div className="laptopInfo">
