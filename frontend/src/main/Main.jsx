@@ -90,13 +90,10 @@ function Main({laptops}) {
                         laptops.map(laptop => (
                             <div className="laptop">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
-<<<<<<< Updated upstream
-                                <Link to='/laptop'>  <img src={laptop.img} alt="" /> </Link>
-                                <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
-=======
+
                                  <img src={laptop.img} alt="" />
                                 <Link to='/laptop'> <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button> </Link>
->>>>>>> Stashed changes
+
                                 </div>
                                 <div className="laptopInfo">
                                 <Link to='/laptop'>  <span>{laptop.name}</span></Link>
