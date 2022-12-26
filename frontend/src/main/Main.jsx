@@ -199,7 +199,7 @@ function Main({laptops}) {
                             <div className="laptop">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                     <img src={laptop.img} alt="" />
-                                    <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
+                                    <Link to='/laptop'> <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button> </Link>
                                 </div>
                                 <div className="laptopInfo">
                                     <span>{laptop.name}</span>

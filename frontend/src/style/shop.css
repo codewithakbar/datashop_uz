@@ -523,9 +523,6 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: #e81c1c;
   border-radius: 6px;
 }
-.goShopBtnClose:hover{
-
-}
 
 .laptopImg {
   transition: all 0.5s ease;
