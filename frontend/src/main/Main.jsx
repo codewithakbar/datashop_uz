@@ -1,12 +1,12 @@
-import {BsLaptop} from 'react-icons/bs'
-import {GrFormNextLink} from 'react-icons/gr'
-import {AiFillStar , AiOutlineStar , AiOutlineCustomerService} from 'react-icons/ai'
-import {Link} from 'react-router-dom'
-import {FiShoppingCart} from 'react-icons/fi'
+import { BsLaptop } from 'react-icons/bs'
+import { GrFormNextLink } from 'react-icons/gr'
+import { AiFillStar, AiOutlineStar, AiOutlineCustomerService } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
+import { FiShoppingCart } from 'react-icons/fi'
 import { useState } from 'react'
-import {FiMonitor} from 'react-icons/fi'
+import { FiMonitor } from 'react-icons/fi'
 import asusLogo from '../texnoimg/asusLogo.png'
-import {BiCategoryAlt} from 'react-icons/bi'
+import { BiCategoryAlt } from 'react-icons/bi'
 import s1 from '../texnoimg/s1.png'
 import s2 from '../texnoimg/s2.png'
 import s3 from '../texnoimg/s3.png'
@@ -17,45 +17,45 @@ import mainFooterImg from '../texnoimg/mainFooterImg.png'
 import googlepaly from '../media/googleplay.svg'
 import appeicon from '../media/apppleicon.svg'
 
-function Main({laptops , monitors , add}) {
-    const [openShopBtn ,setopenShopBtn] = useState('goShopBtnClose')
+function Main({ laptops, monitors, add }) {
+    const [openShopBtn, setopenShopBtn] = useState('goShopBtnClose')
 
-   
+
     return (
         <main>
             <div className="mainlaptops">
                 <div className="laptopsHeaader">
-                    <span><BsLaptop size='36px' color='#3C3C3C'/><h3>Ноутбуки</h3></span>
-                    <button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px'/></button>
+                    <span><BsLaptop size='36px' color='#3C3C3C' /><h3>Ноутбуки</h3></span>
+                    <button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px' /></button>
                 </div>
                 <div className="laptops">
                     {
                         laptops.map(laptop => (
                             <div className="laptop">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
-                                <Link to='/laptop' onClick={() => add({img :laptop.img})}>  <img src={laptop.img} alt="" /> </Link>
-                                    <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
+                                    <img src={laptop.img} alt="" />
+                                    <Link to='/laptop' onClick={() => add({ img: laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
                                 </div>
                                 <div className="laptopInfo">
                                     <span>{laptop.name}</span>
                                     <div className="eva">
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiOutlineStar className='evaCompanent'  color='#E81D1C'/>
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiOutlineStar className='evaCompanent' color='#E81D1C' />
                                     </div>
                                     <span className='price'>{laptop.prise}00 000 UZS</span>
                                 </div>
                             </div>
-                       ))
+                        ))
                     }
                 </div>
             </div>
             <div className="mainlaptops">
                 <div className="laptopsHeaader">
-                    <span><FiMonitor size='36px' color='#3C3C3C'/><h3>Мониторы</h3></span>
-                    <button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px'/></button>
+                    <span><FiMonitor size='36px' color='#3C3C3C' /><h3>Мониторы</h3></span>
+                    <button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px' /></button>
                 </div>
                 <div className="laptops">
                     {
@@ -63,27 +63,27 @@ function Main({laptops , monitors , add}) {
                             <div className="laptop">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                     <img src={monitor.img} alt="" />
-                                    <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
+                                    <button className="goShopBtnClose"><FiShoppingCart />В корзину</button>
                                 </div>
                                 <div className="laptopInfo">
                                     <span>{monitor.name}</span>
                                     <div className="eva">
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiOutlineStar className='evaCompanent'  color='#E81D1C'/>
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiOutlineStar className='evaCompanent' color='#E81D1C' />
                                     </div>
                                     <span className='price'>{monitor.prise}00 000 UZS</span>
                                 </div>
                             </div>
-                       ))
+                        ))
                     }
                 </div>
             </div>
             <div className="brend">
                 <span className="brandTitle">
-                    <BiCategoryAlt size='38px'/>
+                    <BiCategoryAlt size='38px' />
                     <h3>Бренды</h3>
                 </span>
                 <div className="brandLogos">
@@ -111,7 +111,7 @@ function Main({laptops , monitors , add}) {
             </div>
             <div className="services">
                 <span className="brandTitle">
-                    <BiCategoryAlt size='38px'/>
+                    <BiCategoryAlt size='38px' />
                     <h3>Наша подборка для вас</h3>
                 </span>
                 <div className="servicesImages">
@@ -131,8 +131,8 @@ function Main({laptops , monitors , add}) {
             </div>
             <div className="mainlaptops">
                 <div className="laptopsHeaader">
-                    <span><AiOutlineCustomerService size='36px' color='#3C3C3C'/><h3>Аксессуары</h3></span>
-                    <button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px'/></button>
+                    <span><AiOutlineCustomerService size='36px' color='#3C3C3C' /><h3>Аксессуары</h3></span>
+                    <button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px' /></button>
                 </div>
                 <div className="laptops">
                     {
@@ -140,46 +140,46 @@ function Main({laptops , monitors , add}) {
                             <div className="laptop">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                     <img src={laptop.img} alt="" />
-                                    <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
+                                    <Link to='/laptop' onClick={() => add({ img: laptop.img })}>  <button className="goShopBtnClose"><FiShoppingCart />В корзину</button> </Link>
                                 </div>
                                 <div className="laptopInfo">
                                     <span>{laptop.name}</span>
                                     <div className="eva">
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiOutlineStar className='evaCompanent'  color='#E81D1C'/>
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                        <AiOutlineStar className='evaCompanent' color='#E81D1C' />
                                     </div>
                                     <span className='price'>{laptop.prise}00 000 UZS</span>
                                 </div>
                             </div>
-                       ))
+                        ))
                     }
                 </div>
             </div>
-                <div className="mainFooterLine">
-                    <img className='immgLIne' src={mainFooterImg} alt="" />
-                    <div className="mobilAppinfo">
-                        <h1>Tez kunda DataShop mobil ilovasi</h1>
-                        <div className="mobilAppinfoIcons">
-                            <button>
-                                <img src={googlepaly} alt="" />
-                                <span>
-                                    <h5>GET IT ON</h5>
-                                    <h3>Google PLay</h3>
-                                </span>
-                            </button>
-                            <button>
-                                <img src={appeicon} alt="" />
-                                <span>
-                                    <h5>Downoload on the</h5>
-                                    <h3>App Store</h3>
-                                </span>
-                            </button>
-                        </div>
+            <div className="mainFooterLine">
+                <img className='immgLIne' src={mainFooterImg} alt="" />
+                <div className="mobilAppinfo">
+                    <h1>Tez kunda DataShop mobil ilovasi</h1>
+                    <div className="mobilAppinfoIcons">
+                        <button>
+                            <img src={googlepaly} alt="" />
+                            <span>
+                                <h5>GET IT ON</h5>
+                                <h3>Google PLay</h3>
+                            </span>
+                        </button>
+                        <button>
+                            <img src={appeicon} alt="" />
+                            <span>
+                                <h5>Downoload on the</h5>
+                                <h3>App Store</h3>
+                            </span>
+                        </button>
                     </div>
                 </div>
+            </div>
         </main>
     )
 }
