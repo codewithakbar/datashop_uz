@@ -4,7 +4,7 @@ import {FiShoppingCart} from 'react-icons/fi'
 import {Link} from 'react-router-dom'
 import { useState } from 'react'
 
-function Shop({shops}) {
+function Shop({shops , laptop}) {
 
 
     return (
