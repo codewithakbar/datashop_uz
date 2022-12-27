@@ -1,9 +1,9 @@
 import dataLogo from '../media/datalogo 1.png'
 import uzcardLogo from '../media/uzcard.png'
 
-function Footer() {
+function Footer({fotChange}) {
     return (
-        <footer>
+        <footer className={fotChange}> 
             <div className="footerCon">
                 <div className="Footerlogo">
                     <img src={dataLogo} alt="" />
@@ -38,7 +38,7 @@ function Footer() {
                             <li><a href="#">Возврат и обмен товара</a></li>
                             <li><a href="#">Условия рассрочки</a></li>
                             <li><a href="#">Помощь</a></li>
-                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Доставка</a></li> 
                         </ul>
                     </div>
                     <div className="footPay">

@@ -7,7 +7,7 @@ import { useState } from 'react'
 
 
 
-export default function Laptop({laptops , addLaptop}) {
+export default function Laptop({adds}) {
 
     const [borger, setBorder] = useState('non')
     const [borgerr, setBorderr] = useState('non')
@@ -22,17 +22,17 @@ export default function Laptop({laptops , addLaptop}) {
         setBorder('active')
         setBorderr('non')
         setBorderrr('non')
-        setImgg(laptop)
+        setImgg(adds.img)
     }
     function borderr() {
         setBorderr('active')
         setBorder('non')
         setBorderrr('non')
-        setImgg(laptopuse)
+        setImgg(adds.img)
 
     }
     function borderrr() {
-        setImgg(laptopbottom)
+        setImgg(adds.img)
         setBorderrr('active')
         setBorder('non')
         setBorderr('non')
@@ -57,17 +57,17 @@ export default function Laptop({laptops , addLaptop}) {
                 <div className="LaptopTovar">
                     <div className="LaptopImage">
                         <div className="LaptopImgg">
-                            <img className='laptopImgg' src={imgg} alt="" />
+                            <img className='laptopImgg' src={adds.img} alt="" />
                         </div>
                         <div className="ImagesMini">
                             <div onClick={border} className={`miniBorder  ${borger}`}>
-                                <img src={img} alt="" />
+                                <img src={adds.img} alt="" />
                             </div>
                             <div onClick={borderr} className={`miniBorder  ${borgerr}`} >
-                                <img src={img2} alt="" />
+                                <img src={adds.img} alt="" />
                             </div>
                             <div onClick={borderrr} className={`miniBorder  ${borgerrr}`}>
-                                <img src={img3} alt="" />
+                                <img src={adds.img} alt="" />
                             </div>
                         </div>
                     </div>

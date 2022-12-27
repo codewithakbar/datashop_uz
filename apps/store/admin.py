@@ -30,5 +30,3 @@ admin.site.register(BannerHome)
 admin.site.register(TanilganBrendlar)
 
 admin.site.register(FooterPayBrands)
-
-

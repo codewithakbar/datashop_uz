@@ -59,7 +59,7 @@ main {
 .laptop {
     transition: all 0.5s ease;
     width: 240px;
-    min-height: 301px;
+    height: 301px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,6 +68,16 @@ main {
     border-radius: 10px;
 }
 
+<<<<<<< HEAD
+=======
+.laptopImg {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+>>>>>>> main
 
 .laptop:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -77,12 +87,11 @@ main {
 
 .laptop img{
     transition: all 0.5s ease;
-
-
+    max-width: 200px;
+    max-height: 161px;
 }
 
 .laptop:hover img {
-
     transition: all 0.5s ease;
     transition: transform 0.3s ease-in-out;
     transform: scale(1.1);
@@ -230,6 +239,29 @@ main {
     animation: anim 5s infinite;
 }
 
+.immgLineCon {
+    width: 50%;
+}
+
+.mainFooterLineCon {
+    width: 1440px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 180px;
+}
+
+@media screen and (max-width: 1440px) {
+    .mainFooterLineCon {
+        width: 1140px;
+        gap: 0;
+        justify-content: space-between;
+        padding-left: 100px;
+    }
+    
+}
+
 @keyframes anim {
     0% {
         transform: translateY(20px);
@@ -259,6 +291,7 @@ main {
 }
 
 .mobilAppinfo {
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -309,7 +342,7 @@ main {
         width: 1140px;
     }
     .joys {
-        width: 1440px;
+        width: 1140px;
     }
     .services {
         width: 1140px;
