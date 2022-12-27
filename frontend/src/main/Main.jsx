@@ -33,15 +33,10 @@ function Main({ laptops, monitors, add }) {
                         laptops.map(laptop => (
                             <div className="laptop">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
-<<<<<<< HEAD
 
-                                 <img src={laptop.img} alt="" />
-                                <Link to='/laptop'> <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button> </Link>
-
-=======
                                     <img src={laptop.img} alt="" />
                                     <Link to='/laptop' onClick={() => add({ img: laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
->>>>>>> main
+
                                 </div>
                                 <div className="laptopInfo">
                                 <Link to='/laptop'>  <span>{laptop.name}</span></Link>
@@ -147,11 +142,8 @@ function Main({ laptops, monitors, add }) {
                             <div className="laptop">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                     <img src={laptop.img} alt="" />
-<<<<<<< HEAD
-                                    <Link to='/laptop'> <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button> </Link>
-=======
                                     <Link to='/laptop' onClick={() => add({ img: laptop.img })}>  <button className="goShopBtnClose"><FiShoppingCart />В корзину</button> </Link>
->>>>>>> main
+
                                 </div>
                                 <div className="laptopInfo">
                                     <span>{laptop.name}</span>
