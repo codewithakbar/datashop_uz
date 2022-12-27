@@ -4,6 +4,7 @@
     width: 1440px;
     margin: auto;
     justify-content: space-between;
+    gap: 100px;
 }
 
 .products {
