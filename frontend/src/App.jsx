@@ -17,6 +17,7 @@ import m2 from './texnoimg/m2.png'
 import m3 from './texnoimg/m3.png'
 import m4 from './texnoimg/m4.png'
 import Korzinka from './Korzina/Korzina';
+import Zakaz from './Zakaz/Zakaz';
 
 
 
@@ -224,6 +225,7 @@ function AddAksesuar() {
           <Route path='/shop' element={<Shop shops={shops} />}/> 
           <Route path='/laptop' element={<Laptop adds={adds} />} />
           <Route path='/korzinka' element={<Korzinka />} />
+          <Route path='/zakaz' element={<Zakaz />} />
         </Routes>
         <Footer fotChange={fotChange}/>
       </BrowserRouter>
