@@ -15,7 +15,7 @@ import Pr from './Pr'
 import {Link} from 'react-router-dom'
 
 
-function Navbar({AddLaptop , AddMonitor , AddSmartfon , AddAksesuar}) {
+function Navbar({AddLaptop , AddMonitor , AddSmartfon , AddAksesuar , setFotChange}) {
     const [trm , setTrm] = useState(1000)
     const [icon , setIcon] = useState(<BiCategory size='27px' color='#ffffff'/>)
     const [noneBorder , setNoneBoreder] = useState('')
@@ -56,14 +56,14 @@ function Navbar({AddLaptop , AddMonitor , AddSmartfon , AddAksesuar}) {
             </div>
             <div className="nav-b" style={{boxShadow: noneBorder}}>
                 <div className="navBottom">
-                    <Link to='/'><img className='dataLogo' src={DataLogo} /></Link>
+                    <Link to='/' onClick={() => setFotChange('')}><img className='dataLogo' src={DataLogo} /></Link>
                     <button onClick={addCategory} className="CategoryBtn">{icon} Категория</button>
                     <div className="navSearch">
                         <input type="text" placeholder='Введите запрос...'/>
                         <button className='navSearchBtn'><HiOutlineSearch color='#ffffff' size='24px'/></button>
                     </div>
                     <div className="navBtns">
-                        <button><img src={shopIcon} alt="" /> <span>Корзина</span></button>
+                        <Link to='/korzinka' onClick={() => setFotChange('none')}><button><img src={shopIcon} alt="" /> <span>Корзина</span></button></Link>
                         <button><img src={profilIcon} alt="" /> <span>Профиль</span></button>
                     </div>
                 </div>

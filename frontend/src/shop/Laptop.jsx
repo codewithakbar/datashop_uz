@@ -22,17 +22,17 @@ export default function Laptop({adds}) {
         setBorder('active')
         setBorderr('non')
         setBorderrr('non')
-        setImgg(laptop)
+        setImgg(adds.img)
     }
     function borderr() {
         setBorderr('active')
         setBorder('non')
         setBorderrr('non')
-        setImgg(laptopuse)
+        setImgg(adds.img)
 
     }
     function borderrr() {
-        setImgg(laptopbottom)
+        setImgg(adds.img)
         setBorderrr('active')
         setBorder('non')
         setBorderr('non')
@@ -61,13 +61,13 @@ export default function Laptop({adds}) {
                         </div>
                         <div className="ImagesMini">
                             <div onClick={border} className={`miniBorder  ${borger}`}>
-                                <img src={img} alt="" />
+                                <img src={adds.img} alt="" />
                             </div>
                             <div onClick={borderr} className={`miniBorder  ${borgerr}`} >
-                                <img src={img2} alt="" />
+                                <img src={adds.img} alt="" />
                             </div>
                             <div onClick={borderrr} className={`miniBorder  ${borgerrr}`}>
-                                <img src={img3} alt="" />
+                                <img src={adds.img} alt="" />
                             </div>
                         </div>
                     </div>

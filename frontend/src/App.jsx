@@ -2,7 +2,7 @@ import Footer from './footer/Footer';
 import Navbar from './navbar/Navbar'
 import snowLogo from './christmas-snowflake-winter-free-png.png'
 import Snowfall from 'react-snowfall'
-import {BrowserRouter , Route , Routes } from 'react-router-dom'
+import {BrowserRouter , Link, Route , Routes } from 'react-router-dom'
 import WebMenu from './WebMenu';
 import Shop from './shop/Shop';
 import { useState } from 'react';
@@ -16,6 +16,7 @@ import m1 from './texnoimg/m1.png'
 import m2 from './texnoimg/m2.png'
 import m3 from './texnoimg/m3.png'
 import m4 from './texnoimg/m4.png'
+import Korzinka from './Korzina/Korzina';
 
 
 
@@ -191,6 +192,8 @@ function AddAksesuar() {
 // shop qismina produqtlani nomina qarab yubaradi ===============
 
   const [adds, add ]= useState([])
+  const [fotChange , setFotChange] = useState('')
+
 
   return (
     <>
@@ -210,13 +213,19 @@ function AddAksesuar() {
           images={images} 
           rotationSpeed={[-1, 1]} 
         />
-        <Navbar AddLaptop={AddLaptop} AddMonitor={AddMonitor} AddSmartfon={AddSmartfon} AddAksesuar={AddAksesuar}/>
+        <Navbar 
+        AddLaptop={AddLaptop} 
+        AddMonitor={AddMonitor} 
+        AddSmartfon={AddSmartfon} 
+        AddAksesuar={AddAksesuar} 
+        setFotChange={setFotChange}/>
         <Routes>
           <Route path='/' element={<WebMenu laptops={laptops} monitors={monitors} add={add}/> }/>
           <Route path='/shop' element={<Shop shops={shops} />}/> 
           <Route path='/laptop' element={<Laptop adds={adds} />} />
+          <Route path='/korzinka' element={<Korzinka />} />
         </Routes>
-        <Footer/>
+        <Footer fotChange={fotChange}/>
       </BrowserRouter>
     </>
   );
