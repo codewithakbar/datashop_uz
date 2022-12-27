@@ -94,6 +94,10 @@ export default function Laptop({adds}) {
                             <span>Жесткий диск (SSD)</span>
                             <p>512 GB</p>
                         </div>
+                        <div className="">
+                            <span>Видео карта</span>
+                            <p>RTX 3050</p>
+                        </div>
                         <span className='drection'>Все характеристики</span>
                     </div>
                     <div className="LaptopMoneyDiv">
