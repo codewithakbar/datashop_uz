@@ -4,7 +4,7 @@ import {FiShoppingCart} from 'react-icons/fi'
 import {Link} from 'react-router-dom'
 import { useState } from 'react'
 
-function Shop({shops , laptop}) {
+function Shop({shops}) {
 
 
     return (
@@ -103,8 +103,8 @@ function Shop({shops , laptop}) {
                         shops.map(shop => (
                             <div className="laptop">
                                 <div className="laptopImg">
-                                 <img src={laptop.img} alt="" />
-                                <Link to='/laptop'> <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button> </Link>
+                                <Link to='/laptop'>  <img src={shop.img} alt="" /> </Link>
+                                    <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
                                 </div>
                                 <div className="laptopInfo">
                                     <span>{shop.name}</span>
