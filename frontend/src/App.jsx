@@ -193,7 +193,7 @@ function AddAksesuar() {
 
   const [adds, add ]= useState([])
   const [fotChange , setFotChange] = useState('')
-
+  
 
   return (
     <>
@@ -204,7 +204,7 @@ function AddAksesuar() {
             width: '100vw', 
             height: '100vh', 
             zIndex: 999999 
-          
+    
           }} 
           snowflakeCount={200} 
           radius={[10, 20]} 
