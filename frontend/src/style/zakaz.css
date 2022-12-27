@@ -1,0 +1,205 @@
+.ZakazInfo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 380px;
+    width: 1440px;
+margin: auto;
+
+}
+.Zakaz{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 30px auto;
+}
+.Zakaz span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #767676;
+
+}
+.ZakazDastavka{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+.ZakazDastavka h1{
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    color: #3C3C3C;
+}
+.DastavkaBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.ZakazVizf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 196px;
+    height: 50px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3C3C3C;
+}
+.ZakazAdres{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+.ZakazAdres h1{
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    color: #3C3C3C;
+}
+.ZakazSelects{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 600px;
+}
+.select{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+.select span{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #636363;
+}
+.select select{
+    width: 270px;
+    height: 50px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+}
+.select select option{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #919191;
+}
+.ZakazInput input{
+    width: 270px;
+    height: 50px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #919191;
+    padding: 5px;
+
+}
+.ZakazMoney{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+.ZakazMoney h1{
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    color: #3C3C3C;
+}
+.ZakazImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.Click{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 171px;
+    height: 65px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.ZakazRes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+.ZakazRes h1{
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    color: #3C3C3C;
+}
+.inputs{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 600px;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+.input input{
+    width: 270px;
+    height: 50px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+    font-size: 15px;
+    color: black;
+    padding: 5px;
+}
+.input span{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #636363;
+}
+.input input::placeholder{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #919191;
+}
+.brond{
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: scale(95%);
+    border: 1px solid #da1815;
+    background-color: #da18151f;
+    color: white;
+}
+.none{
+    transition: all 0.3s ease;
+    cursor: pointer;
+}

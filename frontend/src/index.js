@@ -8,6 +8,7 @@ import './style/main.css'
 import './style/footer.css'
 import './style/shop.css'
 import './style/korzinka.css'
+import './style/zakaz.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

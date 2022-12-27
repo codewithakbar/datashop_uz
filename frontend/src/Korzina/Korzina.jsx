@@ -1,4 +1,5 @@
 import victus from '../media/laptop.png'
+import { Link } from 'react-router-dom'
 
 function Korzinka() {
     return (
@@ -10,7 +11,7 @@ function Korzinka() {
                 </ul>
                 <div className="korzinkaProduct">
                     <div className="korzinkaTitle">
-                        <h1>Корзина</h1>
+                     <h1>Корзина</h1> 
                         <span>Товаров в корзине (3)</span>
                     </div>
                     <div className="korzinkaElment">
@@ -77,7 +78,7 @@ function Korzinka() {
                         <h3>6 800 000 СУМ</h3>
                     </div>
                 </div>
-                <button>Оформить заказ</button>
+                <Link to='/zakaz'> <button>Оформить заказ</button> </Link>
             </div>
         </div>
     )
