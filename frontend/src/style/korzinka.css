@@ -1,5 +1,5 @@
 .korzinka {
-    height: 90vh;
+    height: 93vh;
     display: flex;
     width: 1440px;
     margin: auto;
@@ -177,7 +177,7 @@
 
 .korzinkaInfoBar {
     width: 447px;
-    height: 90vh;
+    height: 93vh;
     background-color: #FF4645;
     display: flex;
     flex-direction: column;
