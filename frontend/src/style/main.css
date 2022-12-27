@@ -68,6 +68,7 @@ main {
     border-radius: 10px;
 }
 
+
 .laptopImg {
     width: 100%;
     height: 50%;
@@ -102,6 +103,9 @@ main {
     align-items: flex-start;
     justify-content: center;
     padding: 0px 22px;
+}
+.laptopInfo span{
+    color: #000000;
 }
 
 .goShopBtn {    

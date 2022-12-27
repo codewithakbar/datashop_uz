@@ -33,11 +33,13 @@ function Main({ laptops, monitors, add }) {
                         laptops.map(laptop => (
                             <div className="laptop">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
+
                                     <img src={laptop.img} alt="" />
                                     <Link to='/laptop' onClick={() => add({ img: laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
+
                                 </div>
                                 <div className="laptopInfo">
-                                    <span>{laptop.name}</span>
+                                <Link to='/laptop'>  <span>{laptop.name}</span></Link>
                                     <div className="eva">
                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
@@ -141,6 +143,7 @@ function Main({ laptops, monitors, add }) {
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                     <img src={laptop.img} alt="" />
                                     <Link to='/laptop' onClick={() => add({ img: laptop.img })}>  <button className="goShopBtnClose"><FiShoppingCart />В корзину</button> </Link>
+
                                 </div>
                                 <div className="laptopInfo">
                                     <span>{laptop.name}</span>
