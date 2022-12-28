@@ -7,7 +7,7 @@
     align-items: flex-start;
     gap: 50px;
     border-bottom: 1px solid #D9D9D9;
-
+    overflow-y: auto;
 }
 
 .products {
@@ -31,6 +31,7 @@
     justify-content: space-between;
     padding-bottom: 10px;
     border-bottom: 1px solid #D9D9D9;
+    
 }
 
 .korzinkaTitle h1 {
@@ -195,6 +196,9 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
+    position: sticky;
+    z-index: 2;
+    top: 0;
 }
 
 .korzinkaInfoBarInfo {
