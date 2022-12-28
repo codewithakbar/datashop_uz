@@ -120,7 +120,7 @@ export default function Laptop({ adds , setAddKorzinka}) {
                                     В корзину
                                 </button>
                            
-                           <Link to='/korzinka' > <button className='LaptopKupitBtn'>Купить в один клик</button> </Link>
+                           <Link to='/zakaz' > <button className='LaptopKupitBtn'>Купить в один клик</button> </Link>
                         </div>
                         <div className="LaptopMoneyInfo">
                             <div className="">
