@@ -9,3 +9,5 @@ fastapi-mail
 python-dotenv
 
 pyjwt
+
+passlib
