@@ -94,6 +94,7 @@ margin: auto;
     height: 50px;
     border: 1px solid #BCBCBC;
     border-radius: 3px;
+    background-color: transparent;
 }
 .select select option{
     font-weight: 500;
