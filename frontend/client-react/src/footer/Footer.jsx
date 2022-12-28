@@ -12,7 +12,7 @@ function Footer({fotChange}) {
                     <div className="footContact">
                         <div className="tel">
                             <label htmlFor="">Телефон поддержки</label>
-                            <h4>+998 (99) 999 01 00</h4>
+                            <h4>+998 (99) 999 01 11</h4>
                         </div>
                         <div className="addres">
                             <label htmlFor="">Адрес</label>
