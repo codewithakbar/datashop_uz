@@ -195,8 +195,8 @@ margin: auto;
     cursor: pointer;
     transition: all 0.3s ease;
     transform: scale(95%);
-    border: 1px solid #da1815;
-    background-color: #da18151f;
+    border: 2px solid #ff2627;
+    background-color: #ff262617;
     color: white;
 }
 .none{
