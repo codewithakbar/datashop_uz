@@ -49,36 +49,38 @@ function Korzinka() {
                     </div>
                 </div>
             </div>
-            <div className="korzinkaInfoBar">
-                <div className="korzinkaInfoBarInfo">
-                    <div className="korzinkaInfoBarTitle">
-                        <h1>Итого</h1>
-                        <span>6 800 000 СУМ</span>
+            <div className='KorzinkaCon'>
+                <div className="korzinkaInfoBar">
+                    <div className="korzinkaInfoBarInfo">
+                        <div className="korzinkaInfoBarTitle">
+                            <h1>Итого</h1>
+                            <span>6 800 000 СУМ</span>
+                        </div>
+                        <div className="korzinkaInfoBarFon">
+                            <span className='korzinkaInfoBarFon1'>
+                                <h5>Промокод: </h5>
+                                <h5>0 сум</h5>
+                            </span>
+                            <span className='korzinkaInfoBarFon1'>
+                                <h5>Сумма доставки: </h5>
+                                <h5>30.000 сум</h5>
+                            </span>
+                            <span className='korzinkaInfoBarFon1'>
+                                <h5>Сумма товара:</h5>
+                                <h5>736.000 сум</h5>
+                            </span>
+                            <span className='korzinkaInfoBarFon1'>
+                                <h5> Доставка:</h5>
+                                <h5>Курьером</h5>
+                            </span>
+                        </div>
+                        <div className="korzinkaInfoBarPrice">
+                            <h3>Общая сумма</h3>
+                            <h3>6 800 000 СУМ</h3>
+                        </div>
                     </div>
-                    <div className="korzinkaInfoBarFon">
-                        <span className='korzinkaInfoBarFon1'>
-                            <h5>Промокод: </h5>
-                            <h5>0 сум</h5>
-                        </span>
-                        <span className='korzinkaInfoBarFon1'>
-                            <h5>Сумма доставки: </h5>
-                            <h5>30.000 сум</h5>
-                        </span>
-                        <span className='korzinkaInfoBarFon1'>
-                            <h5>Сумма товара:</h5>
-                            <h5>736.000 сум</h5>
-                        </span>
-                        <span className='korzinkaInfoBarFon1'>
-                            <h5> Доставка:</h5>
-                            <h5>Курьером</h5>
-                        </span>
-                    </div>
-                    <div className="korzinkaInfoBarPrice">
-                        <h3>Общая сумма</h3>
-                        <h3>6 800 000 СУМ</h3>
-                    </div>
+                    <Link to='/zakaz'> <button>Оформить заказ</button> </Link>
                 </div>
-                <Link to='/zakaz'> <button>Оформить заказ</button> </Link>
             </div>
         </div>
     )
