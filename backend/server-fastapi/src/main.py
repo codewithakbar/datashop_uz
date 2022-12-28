@@ -2,15 +2,15 @@ from typing import Union
 from tortoise import models
 from fastapi import FastAPI, HTTPException, Request, status
 from tortoise.contrib.fastapi import register_tortoise
-from models import *
-from authentications import (get_hashed_password, very_token)
+from auth.models import *
+from auth.authentication import (get_hashed_password, very_token)
 
 #signals
 from tortoise.signals import post_save
 from typing import List, Optional, Type
 from tortoise import BaseDBAsyncClient
 
-from emails import *
+from auth.emails import *
 
 # response classes
 from fastapi.responses import HTMLResponse
@@ -87,7 +87,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
 register_tortoise(
     app,
     db_url="sqlite://db.sqlite3",
-    modules={"models": ["models"]},
+    modules={"models": ["auth.models"]},
     generate_schemas=True,
     add_exception_handlers=True
 )

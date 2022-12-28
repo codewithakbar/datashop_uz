@@ -7,7 +7,7 @@ from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
 from dotenv import dotenv_values
 from pydantic import BaseModel, EmailStr
 from typing import List
-from models import User
+from auth.models import User
 
 import jwt
 

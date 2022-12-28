@@ -49,8 +49,3 @@ business_pydanticIn = pydantic_model_creator(Business, name="BusinessIn", exclud
 
 product_pydantic = pydantic_model_creator(Product, name="Product")
 product_pydanticIn = pydantic_model_creator(Product, name="ProductIn", exclude=("percentage_discount", "id"))
-
-
-
-
-    
