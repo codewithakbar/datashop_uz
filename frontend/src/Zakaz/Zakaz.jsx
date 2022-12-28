@@ -6,17 +6,85 @@ import nalichi from '../texnoimg/Наличными.png'
 
 export default function Zakaz() {
 
-    const [brund , setBrund] = useState("none")
-        let ff = false
-    function brond(){
+    const [brund, setBrund] = useState("none")
+    let ff = false
+    function brond() {
 
-        if(ff == false){
+        if (ff == false) {
             setBrund('brond')
             ff = true
+            setBrund2('none')
+
         }
-        else{
+        else {
             setBrund('none')
             ff = false
+        }
+    }
+
+    const [brund2, setBrund2] = useState("none")
+    let ff2 = false
+    function brond2() {
+        ff = true
+        if (ff2 == false) {
+            setBrund2('brond')
+            ff2 = true
+            setBrund('none')
+        }
+        else {
+            setBrund2('none')
+            ff2 = false
+        }
+    }
+
+    const [brund3, setBrund3] = useState("none")
+    let ff3 = false
+    function brond3() {
+
+        if (ff3 == false) {
+            setBrund3('brond')
+            ff3 = true
+            setBrund4('none')
+            setBrund5('none')
+
+        }
+        else {
+            setBrund3('none')
+            ff3 = false
+        }
+    }
+
+    const [brund4, setBrund4] = useState("none")
+    let ff4 = false
+    function brond4() {
+
+        if (ff4 == false) {
+            setBrund4('brond')
+            ff4 = true
+            setBrund3('none')
+            setBrund5('none')
+        }
+        else {
+            setBrund4('none')
+            ff4 = false
+        }
+    }
+
+    const [brund5, setBrund5] = useState("none")
+    let ff5 = false
+    function brond5() {
+
+        if (ff5 == false) {
+            setBrund5('brond')
+            ff5 = true
+            setBrund3('none')
+            setBrund4('none')
+
+
+        }
+        else {
+            setBrund5('none')
+            ff5 = false
         }
     }
 
@@ -30,7 +98,7 @@ export default function Zakaz() {
                 <div className="ZakazDastavka">
                     <h1 className="">1. Как вы хотите получить заказ?</h1>
                     <div className="DastavkaBtn">
-                        <span onClick={brond} className={`ZakazVizf ${brund}`}>
+                        <span onClick={brond2} className={`ZakazVizf ${brund2}`} >
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M19.5 10.22V19C19.5 21 19 22 16.5 22H7.5C5 22 4.5 21 4.5 19V10.22M10.18 14H13.82M5 2H19C21 2 22 3 22 5V7C22 9 21 10 19 10H5C3 10 2 9 2 7V5C2 3 3 2 5 2Z" stroke="#3C3C3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
@@ -77,13 +145,13 @@ export default function Zakaz() {
                 <div className="ZakazMoney">
                     <h1>3. Выберите способ оплаты</h1>
                     <div className="ZakazImg">
-                        <div className="Click">
+                        <div onClick={brond3} className={`Click ${brund3}`}>
                             <img src={click} alt="" />
                         </div>
-                        <div className="Click">
+                        <div onClick={brond4} className={`Click ${brund4}`}>
                             <img src={payme} alt="" />
                         </div>
-                        <div className="Click">
+                        <div onClick={brond5} className={`Click ${brund5}`}>
                             <img src={nalichi} alt="" />
                         </div>
                     </div>
@@ -139,7 +207,7 @@ export default function Zakaz() {
                         <h3>6 800 000 СУМ</h3>
                     </div>
                 </div>
-                 <button>Оформить заказ</button> 
+                <button>Оформить заказ</button>
             </div>
         </div>
     )

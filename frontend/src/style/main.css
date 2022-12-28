@@ -87,6 +87,8 @@ main {
     transition: all 0.5s ease;
     max-width: 200px;
     max-height: 161px;
+    margin-bottom: 20px;
+    z-index: 99;
 }
 
 .laptop:hover img {
@@ -346,3 +348,83 @@ main {
         width: 1140px;
     }
 }
+
+
+
+.inner::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.191);
+	z-index: 9999099999;
+	box-sizing: border-box;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	transition: all .4s ease;
+	transform: scaleY(0);
+}
+
+.servicess:hover .inner::after,
+.servicess:hover .inner::before {
+	border-color: red;
+	z-index: 9;
+	animation: fade 0.8s both ease;
+}
+
+
+
+@keyframes fade {
+	0%{
+		opacity: 0;
+		transform: scaleY(0);
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		transform: scaleY(1);
+	}
+}
+.goShopBtnClose {
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 2px solid #E81D1C;
+    height: 36px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    display: none;
+    background: none;
+    cursor: pointer;
+    background-color: #e81c1c;
+    border-radius: 6px;
+    z-index: 999329847561340;
+  }
+  
+  .laptopImg {
+    transition: all 0.5s ease;
+  
+    position: relative;
+  }
+  .laptopImg:hover .goShopBtnClose {
+    transition: all 0.5s ease;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .laptopImg:hover img{
+    transition: all 0.5s ease;
+    filter: blur(2px);
+  }
+  

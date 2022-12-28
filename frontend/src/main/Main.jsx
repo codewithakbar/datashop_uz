@@ -31,23 +31,31 @@ function Main({ laptops, monitors, add }) {
                 <div className="laptops">
                     {
                         laptops.map(laptop => (
-                            <div className="laptop">
-                                <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
+                            <div className="servicess">
+                                <div className="laptop">
+                                    <div className="content">
+                                        <div className="box">
+                                            <div className="inner">
+                                                <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
+                                                    <Link to='/laptop' onClick={() => add({ img: laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
+                                                    <img src={laptop.img} alt="" />
 
-                                    <img src={laptop.img} alt="" />
-                                    <Link to='/laptop' onClick={() => add({ img: laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
 
-                                </div>
-                                <div className="laptopInfo">
-                                <Link to='/laptop'>  <span>{laptop.name}</span></Link>
-                                    <div className="eva">
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiOutlineStar className='evaCompanent' color='#E81D1C' />
+                                                </div>
+                                                <div className="laptopInfo">
+                                                    <Link to='/laptop'>  <span>{laptop.name}</span></Link>
+                                                    <div className="eva">
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiOutlineStar className='evaCompanent' color='#E81D1C' />
+                                                    </div>
+                                                    <span className='price'>{laptop.prise}00 000 UZS</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <span className='price'>{laptop.prise}00 000 UZS</span>
                                 </div>
                             </div>
                         ))
@@ -62,21 +70,29 @@ function Main({ laptops, monitors, add }) {
                 <div className="laptops">
                     {
                         monitors.map(monitor => (
-                            <div className="laptop">
-                                <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
-                                    <img src={monitor.img} alt="" />
-                                    <button className="goShopBtnClose"><FiShoppingCart />В корзину</button>
-                                </div>
-                                <div className="laptopInfo">
-                                    <span>{monitor.name}</span>
-                                    <div className="eva">
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiOutlineStar className='evaCompanent' color='#E81D1C' />
+                            <div className="servicess">
+                                <div className="laptop">
+                                    <div className="content">
+                                        <div className="box">
+                                            <div className="inner">
+                                                <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
+                                                    <img src={monitor.img} alt="" />
+                                                    <button className="goShopBtnClose"><FiShoppingCart />В корзину</button>
+                                                </div>
+                                                <div className="laptopInfo">
+                                                    <span>{monitor.name}</span>
+                                                    <div className="eva">
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiOutlineStar className='evaCompanent' color='#E81D1C' />
+                                                    </div>
+                                                    <span className='price'>{monitor.prise}00 000 UZS</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <span className='price'>{monitor.prise}00 000 UZS</span>
                                 </div>
                             </div>
                         ))
@@ -139,22 +155,30 @@ function Main({ laptops, monitors, add }) {
                 <div className="laptops">
                     {
                         laptops.map(laptop => (
-                            <div className="laptop">
-                                <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
-                                    <img src={laptop.img} alt="" />
-                                    <Link to='/laptop' onClick={() => add({ img: laptop.img })}>  <button className="goShopBtnClose"><FiShoppingCart />В корзину</button> </Link>
+                            <div className="servicess">
+                                <div className="laptop">
+                                    <div className="content">
+                                        <div className="box">
+                                            <div className="inner">
+                                                <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
+                                                    <img src={laptop.img} alt="" />
+                                                    <Link to='/laptop' onClick={() => add({ img: laptop.img })}>  <button className="goShopBtnClose"><FiShoppingCart />В корзину</button> </Link>
 
-                                </div>
-                                <div className="laptopInfo">
-                                    <span>{laptop.name}</span>
-                                    <div className="eva">
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                        <AiOutlineStar className='evaCompanent' color='#E81D1C' />
+                                                </div>
+                                                <div className="laptopInfo">
+                                                    <span>{laptop.name}</span>
+                                                    <div className="eva">
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiOutlineStar className='evaCompanent' color='#E81D1C' />
+                                                    </div>
+                                                    <span className='price'>{laptop.prise}00 000 UZS</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <span className='price'>{laptop.prise}00 000 UZS</span>
                                 </div>
                             </div>
                         ))
