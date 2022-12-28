@@ -1,7 +1,7 @@
 import victus from '../media/laptop.png'
 import { Link } from 'react-router-dom'
 
-function Korzinka() {
+function Korzinka({addKorzinka}) {
     return (
         <div className="korzinka">
             <div className="products">
@@ -23,28 +23,32 @@ function Korzinka() {
                             </span>
                         </div>
                         <div className="korzinkaProducts">
-                            <div className="Kproduct">
-                                <div className="KproductInfo">
-                                    <div className="KproductImg">
-                                        <img src={victus} alt="" />
+                            {
+                                addKorzinka.map(addKorzin =>(
+                                    <div className="Kproduct">
+                                    <div className="KproductInfo">
+                                        <div className="KproductImg">
+                                            <img src={addKorzin.img} alt="" />
+                                        </div>
+                                        <div className="productInfo">
+                                            <span className='productInfo1'>HP Victus 15 RTX 3050...</span>
+                                            <span className='productInfo2'>Ноутбук</span>
+                                            <span className='productInfo3'>Удалить</span>
+                                        </div>
                                     </div>
-                                    <div className="productInfo">
-                                        <span className='productInfo1'>HP Victus 15 RTX 3050...</span>
-                                        <span className='productInfo2'>Ноутбук</span>
-                                        <span className='productInfo3'>Удалить</span>
+                                    <div className="KproductEnd">
+                                        <div className="KproductCount">
+                                            <button>-</button>
+                                            <span>1</span>
+                                            <button>+</button>
+                                        </div>
+                                        <div className="KproductPrice">
+                                            <span>6 800 000 СУМ</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="KproductEnd">
-                                    <div className="KproductCount">
-                                        <button>-</button>
-                                        <span>1</span>
-                                        <button>+</button>
-                                    </div>
-                                    <div className="KproductPrice">
-                                        <span>6 800 000 СУМ</span>
-                                    </div>
-                                </div>
-                            </div>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
