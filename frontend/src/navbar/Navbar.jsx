@@ -15,7 +15,7 @@ import Pr from './Pr'
 import {Link} from 'react-router-dom'
 
 
-function Navbar({AddLaptop , AddMonitor , AddSmartfon , AddAksesuar , setFotChange}) {
+function Navbar({AddLaptop , AddMonitor , AddSmartfon , AddAksesuar , setFotChange , addKorzinka}) {
     const [trm , setTrm] = useState(1000)
     const [icon , setIcon] = useState(<BiCategory size='27px' color='#ffffff'/>)
     const [noneBorder , setNoneBoreder] = useState('')
@@ -65,6 +65,7 @@ function Navbar({AddLaptop , AddMonitor , AddSmartfon , AddAksesuar , setFotChan
                     <div className="navBtns">
                         <Link to='/korzinka' onClick={() => setFotChange('none')}><button><img src={shopIcon} alt="" /> <span>Корзина</span></button></Link>
                         <button><img src={profilIcon} alt="" /> <span>Профиль</span></button>
+                        <span className='kLenght'>{addKorzinka.length}</span> 
                     </div>
                 </div>
             </div>

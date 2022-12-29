@@ -120,6 +120,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 40px;
+    position: relative;
 }
 
 .navBtns button {
@@ -248,4 +249,20 @@ nav {
     line-height: 17px;
     color: #666363;
     cursor: pointer;
+}
+
+
+.kLenght {
+    color: #FFFFFF ;
+    position: absolute;
+    top: -5px;
+    font-size: 12px;
+    right: 200px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E81D1C;
+    border-radius: 50%;
 }

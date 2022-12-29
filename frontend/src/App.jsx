@@ -194,8 +194,8 @@ function AddAksesuar() {
   const [adds, add ]= useState([])
   const [fotChange , setFotChange] = useState('')
   const [addKorzinka , setAddKorzinka] = useState([])
-  
 
+  
   return (
     <>
       <BrowserRouter>
@@ -215,6 +215,7 @@ function AddAksesuar() {
           rotationSpeed={[-1, 1]} 
         />
         <Navbar 
+        addKorzinka={addKorzinka}
         AddLaptop={AddLaptop} 
         AddMonitor={AddMonitor} 
         AddSmartfon={AddSmartfon} 
@@ -223,7 +224,7 @@ function AddAksesuar() {
         <Routes>
           <Route path='/' element={<WebMenu laptops={laptops} monitors={monitors} add={add}/> }/>
           <Route path='/shop' element={<Shop shops={shops} />}/> 
-          <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka}/>} />
+          <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} />} />
           <Route path='/korzinka' element={<Korzinka addKorzinka={addKorzinka} />} />
           <Route path='/zakaz' element={<Zakaz />} />
         </Routes>
