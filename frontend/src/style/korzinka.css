@@ -273,3 +273,10 @@
     background: #E81D1C;
     border-radius: 10px;
 }
+
+.productInfo3:hover  {
+    color: red;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s all;
+}

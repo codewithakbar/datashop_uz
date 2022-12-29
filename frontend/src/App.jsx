@@ -32,15 +32,19 @@ function App() {
 
 
 
-  fetch("https://akbar2day.pythonanywhere.com/api/?format=json")
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    });
+//   async function GetTack() {
+//     const response = await axios.get('https://fakestoreapi.com/products')
+//     setLaptops(response.data);
+//     console.log(response.data);
+//  }
+//  useEffect( () => {
+//   GetTack()
+//  })
 
 
 
-  const [laptops] = useState([
+
+  const [laptops, setLaptops] = useState([
     {   
         id: 1 ,
         img: tufGamingPng ,
