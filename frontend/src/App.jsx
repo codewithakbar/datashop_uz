@@ -199,6 +199,15 @@ function AddAksesuar() {
   const [fotChange , setFotChange] = useState('')
   const [addKorzinka , setAddKorzinka] = useState([])
 
+
+
+  // korzinka ischindagi nasani dalete atadi
+  function Delete(id) {
+    const filtered = addKorzinka.filter(korzinka => korzinka.id != id)    // korzinka ischindagi nasani dalete atadi
+    setAddKorzinka(filtered)
+    console.log(filtered);
+  }
+    // korzinka ischindagi nasani dalete atadi
   
   return (
     <>
@@ -229,7 +238,7 @@ function AddAksesuar() {
           <Route path='/' element={<WebMenu laptops={laptops} monitors={monitors} add={add}/> }/>
           <Route path='/shop' element={<Shop shops={shops} />}/> 
           <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} />} />
-          <Route path='/korzinka' element={<Korzinka addKorzinka={addKorzinka} />} />
+          <Route path='/korzinka' element={<Korzinka addKorzinka={addKorzinka} Delete={Delete}/>} />
           <Route path='/zakaz' element={<Zakaz />} />
         </Routes>
         <Footer fotChange={fotChange}/>

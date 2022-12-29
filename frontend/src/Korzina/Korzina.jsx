@@ -1,7 +1,7 @@
 import victus from '../media/laptop.png'
 import { Link } from 'react-router-dom'
 
-function Korzinka({addKorzinka}) {
+function Korzinka({addKorzinka , Delete}) {
     return (
         <div className="korzinka">
             <div className="products">
@@ -33,7 +33,7 @@ function Korzinka({addKorzinka}) {
                                         <div className="productInfo">
                                             <span className='productInfo1'>HP Victus 15 RTX 3050...</span>
                                             <span className='productInfo2'>Ноутбук</span>
-                                            <span className='productInfo3'>Удалить</span>
+                                            <span className='productInfo3' onClick={Delete}>Удалить</span>
                                         </div>
                                     </div>
                                     <div className="KproductEnd">
