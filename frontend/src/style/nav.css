@@ -54,6 +54,7 @@ nav {
     width: 100%;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.104);
     z-index: 100;
+    background-color: white;
 }
 
 .navBottom {
@@ -265,4 +266,10 @@ nav {
     justify-content: center;
     background-color: #E81D1C;
     border-radius: 50%;
+}
+
+.nav {
+    top: 0;
+    position: fixed;
+    z-index: 101;
 }

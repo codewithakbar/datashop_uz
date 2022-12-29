@@ -13,6 +13,7 @@ import {AiOutlineCustomerService} from 'react-icons/ai'
 import {MdOutlineNavigateNext} from 'react-icons/md'
 import Pr from './Pr'
 import {Link} from 'react-router-dom'
+import {useEffect} from 'react'
 
 
 function Navbar({AddLaptop , AddMonitor , AddSmartfon , AddAksesuar , setFotChange , addKorzinka}) {
@@ -34,9 +35,29 @@ function Navbar({AddLaptop , AddMonitor , AddSmartfon , AddAksesuar , setFotChan
         }
     }
 
+// navbar fixed function ==============================
+
+    const [scrolled, setScrolled] = useState('');
+
+    const scrollFixed = () => {
+        const scrol = window.scrollY;
+
+        if(scrol > 200) {
+            setScrolled('nav');
+        } else{
+            setScrolled(false);
+        }
+    }
     
+    useEffect(() => {
+        window.addEventListener('scroll', scrollFixed)
+    })
+    // navbar fixed function ==============================
+
+
+
     return (
-        <nav>
+        <nav className={scrolled}>
             <div className="navTop">
                 <div className="container">
                     <div className="navTopLeft">

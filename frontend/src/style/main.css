@@ -359,7 +359,7 @@ main {
 	width: 100%;
 	height: 100%;
 	background: rgba(255, 255, 255, 0.191);
-	z-index: 9999099999;
+	z-index: 99;
 	box-sizing: border-box;
 	border-left: 3px solid transparent;
 	border-right: 3px solid transparent;
@@ -407,7 +407,7 @@ main {
     cursor: pointer;
     background-color: #e81c1c;
     border-radius: 6px;
-    z-index: 999329847561340;
+    z-index: 100;
   }
   
   .laptopImg {
