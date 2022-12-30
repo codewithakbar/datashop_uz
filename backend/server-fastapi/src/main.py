@@ -1,9 +1,11 @@
 from fastapi import (FastAPI, BackgroundTasks, UploadFile, 
                     File, Form, Depends, HTTPException, status, Request)
 from tortoise.contrib.fastapi import register_tortoise
-from .models import (User, Business, Product, user_pydantic, user_pydanticIn, 
-                    product_pydantic,product_pydanticIn, business_pydantic, 
-                    business_pydanticIn, user_pydanticOut)
+from models import (
+    User, Business, Product, user_pydantic, user_pydanticIn, 
+    product_pydantic,product_pydanticIn, business_pydantic, 
+    business_pydanticIn, user_pydanticOut
+)
 
 # signals
 from tortoise.signals import  post_save 
@@ -21,8 +23,8 @@ from fastapi.security import (
     OAuth2PasswordRequestForm
 )
 # self packages
-from src.emails import *
-from src.authentication import *
+from emails import *
+from authentication import *
 from dotenv import dotenv_values
 import math
 
@@ -160,7 +162,11 @@ async def add_new_product(product: product_pydanticIn,
 @app.get("/products")
 async def get_products():
     response = await product_pydantic.from_tortoise_orm(Product.all())
-    return {"status" : "ok", "data" : response}
+
+    for i in response:
+        i.name
+
+    return {"status" : "ok", "data" : i}
 
 
 @app.get("/products/{id}")
