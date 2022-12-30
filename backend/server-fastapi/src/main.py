@@ -163,10 +163,7 @@ async def add_new_product(product: product_pydanticIn,
 async def get_products():
     response = await product_pydantic.from_tortoise_orm(Product.all())
 
-    for i in response:
-        i.name
-
-    return {"status" : "ok", "data" : i}
+    return {"status" : "ok", "data" : response}
 
 
 @app.get("/products/{id}")
