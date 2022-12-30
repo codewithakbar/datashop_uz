@@ -1,20 +1,14 @@
-from fastapi import(
-    BackgroundTasks, UploadFile, File, Form, 
-    Depends, HTTPException, status
-)
+from fastapi import (BackgroundTasks, UploadFile, 
+                    File, Form, Depends, HTTPException, status)
 
-from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
 from dotenv import dotenv_values
 from pydantic import BaseModel, EmailStr
 from typing import List
-from auth.models import User
-
+from fastapi_mail import FastMail, MessageSchema,ConnectionConfig
 import jwt
+from models import User
 
-
-
-
-config_credentials = dotenv_values(".env")
+config_credentials = dict(dotenv_values(".env"))
 
 conf = ConnectionConfig(
     MAIL_USERNAME = config_credentials["EMAIL"],
@@ -25,14 +19,14 @@ conf = ConnectionConfig(
     MAIL_STARTTLS = False,
     MAIL_SSL_TLS = True,
     USE_CREDENTIALS = True,
+    VALIDATE_CERTS = True
 )
 
 
 class EmailSchema(BaseModel):
     email: List[EmailStr]
 
-
-async def send_email(email: list, instance: User):
+async def send_email(email : list, instance: User):
 
     token_data = {
         "id": instance.id,
