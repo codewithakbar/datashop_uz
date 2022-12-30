@@ -132,7 +132,7 @@ async def user_login(user: user_pydantic = Depends(get_current_user)):
 
     business = await Business.get(owner = user)
     logo = business.logo
-    logo = "localhost:8000/static/images/"+logo
+    logo = config_credentials["SITE_URL"]+"/static/images/"+logo
 
     return {"status" : "ok", 
             "data" : 
@@ -251,7 +251,7 @@ async def create_upload_file(file: UploadFile = File(...),
             detail = "Not authenticated to perform this action",
             headers={"WWW-Authenticate": "Bearer"},
         )
-    file_url = "localhost:8000" + generated_name[1:]
+    file_url = config_credentials["SITE_URL"] + generated_name[1:]
     return {"status": "ok", "filename": file_url}
 
 
@@ -298,7 +298,7 @@ async def create_upload_file(id: int, file: UploadFile = File(...),
         )
 
 
-    file_url = "localhost:8000" + generated_name[1:]
+    file_url = config_credentials["SITE_URL"] + generated_name[1:]
     return {"status": "ok", "filename": file_url}
 
 
