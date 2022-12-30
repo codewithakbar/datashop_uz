@@ -40,9 +40,11 @@ export default function Laptop({ adds , setAddKorzinka}) {
     }
 
     function Addkor() {
+        let id = 1
         setAddKorzinka(value =>([
           ...value,  
-            {
+            {  
+                id: id++ ,
                 img: adds.img
             }
         ]))

@@ -32,15 +32,19 @@ function App() {
 
 
 
-  fetch("https://akbar2day.pythonanywhere.com/api/?format=json")
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    });
+//   async function GetTack() {
+//     const response = await axios.get('https://fakestoreapi.com/products')
+//     setLaptops(response.data);
+//     console.log(response.data);
+//  }
+//  useEffect( () => {
+//   GetTack()
+//  })
 
 
 
-  const [laptops] = useState([
+
+  const [laptops, setLaptops] = useState([
     {   
         id: 1 ,
         img: tufGamingPng ,
@@ -194,8 +198,17 @@ function AddAksesuar() {
   const [adds, add ]= useState([])
   const [fotChange , setFotChange] = useState('')
   const [addKorzinka , setAddKorzinka] = useState([])
-  
 
+
+
+  // korzinka ischindagi nasani dalete atadi
+  function Delete(id) {
+    const filtered = addKorzinka.filter(korzinka => korzinka.id != id)    // korzinka ischindagi nasani dalete atadi
+    setAddKorzinka(filtered)
+    console.log(filtered);
+  }
+    // korzinka ischindagi nasani dalete atadi
+  
   return (
     <>
       <BrowserRouter>
@@ -215,6 +228,7 @@ function AddAksesuar() {
           rotationSpeed={[-1, 1]} 
         />
         <Navbar 
+        addKorzinka={addKorzinka}
         AddLaptop={AddLaptop} 
         AddMonitor={AddMonitor} 
         AddSmartfon={AddSmartfon} 
@@ -223,8 +237,8 @@ function AddAksesuar() {
         <Routes>
           <Route path='/' element={<WebMenu laptops={laptops} monitors={monitors} add={add}/> }/>
           <Route path='/shop' element={<Shop shops={shops} />}/> 
-          <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka}/>} />
-          <Route path='/korzinka' element={<Korzinka addKorzinka={addKorzinka} />} />
+          <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} />} />
+          <Route path='/korzinka' element={<Korzinka addKorzinka={addKorzinka} Delete={Delete}/>} />
           <Route path='/zakaz' element={<Zakaz />} />
         </Routes>
         <Footer fotChange={fotChange}/>
