@@ -12,7 +12,7 @@ function Korzinka({addKorzinka , Delete}) {
                 <div className="korzinkaProduct">
                     <div className="korzinkaTitle">
                      <h1>Корзина</h1> 
-                        <span>Товаров в корзине (3)</span>
+                        <span>Товаров в корзине ({addKorzinka.lenght})</span>
                     </div>
                     <div className="korzinkaElment">
                         <div className="korzinkaElmentTitle">

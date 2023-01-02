@@ -534,3 +534,50 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #FF0000;
 }
+
+
+.saveK {
+  position: absolute;
+  right: 0px;
+  top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 362px;
+  height: 69px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  animation: animateSaveBar 1s ease;
+}
+
+.saveK::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 69px;
+  background-color: #48FF2A;
+  left: 0;
+}
+
+.saveKClose {
+  position: absolute;
+  right: 0px;
+  top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 362px;
+  height: 69px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+@keyframes animateSaveBar {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(-0px);
+  }
+}
