@@ -211,7 +211,7 @@ function AddAksesuar() {
 
 
   function FilterAdd(id) {
-    const filtered = addKorzinka.filter(addKorzin => addKorzin.id == id) 
+    const filtered = addKorzinka.filter(addKorzin => addKorzin.id !== id) 
     setAddKorzinka(filtered)
   }
   console.log(addKorzinka);

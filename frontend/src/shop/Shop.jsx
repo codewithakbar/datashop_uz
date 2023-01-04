@@ -101,21 +101,31 @@ function Shop({shops}) {
                     <div className="shopMenuCon">
                     {
                         shops.map(shop => (
-                            <div className="laptop">
-                                <div className="laptopImg">
-                                <Link to='/laptop'>  <img src={shop.img} alt="" /> </Link>
-                                    <button className="goShopBtnClose"><FiShoppingCart/>В корзину</button>
-                                </div>
-                                <div className="laptopInfo">
-                                    <span>{shop.name}</span>
-                                    <div className="eva">
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiFillStar    className='evaCompanent'  color='#E81D1C'/>
-                                        <AiOutlineStar className='evaCompanent'  color='#E81D1C'/>
+                            <div className="servicess">
+                                <div className="laptop">
+                                    <div className="content">
+                                        <div className="box">
+                                            <div className="inner">
+                                                <div className="laptopImg">
+                                                    <div className="gobtn">
+                                                        <Link to='/laptop'> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
+                                                    </div>
+                                                    <img src={shop.img} alt="" />
+                                                </div>
+                                                <div className="laptopInfo">
+                                                    <Link to='/laptop'>  <span>{shop.name}</span></Link>
+                                                    <div className="eva">
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
+                                                        <AiOutlineStar className='evaCompanent' color='#E81D1C' />
+                                                    </div>
+                                                    <span className='price'>{shop.prise}00 000 UZS</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <span className='price'>{shop.prise}00 000 UZS</span>
                                 </div>
                             </div>
                        ))

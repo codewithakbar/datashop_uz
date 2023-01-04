@@ -45,7 +45,7 @@ export default function Laptop({ adds , setAddKorzinka , FilterAdd}) {
         setAddKorzinka(value =>([
           ...value,  
             {  
-                id: id ++ ,
+                id: id++ ,
                 img: adds.img
             }
         ]))

@@ -406,30 +406,26 @@ input[type=range] {
   .LaptopInfo span{
     color: #000000;
   }
+
+  .gobtn {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
   .goShopBtnClose {
-    transition: all 0.5s ease;
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    gap: 10px;
-    padding: 10px 20px;
-    border: 2px solid #E81D1C;
-    height: 36px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #FFFFFF;
-    display: none;
-    background: none;
-    cursor: pointer;
-    background-color: #e81c1c;
-    border-radius: 6px;
+
   }
   
   .laptopImg {
     transition: all 0.5s ease;
-  
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .laptopImg:hover .goShopBtnClose {
     transition: all 0.5s ease;
@@ -443,6 +439,7 @@ input[type=range] {
     transition: all 0.5s ease;
     filter: blur(2px);
   }
+  
   
 /* input renge */
 input[type=range] {
