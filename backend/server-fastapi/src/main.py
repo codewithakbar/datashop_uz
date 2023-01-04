@@ -7,7 +7,6 @@ from models import (
     business_pydanticIn, user_pydanticOut
 )
 
-from models import LoginItem
 from fastapi.encoders import jsonable_encoder
 
 # signals
@@ -30,6 +29,9 @@ from emails import *
 from authentication import *
 from dotenv import dotenv_values
 import math
+
+from pydantic import BaseModel
+
 
 # user image uploads
 #  pip install python-multipart
@@ -55,6 +57,13 @@ config_credentials = dict(dotenv_values(".env"))
 
 app = FastAPI()
 
+
+admin_user = {
+    "username": "admin",
+    "password": "kali"
+}
+
+
 origins = [
     "http://admin.datashop.uz",
     "https://admin.datashop.uz",
@@ -70,12 +79,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+ACCESS_TOKEN_EXPIRE_MINUTES = 800
+
+
+class LoginItem(BaseModel):
+    username: str
+    password: str
+
 # static files
 # pip install aiofiles
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # authorization configs
 oath2_scheme = OAuth2PasswordBearer(tokenUrl = 'token')
+
+
+
 
 # password helper functions
 @app.post('/token')
@@ -167,17 +186,15 @@ async def user_login(user: user_pydantic = Depends(get_current_user)):
             }
 
 
-@app.post('/login')
-def login_user(loginitem: LoginItem):
+@app.post("/login")
+async def login_user(login_item: LoginItem):
 
-    data = jsonable_encoder(loginitem)
-
-    if not loginitem.username or not loginitem.password:
-        return {"status" : "error", "message" : "Username or password not provided"}
-
-    encoded_jwd = jwt.encode(data, config_credentials["SECRET"], algorithm="HS256")
-
-    return {"token" : encoded_jwd}
+    data = jsonable_encoder(login_item)
+    if admin_user['username'] == data['username'] and admin_user['username'] == data['username']:
+        encoded_jwt = jwt.encode(data, config_credentials["SECRET"], algorithm="HS256")
+        return {'token': encoded_jwt }
+    else:
+        return {'message': 'Login failed'}
 
 
 
