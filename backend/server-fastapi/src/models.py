@@ -61,3 +61,6 @@ product_pydanticIn = pydantic_model_creator(Product, name = "ProductIn",
 
 
 
+class LoginItem(BaseModel):
+    username = str
+    password = str

@@ -7,6 +7,9 @@ from models import (
     business_pydanticIn, user_pydanticOut
 )
 
+from models import LoginItem
+from fastapi.encoders import jsonlable_encode
+
 # signals
 from tortoise.signals import  post_save 
 from typing import List, Optional, Type
@@ -164,6 +167,21 @@ async def user_login(user: user_pydantic = Depends(get_current_user)):
             }
 
 
+@app.post('/login')
+def login_user(loginitem: LoginItem):
+
+    data = jsonlable_encode(loginitem)
+
+    if not loginitem.username or not loginitem.password:
+        return {"status" : "error", "message" : "Username or password not provided"}
+
+    encoded_jwd = jwt.encode(data, config_credentials["SECRET"], algorithm="HS256")
+
+    return {"token" : encoded_jwd}
+
+
+
+
 @app.post("/products")
 async def add_new_product(product: product_pydanticIn, 
                             user: user_pydantic = Depends(get_current_user)):
@@ -253,7 +271,7 @@ async def create_upload_file(file: UploadFile = File(...),
     business = await Business.get(owner = user)
     owner = await business.owner
 
- # check if the user making the request is authenticated
+    # check if the user making the request is authenticated
     print(user.id)
     print(owner.id)
     if owner == user:
