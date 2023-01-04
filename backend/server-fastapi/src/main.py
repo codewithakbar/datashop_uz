@@ -44,10 +44,28 @@ from fastapi.templating import Jinja2Templates
 # HTMLResponse
 from fastapi.responses import HTMLResponse
 
+from fastapi.middleware.cors import CORSMiddleware
+
+
 config_credentials = dict(dotenv_values(".env"))
 
 
 app = FastAPI()
+
+origins = [
+    "http://admin.datashop.uz",
+    "https://admin.datashop.uz",
+    "http://localhost",
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # static files
 # pip install aiofiles
