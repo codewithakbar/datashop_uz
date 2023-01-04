@@ -8,7 +8,7 @@ from models import (
 )
 
 from models import LoginItem
-from fastapi.encoders import jsonlable_encode
+from fastapi.encoders import jsonable_encoder
 
 # signals
 from tortoise.signals import  post_save 
@@ -170,7 +170,7 @@ async def user_login(user: user_pydantic = Depends(get_current_user)):
 @app.post('/login')
 def login_user(loginitem: LoginItem):
 
-    data = jsonlable_encode(loginitem)
+    data = jsonable_encoder(loginitem)
 
     if not loginitem.username or not loginitem.password:
         return {"status" : "error", "message" : "Username or password not provided"}
