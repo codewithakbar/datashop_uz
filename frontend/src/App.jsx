@@ -49,113 +49,113 @@ function App() {
         id: 1 ,
         img: tufGamingPng ,
         name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-        prise: 14.500
+        prise: '????'
     },     
     {
         id: 2 ,
         img: aser ,
         name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-        prise: 14.500
+        prise: '????'
     },
     {
         id: 3,
         img: victus ,
         name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-        prise: 14.500
+        prise: '????'
     },
     {
         id: 4,
         img: tufGamingPng ,
         name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-        prise: 14.500
+        prise: '????'
     },
     {
         id: 5,
         img: aser ,
         name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-        prise: 14.500
+        prise: '????'
     },
     {
         id: 6,
         img: victus ,
         name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-        prise: 14.500
+        prise: '????'
     },
     {
         id: 7,
         img: tufGamingPng ,
         name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-        prise: 14.500
+        prise: '????'
     },
     {
         id: 8,
         img: aser ,
         name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-        prise: 14.500
+        prise: '????'
     },
     {
         id: 9,
         img: victus ,
         name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-        prise: 14.500
+        prise: '????'
     },
     {
         id: 10,
         img: tufGamingPng ,
         name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..' ,
-        prise: 14.500
+        prise: '????'
     },
 ])
 const [monitors , setMonitors] = useState([
   {
       img: m1 ,
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-      prise: 14.500
+      prise: '????'
   },
   {
       img: m2 ,
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-      prise: 14.500
+      prise: '????'
   },
   {
       img: m3 ,
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-      prise: 14.500
+      prise: '????'
   },
   {
       img: m4 ,
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-      prise: 14.500
+      prise: '????'
   },
   {
       img: m1 ,
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-      prise: 14.500
+      prise: '????'
   },
   {
       img: m2 ,
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-      prise: 14.500
+      prise: '????'
   },
   {
       img: m3 ,
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-      prise: 14.500
+      prise: '????'
   },
   {
       img: m4 ,
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-      prise: 14.500
+      prise: '????'
   },
   {
       img: m1 ,
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-      prise: 14.500
+      prise: '????'
   },
   {
       img: m2 ,
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
-      prise: 14.500
+      prise: '????'
   }
 ])
 
@@ -211,9 +211,10 @@ function AddAksesuar() {
 
 
   function FilterAdd(id) {
-    const filtered = addKorzinka.filter(korzinka => korzinka.id == id) 
+    const filtered = addKorzinka.filter(addKorzin => addKorzin.id == id) 
     setAddKorzinka(filtered)
   }
+  console.log(addKorzinka);
   
   return (
     <>
