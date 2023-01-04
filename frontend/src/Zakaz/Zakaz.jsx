@@ -137,7 +137,7 @@ export default function Zakaz() {
                         </div>
                         <div className="select ZakazInput">
                             <span>Полный адрес</span>
-                            <input type="text" placeholder="Введите полный адрес" />
+                            <input type="text" placeholder="Введите полный адрес"/>
                         </div>
                     </div>
 
@@ -173,7 +173,7 @@ export default function Zakaz() {
                         </div>
                         <div className="input">
                             <span>Дополнительный телефон</span>
-                            <input type="text" placeholder="Введите Дополнительный телефон" />
+                            <input type="text" placeholder="Введите Дополнительный телефон"/>
                         </div>
                     </div>
                 </div>
@@ -208,7 +208,7 @@ export default function Zakaz() {
                             <h3>6 800 000 СУМ</h3>
                         </div>
                     </div>
-                    <button>Оформить заказ</button>
+                    <button type='submit'>Оформить заказ</button>
                 </div>
             </div>
         </div>

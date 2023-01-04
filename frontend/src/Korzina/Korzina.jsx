@@ -1,7 +1,9 @@
 import victus from '../media/laptop.png'
 import { Link } from 'react-router-dom'
 
-function Korzinka({addKorzinka , Delete}) {
+function Korzinka({addKorzinka , Delete , setAddKorzinka}) {
+
+
     return (
         <div className="korzinka">
             <div className="products">
@@ -12,7 +14,7 @@ function Korzinka({addKorzinka , Delete}) {
                 <div className="korzinkaProduct">
                     <div className="korzinkaTitle">
                      <h1>Корзина</h1> 
-                        <span>Товаров в корзине ({addKorzinka.lenght})</span>
+                        <span>Товаров в корзине ({addKorzinka.length})</span>
                     </div>
                     <div className="korzinkaElment">
                         <div className="korzinkaElmentTitle">

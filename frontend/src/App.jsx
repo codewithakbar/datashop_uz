@@ -203,11 +203,17 @@ function AddAksesuar() {
 
   // korzinka ischindagi nasani dalete atadi
   function Delete(id) {
-    const filtered = addKorzinka.filter(korzinka => korzinka.id != id)    // korzinka ischindagi nasani dalete atadi
+    const filtered = addKorzinka.filter(korzinka => korzinka.id !== id)    // korzinka ischindagi nasani dalete atadi
     setAddKorzinka(filtered)
-    console.log(filtered);
+    console.log(filtered)
   }
-    // korzinka ischindagi nasani dalete atadi
+  // korzinka ischindagi nasani dalete atadi
+
+
+  function FilterAdd(id) {
+    const filtered = addKorzinka.filter(korzinka => korzinka.id == id) 
+    setAddKorzinka(filtered)
+  }
   
   return (
     <>
@@ -237,8 +243,8 @@ function AddAksesuar() {
         <Routes>
           <Route path='/' element={<WebMenu laptops={laptops} monitors={monitors} add={add}/> }/>
           <Route path='/shop' element={<Shop shops={shops} />}/> 
-          <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} />} />
-          <Route path='/korzinka' element={<Korzinka addKorzinka={addKorzinka} Delete={Delete}/>} />
+          <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} FilterAdd={FilterAdd}/>} />
+          <Route path='/korzinka' element={<Korzinka addKorzinka={addKorzinka} Delete={Delete} setAddKorzinka={setAddKorzinka}/>} />
           <Route path='/zakaz' element={<Zakaz />} />
         </Routes>
         <Footer fotChange={fotChange}/>
