@@ -173,8 +173,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 6px;
+    padding: 5px 7px;
     cursor: pointer;
+    transition: all 0.4s ease;
+    
 }
 
 .ctMenu li button {
@@ -194,6 +196,11 @@ nav {
 
 .ctMenu li:hover {
     background-color: #ff2627;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: all 0.6s ease;
+
+
 }
 
 .ctMenu li:hover .ctIcon,
@@ -269,19 +276,8 @@ nav {
     border-radius: 50%;
 }
 
-@keyframes navAnimation {
-    0% {
-        transform: translateY(-100px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
 .nav {
     top: 0;
     position: fixed;
     z-index: 101;
-    animation: navAnimation 0.5s ease ;
 }
