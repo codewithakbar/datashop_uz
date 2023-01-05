@@ -276,8 +276,18 @@ nav {
     border-radius: 50%;
 }
 
+@keyframes navAnimation {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .nav {
     top: 0;
     position: fixed;
     z-index: 101;
+    animation: navAnimation 0.5s ease ;
 }
