@@ -42,7 +42,7 @@ function Navbar({AddLaptop , AddMonitor , AddSmartfon , AddAksesuar , setFotChan
     const scrollFixed = () => {
         const scrol = window.scrollY;
 
-        if(scrol > 200) {
+        if(scrol > 0) {
             setScrolled('nav');
         } else{
             setScrolled(false);

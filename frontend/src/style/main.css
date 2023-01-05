@@ -52,8 +52,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 26px;
+    justify-content: flex-start;
+    gap: 50px;
 }
 
 .laptop {
