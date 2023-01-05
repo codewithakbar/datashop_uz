@@ -18,6 +18,7 @@ import { MdOutlineNavigateNext } from 'react-icons/md'
 import Pr from './Pr'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
+import izbIcon from '../media/izb.svg'
 
 
 function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange, addKorzinka }) {
@@ -100,6 +101,7 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                     </div>
                     <div className="navBtns">
                         <Link to='/korzinka' onClick={() => setFotChange('none')}><button><img src={shopIcon} alt="" /> <span>Корзина</span></button></Link>
+                        <Link to='/Избранное'><button><img src={izbIcon} alt="" /> <span>Избранное</span></button></Link>
                         <button onClick={profil}><img src={profilIcon} alt="" /> <span>Профиль</span></button>
                         <span className='kLenght'>{addKorzinka.length}</span>
                         <div className={pr}>

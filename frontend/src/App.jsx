@@ -21,6 +21,7 @@ import Zakaz from './Zakaz/Zakaz';
 import Kabinet from './profil/kabinet';
 import MoyZakaz from './profil/MoyZakaz';
 import Xabar from './profil/Xabar';
+import Izb from './izbronoe/Izb'
 
 
 function App() {
@@ -252,6 +253,7 @@ function AddAksesuar() {
           <Route path='/kabinet' element={<Kabinet />} />
           <Route path='/profilZakaz' element={<MoyZakaz />} />
           <Route path='/xabar' element={<Xabar />} />
+          <Route path='/Избранное' element={<Izb/>} />
         </Routes>
         <Footer fotChange={fotChange}/>
       </BrowserRouter>
