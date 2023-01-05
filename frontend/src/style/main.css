@@ -53,7 +53,7 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    gap: 50px;
+    gap: 60px;
 }
 
 .laptop {
