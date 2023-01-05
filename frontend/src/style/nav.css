@@ -291,3 +291,58 @@ nav {
     z-index: 101;
     animation: navAnimation 0.5s ease ;
 }
+.navProfil{
+    display: none!important;
+    position: absolute;
+    top: 45px;
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 19px;
+    gap: 15px;
+    width: 180px;
+    height: 188px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px 0px 5px 5px;
+}
+.profilPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+.profilPage span{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #3C3C3C;
+    width: 100%;
+    padding: 1px 2px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+.profilPage span:hover{
+        
+   transform: translateX(5px);
+}
+.profilTitle{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3C3C3C;
+    border-bottom: 1px solid #666363;
+    padding: 5px;
+}
+.pr{
+    display: flex!important;
+}
