@@ -544,7 +544,7 @@ input[type=range]:focus::-ms-fill-upper {
   width: 362px;
   height: 69px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-  animation: animateSaveBar 1s ease;
+  animation: animateSaveBar 0.3s ease-in-out;
 }
 
 .saveK::after {
