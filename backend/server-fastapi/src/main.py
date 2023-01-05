@@ -7,6 +7,8 @@ from models import (
     business_pydanticIn, user_pydanticOut
 )
 
+from fastapi.encoders import jsonable_encoder
+
 # signals
 from tortoise.signals import  post_save 
 from typing import List, Optional, Type
@@ -27,6 +29,9 @@ from emails import *
 from authentication import *
 from dotenv import dotenv_values
 import math
+
+from pydantic import BaseModel
+
 
 # user image uploads
 #  pip install python-multipart
@@ -52,6 +57,13 @@ config_credentials = dict(dotenv_values(".env"))
 
 app = FastAPI()
 
+
+admin_user = {
+    "username": "admin",
+    "password": "kali"
+}
+
+
 origins = [
     "http://admin.datashop.uz",
     "https://admin.datashop.uz",
@@ -67,12 +79,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+ACCESS_TOKEN_EXPIRE_MINUTES = 800
+
+
+class LoginItem(BaseModel):
+    username: str
+    password: str
+
 # static files
 # pip install aiofiles
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # authorization configs
 oath2_scheme = OAuth2PasswordBearer(tokenUrl = 'token')
+
+
+
 
 # password helper functions
 @app.post('/token')
@@ -164,6 +186,19 @@ async def user_login(user: user_pydantic = Depends(get_current_user)):
             }
 
 
+@app.post("/login")
+async def login_user(login_item: LoginItem):
+
+    data = jsonable_encoder(login_item)
+    if admin_user['username'] == data['username'] and admin_user['username'] == data['username']:
+        encoded_jwt = jwt.encode(data, config_credentials["SECRET"], algorithm="HS256")
+        return {'token': encoded_jwt }
+    else:
+        return {'message': 'Login failed'}
+
+
+
+
 @app.post("/products")
 async def add_new_product(product: product_pydanticIn, 
                             user: user_pydantic = Depends(get_current_user)):
@@ -253,7 +288,7 @@ async def create_upload_file(file: UploadFile = File(...),
     business = await Business.get(owner = user)
     owner = await business.owner
 
- # check if the user making the request is authenticated
+    # check if the user making the request is authenticated
     print(user.id)
     print(owner.id)
     if owner == user:
