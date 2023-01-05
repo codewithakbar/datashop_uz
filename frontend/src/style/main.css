@@ -390,10 +390,15 @@ main {
 	}
 }
 .goShopBtnClose {
-    transition: all 0.5s ease;
+    width: 156px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50px;
-    left: 50px;
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease;
     gap: 10px;
     padding: 10px 20px;
     border: 2px solid #E81D1C;
@@ -408,8 +413,9 @@ main {
     background-color: #e81c1c;
     border-radius: 6px;
     z-index: 100;
+    display: none;
   }
-  
+
   .laptopImg {
     transition: all 0.5s ease;
   
@@ -417,7 +423,6 @@ main {
   }
   .laptopImg:hover .goShopBtnClose {
     transition: all 0.5s ease;
-  
     display: flex;
     justify-content: center;
     align-items: center;

@@ -13,7 +13,7 @@ nav {
     padding: 10px 0px;
     background-color: #ff201f;
     color: #FFFFFF;
-    z-index: 100;
+    z-index: 101;
 }
 
 .navTopRight {
@@ -53,7 +53,7 @@ nav {
 .nav-b {
     width: 100%;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.104);
-    z-index: 100;
+    z-index: 101;
     background-color: white;
 }
 
@@ -150,6 +150,7 @@ nav {
     -moz-box-shadow: 4px 36px 30px -5px rgba(0, 0, 0, 0.11);
     box-shadow: 4px 36px 30px -5px rgba(0, 0, 0, 0.11);
     transition: transform 0.3s ;
+    z-index: 100;
 }
 
 .categoryCon {
