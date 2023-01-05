@@ -5,7 +5,7 @@
     align-items: flex-start;
     gap: 30px;
     width: 1440px;
-    margin: auto;
+    margin: 30px auto;
 }
 .kabinetProfil{
     display: flex;
@@ -20,7 +20,7 @@
     border-radius: 5px;
     padding: 10px 20px;
 }
-.kabinetProfil span{
+.kabinetUserIcon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,10 +29,95 @@
     font-size: 16px;
     line-height: 19px;
     color: #3C3C3C;
+    transition: all 0.5s ease;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid transparent;
+    padding: 2px 5px;
 }
-.kabinetProfil span img{
+
+.kabinetUserIcon img{
     width: 20px;
 }
-.kabinetUserIcon{
+.red{
     color: #E81D1C;
+    cursor: pointer;
+    border: 1px solid #9593932f;
+}
+
+
+.kabinetInfo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 150px;
+}
+
+.kabinetRegiser{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+}
+.registerTel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+}
+.registerTitle{
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    color: #3C3C3C;
+}
+.inputFic{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+.inputFic span{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    color: #636363;
+}
+.userInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.input{
+    width: 270px;
+    height: 50px;
+    left: 510px;
+    top: 371px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+    padding: 20px;
+}
+.telInput{
+    width: 560px;
+    height: 50px;
+    left: 510px;
+    top: 267px;
+    border: 1px solid #BCBCBC;
+    border-radius: 3px;
+}
+.saveButton{
+    width: 560px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    background: #E81D1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

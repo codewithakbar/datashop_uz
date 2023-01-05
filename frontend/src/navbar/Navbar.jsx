@@ -6,7 +6,7 @@ import { HiOutlineSearch } from 'react-icons/hi'
 import shopIcon from '../media/shopIcon.svg'
 import profilIcon from '../media/profilIcon.svg'
 import profilIcon1 from '../media/Vector.png'
-import profilIcon2 from '../media/boxtick.png'
+import profilIcon2 from '../media/boxtick3.png'
 import profilIcon3 from '../media/bell.png'
 import profilIcon4 from '../media/x-circle.png'
 import { useState } from 'react'
@@ -106,8 +106,8 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                             <p className="profilTitle">Name</p>
                             <div className="profilPage">
                             <Link to='/kabinet'><span><img src={profilIcon1} alt="" /> Личный кабинет</span></Link>
-                            <Link to='/'><span><img src={profilIcon2} alt="" /> Мои заказы</span></Link>
-                            <Link to='/'><span><img src={profilIcon3} alt="" /> Уведомления </span></Link>
+                            <Link to='/profilZakaz'><span><img src={profilIcon2} alt="" /> Мои заказы</span></Link>
+                            <Link to='/xabar'><span><img src={profilIcon3} alt="" /> Уведомления </span></Link>
                             <Link to='/'><span><img src={profilIcon4} alt="" /> Выйти </span></Link>
                             </div>
 

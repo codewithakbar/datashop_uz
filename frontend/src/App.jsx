@@ -19,6 +19,8 @@ import m4 from './texnoimg/m4.png'
 import Korzinka from './Korzina/Korzina';
 import Zakaz from './Zakaz/Zakaz';
 import Kabinet from './profil/kabinet';
+import MoyZakaz from './profil/MoyZakaz';
+import Xabar from './profil/Xabar';
 
 
 function App() {
@@ -248,6 +250,8 @@ function AddAksesuar() {
           <Route path='/korzinka' element={<Korzinka addKorzinka={addKorzinka} Delete={Delete} setAddKorzinka={setAddKorzinka}/>} />
           <Route path='/zakaz' element={<Zakaz />} />
           <Route path='/kabinet' element={<Kabinet />} />
+          <Route path='/profilZakaz' element={<MoyZakaz />} />
+          <Route path='/xabar' element={<Xabar />} />
         </Routes>
         <Footer fotChange={fotChange}/>
       </BrowserRouter>
