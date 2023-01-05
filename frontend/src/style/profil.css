@@ -1,0 +1,38 @@
+.Kabinet{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 1440px;
+    margin: auto;
+}
+.kabinetProfil{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    width: 270px;
+    height: 156px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.kabinetProfil span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3C3C3C;
+}
+.kabinetProfil span img{
+    width: 20px;
+}
+.kabinetUserIcon{
+    color: #E81D1C;
+}

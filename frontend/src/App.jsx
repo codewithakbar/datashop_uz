@@ -18,7 +18,7 @@ import m3 from './texnoimg/m3.png'
 import m4 from './texnoimg/m4.png'
 import Korzinka from './Korzina/Korzina';
 import Zakaz from './Zakaz/Zakaz';
-
+import Kabinet from './profil/kabinet';
 
 
 function App() {
@@ -247,6 +247,7 @@ function AddAksesuar() {
           <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} FilterAdd={FilterAdd}/>} />
           <Route path='/korzinka' element={<Korzinka addKorzinka={addKorzinka} Delete={Delete} setAddKorzinka={setAddKorzinka}/>} />
           <Route path='/zakaz' element={<Zakaz />} />
+          <Route path='/kabinet' element={<Kabinet />} />
         </Routes>
         <Footer fotChange={fotChange}/>
       </BrowserRouter>

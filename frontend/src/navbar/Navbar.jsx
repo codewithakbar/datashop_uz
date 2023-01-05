@@ -105,10 +105,10 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                         <div className={pr}>
                             <p className="profilTitle">Name</p>
                             <div className="profilPage">
-                                <span><img src={profilIcon1} alt="" /> Личный кабинет</span>
-                                <span><img src={profilIcon2} alt="" /> Мои заказы</span>
-                                <span><img src={profilIcon3} alt="" /> Уведомления </span>
-                                <span><img src={profilIcon4} alt="" /> Выйти </span>
+                            <Link to='/kabinet'><span><img src={profilIcon1} alt="" /> Личный кабинет</span></Link>
+                            <Link to='/'><span><img src={profilIcon2} alt="" /> Мои заказы</span></Link>
+                            <Link to='/'><span><img src={profilIcon3} alt="" /> Уведомления </span></Link>
+                            <Link to='/'><span><img src={profilIcon4} alt="" /> Выйти </span></Link>
                             </div>
 
                         </div>
