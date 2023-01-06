@@ -346,3 +346,81 @@ nav {
 .pr{
     display: flex!important;
 }
+
+/* none bolib duradon narsalar === START */
+.navBtnsRes {
+    display: none;
+}
+.menuBtn  {
+    display: none;
+}
+
+/* none bolib duradon narsalar === END */
+
+/* Respansive mobile ============================================ START*/
+
+@media screen  and  (max-width : 414px) and (min-width: 360px) {
+    .navTop {
+        display: none;
+    }
+    .CategoryBtn {
+        display: none;
+    }
+    .dataLogo {
+        width: 150px;
+    }
+    .nav-b {
+        height: 80px;
+    }
+    .navBottom {
+        padding-top: 25px;
+        padding-left: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 5px;
+    }
+    .navBtns {
+        display: none;
+    }
+    .navBtnsRes {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .navBtnsRes button {
+        border: none;
+        background: none;
+    }
+    .LogoBtnCon {
+        display: flex;
+        justify-content: space-between;
+        gap: 80px;
+    }
+    .navSearch {
+        width: 300px;
+        height: 30px;
+        border-radius: 10px;
+    }
+    .navSearch button {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        height: 30px;
+    }
+    .navSearchBtn {
+        size: 10px;
+    }
+    .menuBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: none;
+        font-size: 25px;
+    }
+    .resMenuSearchCon {
+        display: flex;
+        gap: 5px;
+    }
+}

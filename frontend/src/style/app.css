@@ -28,21 +28,6 @@ body {
     width: 1140px;
   }
 }
-@media screen  and  (max-width : 768px) {
-  .laptops{
-      width: 580px;
-      padding: 10px 15px;
-      transform: scale(90%);
-  }
-  .laptopsHeaader{
-    width: 580px;
-    padding: 10px 15px;
-  }
-
-  .laptopsHeaader button h3 {
-    display: none;
-  }
-}
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
@@ -56,4 +41,13 @@ body {
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #ff2627; 
+  }
+
+  @media screen  and  (max-width : 414px) and (min-width: 360px) {
+
+    .container {
+      width: 100%;
+      margin: auto;
+    }
+
   }
