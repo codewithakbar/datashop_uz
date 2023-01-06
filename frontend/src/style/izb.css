@@ -1,0 +1,44 @@
+.izb {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.izbCon {
+    width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap:  40px;
+}
+.izbHeadLinks {
+    display: flex;
+}
+
+.izbHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.izbTitle {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.izbTitle h1 {
+    color:  #3C3C3C;
+}
+
+.izbTitle span{
+    border-bottom: 1px solid;
+    color: #5E5E5E;
+}
+
+
+.izbMain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}

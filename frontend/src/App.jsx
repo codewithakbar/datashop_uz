@@ -253,7 +253,7 @@ function AddAksesuar() {
           <Route path='/kabinet' element={<Kabinet />} />
           <Route path='/profilZakaz' element={<MoyZakaz />} />
           <Route path='/xabar' element={<Xabar />} />
-          <Route path='/Избранное' element={<Izb/>} />
+          <Route path='/Избранное' element={<Izb add={add} laptops={laptops}/>} />
         </Routes>
         <Footer fotChange={fotChange}/>
       </BrowserRouter>

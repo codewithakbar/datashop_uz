@@ -10,6 +10,7 @@ import './style/shop.css'
 import './style/korzinka.css'
 import './style/zakaz.css'
 import './style/profil.css'
+import './style/izb.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
