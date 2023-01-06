@@ -32,6 +32,7 @@ body {
   .laptops{
       width: 580px;
       padding: 10px 15px;
+      transform: scale(90%);
   }
   .laptopsHeaader{
     width: 580px;
