@@ -295,7 +295,7 @@ nav {
     display: none!important;
     position: absolute;
     top: 45px;
-    right: 60px;
+    right: 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
