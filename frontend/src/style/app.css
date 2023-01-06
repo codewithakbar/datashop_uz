@@ -30,13 +30,11 @@ body {
 }
 @media screen  and  (max-width : 768px) {
   .laptops{
-      width: 375px;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      width: 580px;
+      padding: 10px 15px;
   }
   .laptopsHeaader{
-    width: 375px;
+    width: 580px;
     padding: 10px 15px;
   }
 
