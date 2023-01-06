@@ -28,6 +28,22 @@ body {
     width: 1140px;
   }
 }
+@media screen  and  (max-width : 768px) {
+  .laptops{
+      width: 375px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .laptopsHeaader{
+    width: 375px;
+    padding: 10px 15px;
+  }
+
+  .laptopsHeaader button h3 {
+    display: none;
+  }
+}
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
