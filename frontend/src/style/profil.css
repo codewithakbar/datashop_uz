@@ -121,3 +121,90 @@
     justify-content: center;
     align-items: center;
 }
+/* MoyZakaz */
+
+.numList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    height: 56px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3C3C3C;
+    padding: 20px;
+
+}
+
+.moyZakaz{
+    gap: 25px;
+}
+
+.listPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.pageZakaz{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 847px;
+    height: 56px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(3, 0, 71, 0.09);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.zakazNum{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    color: #2B3445;
+}
+
+.zakazStatus{
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    color: #0F3460;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 10px;
+    width: 78px;
+    height: 22px;
+    background: #F3F6F9;
+    border-radius: 15px;
+}
+
+
+.zakazData{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #2B3445;
+}
+
+.zakazSum{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #2B3445;
+}
+
+.dostavlene{
+    color: #33D067;
+    background: #E7F9ED;
+}
+
+.otmena{
+    color: #E81D1C;
+    background: #FCE9EC;
+}
