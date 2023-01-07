@@ -22,7 +22,20 @@ export default function Kabinet() {
                         <span className="xabarData">26-10-2022</span>
                         <h1 className="xabarTitle">С новым 2023 годом!</h1>
                         <p className="xabarText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and <br /> scrambled it ...</p>
-                        <IoIosCloseCircle color='' size={'200px'}/>
+                       
+                    </div>
+
+                    <div className="infoXabar">
+                        <span className="xabarData">26-10-2022</span>
+                        <h1 className="xabarTitle">С новым 2023 годом!</h1>
+                        <p className="xabarText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and <br /> scrambled it ...</p>
+                    </div>
+
+                    <div className="infoXabar">
+                        <span className="xabarData">26-10-2022</span>
+                        <h1 className="xabarTitle">С новым 2023 годом!</h1>
+                        <p className="xabarText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and <br /> scrambled it ...</p>
+                       
                     </div>
                 </div>
             </div>

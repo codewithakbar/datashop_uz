@@ -119,20 +119,19 @@ export default function Zakaz() {
                             <span>Область</span>
                             <select name="Viloyat">
                                 <option selected disabled hidden value="">Выберите область</option>
-                                <option value="">Toshkent</option>
-                                <option value="">Samarqand</option>
-                                <option value="">Buxoro</option>
-                                <option value=""></option>
+                                <option value="">Xorazm</option>
                             </select>
                         </div>
                         <div className="select">
                             <span>Город</span>
                             <select name="Viloyat">
                                 <option selected disabled hidden value="">Выберите город</option>
-                                <option value="">Toshkent</option>
-                                <option value="">Samarqand</option>
-                                <option value="">Buxoro</option>
-                                <option value=""></option>
+                                <option value="">Shovot</option>
+                                <option value="">Urganch</option>
+                                <option value="">Gurllan</option>
+                                <option value="">Xonqa</option>
+                                <option value="">Qo'shko'pir</option>
+                                <option value="">Yangiarik</option>
                             </select>
                         </div>
                         <div className="select ZakazInput">
