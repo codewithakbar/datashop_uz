@@ -45,7 +45,9 @@ body {
   }
 
   @media screen  and  (max-width : 414px) and (min-width: 360px) {
-
+    * {
+      
+    }
     .container {
       width: 100%;
     }

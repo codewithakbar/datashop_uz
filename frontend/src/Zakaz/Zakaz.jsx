@@ -158,19 +158,19 @@ export default function Zakaz() {
                 <div className="ZakazRes">
                     <h1>4. Контактное имя</h1>
                     <div className="inputs">
-                        <div className="input">
+                        <div className="Kinput">
                             <span>Имя</span>
                             <input type="text" placeholder="Введите Имя" />
                         </div>
-                        <div className="input">
+                        <div className="Kinput">
                             <span>Фамилия</span>
                             <input type="text" placeholder="Введите Фамилия" />
                         </div>
-                        <div className="input">
+                        <div className="Kinput">
                             <span>Телефон</span>
                             <input type="text" placeholder="Введите Телефон" />
                         </div>
-                        <div className="input">
+                        <div className="Kinput">
                             <span>Дополнительный телефон</span>
                             <input type="text" placeholder="Введите Дополнительный телефон"/>
                         </div>

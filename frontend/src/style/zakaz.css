@@ -164,14 +164,14 @@ margin: auto;
     gap: 20px;
     width: 600px;
 }
-.input{
+.Kinput{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 15px;
 }
-.input input{
+.Kinput input{
     width: 270px;
     height: 50px;
     border: 1px solid #BCBCBC;
@@ -180,7 +180,7 @@ margin: auto;
     color: black;
     padding: 5px;
 }
-.input span{
+.Kinput span{
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
