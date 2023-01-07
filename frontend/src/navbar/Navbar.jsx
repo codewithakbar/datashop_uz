@@ -20,6 +20,7 @@ import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import izbIcon from '../media/izb.svg'
 import {CgMenu} from 'react-icons/cg'
+import {FiPhone} from 'react-icons/fi'
 
 
 function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange, addKorzinka }) {
@@ -99,12 +100,10 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                         <Link to='/' onClick={() => setFotChange('')}><img className='dataLogo' src={DataLogo} /></Link>
                     </div>
                     <button onClick={addCategory} className="CategoryBtn">{icon} Категория</button>
-                    <div className="resMenuSearchCon">
                         <div className="navSearch">
                             <input type="text" placeholder='Введите запрос...' />
                             <button className='navSearchBtn'><HiOutlineSearch color='#ffffff' size='24px' /></button>
                         </div>
-                    </div>
                     <div className="navBtns">
                         <Link to='/korzinka' onClick={() => setFotChange('none')}><button><img src={shopIcon} alt="" /> <span>Корзина</span></button></Link>
                         <Link to='/Избранное'><button><img src={izbIcon} alt="" /> <span>Избранное</span></button></Link>
@@ -132,6 +131,28 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                     </ul>
                     <div className="ctInfo">
                         <Pr AddSmartfon={AddSmartfon} AddAksesuar={AddAksesuar} AddMonitor={AddMonitor} st={st} setSt={setSt} addCategory={addCategory} AddLaptop={AddLaptop} />
+                    </div>
+                </div>
+            </div>
+            <div className="navRes">
+                <div className="navResTop">
+                    <Link to='/' onClick={() => setFotChange('')}><img className='dataLogo' src={DataLogo} /></Link>
+                    <div className="navResTopBtn">
+                        <FiPhone size={'18px'}/>
+                        <div className="til">
+                            <img src={uzbFlag} alt="" />
+                            <select name="Til" id="" className='navSec'>
+                                <option value="uzb">UZB</option>
+                                <option value="rus">RUS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div className="navResBottom">
+                    <button onClick={addCategory} className="CategoryBtn">{icon}</button>
+                    <div className="navSearch">
+                        <input type="text" />
+                        <button className='navSearchBtn'><HiOutlineSearch color='#ffffff' size='20px' /></button>
                     </div>
                 </div>
             </div>

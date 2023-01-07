@@ -5,11 +5,9 @@ header {
     gap: 22px;
 }
 
-
 /* swiber */
 
 .swiper {
-
     width: 1440px;
     height: 392px;
   }
@@ -57,9 +55,6 @@ header {
     display: block;
     object-fit: cover;
   }
-
-
-
 
   .headTexnoInfo {
     display: flex;
@@ -164,12 +159,67 @@ header {
     height: 120px;
     justify-content: space-between;
   }
-
-
 }
+
+.mySwiper2 {
+  display: none;
+}
+
 
 /* Respansive mobile ============================================ START*/
 
 @media screen  and  (max-width : 414px) and (min-width: 360px) { 
-  
+    .swiper {
+      width: 100%;
+      height: 181px;
+      padding: 0px 10px;
+    }
+    .swiper img{
+      width: 198px;
+    }
+    .headTexnoInfo{
+      padding-left: 10px;
+    }
+    .headTexnoInfo-name {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 27px;
+      color: #FFFFFF;
+    }
+    .headTexnoInfo-info {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #FFFFFF;
+    }
+    .headerCategory {
+      display: none;
+    }
+    .mySwiper2 {
+      width: 100%;
+      height: 80px;
+      display: inline-block;
+      border-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .headerCategory-card {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .headerCategory-img {
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .headerCategory-img img {
+      position: absolute;
+      width: 100px;
+      right: 10px;
+    }
 }
+
+/* Respansive mobile ============================================ END*/

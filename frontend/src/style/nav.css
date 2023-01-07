@@ -347,13 +347,70 @@ nav {
     display: flex!important;
 }
 
-/* none bolib duradon narsalar === START */
-    
-
-/* none bolib duradon narsalar === END */
+/*desktop versiyada none bolib duradon narsalar === START */
+    .navRes {
+        display: none;
+    }
+/*desktop versiyada none bolib duradon narsalar === END */
 
 /* Respansive mobile ============================================ START*/
 
 @media screen  and  (max-width : 414px) and (min-width: 360px) {
-
+    .nav-b {
+        display: none;
+    }
+    .navTop {
+        display: none;
+    }
+    .navRes {
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: white;
+    }
+    .navResTop {
+        width: 100%;
+        padding: 0px 10px;
+        display: flex ;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .dataLogo {
+        width: 11em;
+    }
+    .navResTopBtn {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    .til img{
+        width: 20px;
+    }
+    .til select {
+        color: black;
+        gap: 0;
+    }
+    .navResBottom {
+        width: 100%;
+        padding: 0px 10px;
+        display: flex;
+        gap: 10px;
+    }
+    .CategoryBtn {
+        height: 40px;
+        width: 70px;
+    }
+    .navSearch {
+        height: auto;
+    }
+    .navSearch button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 100%;
+    }
 }
+
+/* Respansive mobile ============================================ END*/

@@ -68,67 +68,92 @@ function Header() {
 
     return (
         <header>
-        <Swiper
-            style={{
-                "--swiper-pagination-color": "#272727",
-                "--swiper-pagination-bullet-inactive-color": "#ffffff",
-                "--swiper-pagination-bullet-inactive-opacity": "1",
-                "--swiper-pagination-bullet-size": "10px",
-                "--swiper-pagination-bullet-horizontal-gap": "6px"
-                }}
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false
-                }}
-                pagination={{
-                  clickable: true
-                }}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper">     
-                <SwiperSlide id="sw1">
-                    <img src={victusHead} alt="" />
-                    <div className="headTexnoInfo">
-                        <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>
-                        <span className="headTexnoInfo-info">СОЗДАН ДЛЯ <span className="text-blacGren">ПРОФЕССИОНАЛОВ</span> ОТ ПРОФЕССИОНАЛОВ</span>
+            <Swiper
+                style={{
+                    "--swiper-pagination-color": "#272727",
+                    "--swiper-pagination-bullet-inactive-color": "#ffffff",
+                    "--swiper-pagination-bullet-inactive-opacity": "1",
+                    "--swiper-pagination-bullet-size": "10px",
+                    "--swiper-pagination-bullet-horizontal-gap": "6px",
+                    }}
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{
+                      delay: 2500,
+                      disableOnInteraction: false
+                    }}
+                    pagination={{
+                      clickable: true
+                    }}
+                    navigation={true}
+                    modules={[Autoplay, Pagination, Navigation]}
+                    className="mySwiper">     
+                    <SwiperSlide id="sw1">
+                        <img src={victusHead} alt="" />
+                        <div className="headTexnoInfo">
+                            <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>
+                            <span className="headTexnoInfo-info">СОЗДАН ДЛЯ <span className="text-blacGren">ПРОФЕССИОНАЛОВ</span> ОТ ПРОФЕССИОНАЛОВ</span>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide id="sw2">
+                        <img src={victusHead} alt="" />
+                        <div className="headTexnoInfo">
+                            <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>
+                            <span className="headTexnoInfo-info">СОЗДАН ДЛЯ <span className="text-blacGren">ПРОФЕССИОНАЛОВ</span> ОТ ПРОФЕССИОНАЛОВ</span>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide id="sw3">
+                        <img src={victusHead} alt="" />
+                        <div className="headTexnoInfo">
+                            <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>
+                            <span className="headTexnoInfo-info">СОЗДАН ДЛЯ <span className="text-blacGren">ПРОФЕССИОНАЛОВ</span> ОТ ПРОФЕССИОНАЛОВ</span>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide id="sw4">
+                        <img src={victusHead} alt="" />
+                        <div className="headTexnoInfo">
+                            <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>
+                            <span className="headTexnoInfo-info">СОЗДАН ДЛЯ <span className="text-blacGren">ПРОФЕССИОНАЛОВ</span> ОТ ПРОФЕССИОНАЛОВ</span>
+                        </div>
+                    </SwiperSlide>
+            </Swiper>
+            <div className="headerCategory">
+                {
+                    Categors.map(category => (
+                    <div className="headerCategory-card" style={{background: category.bc}}>
+                        <h2>{category.name}</h2>
+                        <div className="headerCategory-img">
+                            <img src={category.img} alt="" />
+                        </div>
                     </div>
-                </SwiperSlide>
-                <SwiperSlide id="sw2">
-                    <img src={victusHead} alt="" />
-                    <div className="headTexnoInfo">
-                        <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>
-                        <span className="headTexnoInfo-info">СОЗДАН ДЛЯ <span className="text-blacGren">ПРОФЕССИОНАЛОВ</span> ОТ ПРОФЕССИОНАЛОВ</span>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide id="sw3">
-                    <img src={victusHead} alt="" />
-                    <div className="headTexnoInfo">
-                        <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>
-                        <span className="headTexnoInfo-info">СОЗДАН ДЛЯ <span className="text-blacGren">ПРОФЕССИОНАЛОВ</span> ОТ ПРОФЕССИОНАЛОВ</span>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide id="sw4">
-                    <img src={victusHead} alt="" />
-                    <div className="headTexnoInfo">
-                        <span className="headTexnoInfo-name">HP VICTUS <span className="text-blacGren">15</span></span>
-                        <span className="headTexnoInfo-info">СОЗДАН ДЛЯ <span className="text-blacGren">ПРОФЕССИОНАЛОВ</span> ОТ ПРОФЕССИОНАЛОВ</span>
-                    </div>
-                </SwiperSlide>
-        </Swiper>
-        <div className="headerCategory">
+                    ))
+                }
+            </div>
+            {/* respansive uchun cartegoryalar */}
+            <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[ Navigation]}
+            className="mySwiper mySwiper2"
+            >
             {
                 Categors.map(category => (
-                <div className="headerCategory-card" style={{background: category.bc}}>
-                    <h2>{category.name}</h2>
-                    <div className="headerCategory-img">
-                        <img src={category.img} alt="" />
-                    </div>
-                </div>
+                    <SwiperSlide>
+                        <div className="headerCategory-card" style={{background: category.bc}}>
+                            <h2>{category.name}</h2>
+                            <div className="headerCategory-img">
+                                <img src={category.img} alt="" />
+                            </div>
+                        </div>
+                    </SwiperSlide>
                 ))
             }
-        </div>
+            </Swiper>
         </header>
     )
 }
