@@ -19,6 +19,7 @@ import m4 from './texnoimg/m4.png'
 import Korzinka from './Korzina/Korzina';
 import Zakaz from './Zakaz/Zakaz';
 import Kabinet from './profil/kabinet';
+import Account from './profil/Accaunt';
 import MoyZakaz from './profil/MoyZakaz';
 import Xabar from './profil/Xabar';
 import Izb from './izbronoe/Izb'
@@ -253,6 +254,7 @@ function AddAksesuar() {
           <Route path='/kabinet' element={<Kabinet />} />
           <Route path='/profilZakaz' element={<MoyZakaz />} />
           <Route path='/xabar' element={<Xabar />} />
+          <Route path='/account' element={<Account />} />
           <Route path='/Избранное' element={<Izb add={add} laptops={laptops}/>} />
         </Routes>
         <Footer fotChange={fotChange}/>

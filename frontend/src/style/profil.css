@@ -1,4 +1,4 @@
-.Kabinet{
+.Kabinet {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,7 +8,8 @@
     margin: 30px auto;
 
 }
-.kabinetProfil{
+
+.kabinetProfil {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -20,9 +21,10 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 10px 20px;
-    
+
 }
-.kabinetUserIcon{
+
+.kabinetUserIcon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,17 +40,18 @@
     padding: 2px 5px;
 }
 
-.kabinetUserIcon img{
+.kabinetUserIcon img {
     width: 20px;
 }
-.red{
+
+.red {
     color: #E81D1C;
     cursor: pointer;
     border: 1px solid #9593932f;
 }
 
 
-.kabinetInfo{
+.kabinetInfo {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -56,46 +59,52 @@
     height: 60vh;
 }
 
-.kabinetRegiser{
+.kabinetRegiser {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 40px;
 }
-.registerTel{
+
+.registerTel {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 15px;
 }
-.registerTitle{
+
+.registerTitle {
     font-weight: 600;
     font-size: 26px;
     line-height: 31px;
     color: #3C3C3C;
 }
-.inputFic{
+
+.inputFic {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 10px;
 }
-.inputFic span{
+
+.inputFic span {
     font-weight: 500;
     font-size: 13px;
     line-height: 19px;
     color: #636363;
 }
-.userInfo{
+
+.userInfo {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
 }
-.input{
+
+.input {
     width: 270px;
     height: 50px;
     left: 510px;
@@ -104,7 +113,8 @@
     border-radius: 3px;
     padding: 20px;
 }
-.telInput{
+
+.telInput {
     width: 560px;
     height: 50px;
     left: 510px;
@@ -112,7 +122,8 @@
     border: 1px solid #BCBCBC;
     border-radius: 3px;
 }
-.saveButton{
+
+.saveButton {
     width: 560px;
     height: 50px;
     font-weight: 700;
@@ -124,9 +135,10 @@
     justify-content: center;
     align-items: center;
 }
+
 /* MoyZakaz */
 
-.numList{
+.numList {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -140,11 +152,11 @@
 
 }
 
-.moyZakaz{
+.moyZakaz {
     gap: 25px;
 }
 
-.listPage{
+.listPage {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,7 +164,7 @@
     gap: 20px;
 }
 
-.pageZakaz{
+.pageZakaz {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,14 +176,14 @@
     padding: 20px;
 }
 
-.zakazNum{
+.zakazNum {
     font-weight: 700;
     font-size: 14px;
     line-height: 150%;
     color: #2B3445;
 }
 
-.zakazStatus{
+.zakazStatus {
     font-weight: 600;
     font-size: 10px;
     line-height: 12px;
@@ -188,26 +200,26 @@
 }
 
 
-.zakazData{
+.zakazData {
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
     color: #2B3445;
 }
 
-.zakazSum{
+.zakazSum {
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
     color: #2B3445;
 }
 
-.dostavlene{
+.dostavlene {
     color: #33D067;
     background: #E7F9ED;
 }
 
-.otmena{
+.otmena {
     color: #E81D1C;
     background: #FCE9EC;
 }
@@ -215,7 +227,7 @@
 
 /* Xabar */
 
-.infoXabar{
+.infoXabar {
     width: 847px;
     height: 181px;
     background: #FFFFFF;
@@ -230,7 +242,7 @@
     padding-bottom: 30px;
 }
 
-.xabarData{
+.xabarData {
 
     font-weight: 400;
     font-size: 14px;
@@ -238,16 +250,112 @@
     color: #B0B0B0;
 }
 
-.xabarTitle{
+.xabarTitle {
     font-weight: 500;
     font-size: 22px;
     line-height: 27px;
     color: #3C3C3C;
 }
 
-.xabarText{
+.xabarText {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #737373;
+}
+
+
+/* Account Page */
+
+.Accaunt {
+    width: 1440px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 620px;
+    width: 459px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    border-radius: 5px;
+    gap: 30px;
+}
+
+.accountTitle {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.accountInputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom:1px solid #C1C1C1 ;
+    padding-bottom: 40px;
+}
+
+.inputInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.inputInfo p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+}
+
+.inputIcon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 303px;
+    height: 42px;
+    background: #FFFFFF;
+    border: 1px solid #C1C1C1;
+    padding: 10px;
+}
+
+.inputIcon input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-left: 10px;
+    border-left: 1px solid #C1C1C1;
+}
+
+.login{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+}
+
+.accountbutton{
+    width: 303px;
+    height: 42px;
+    background: #E81D1C;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.accountbutton:hover{
+    background: #b51616;
+
 }
