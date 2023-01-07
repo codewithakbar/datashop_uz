@@ -96,28 +96,10 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
             <div className="nav-b" style={{ boxShadow: noneBorder }}>
                 <div className="navBottom">
                     <div className="LogoBtnCon">
-                    <Link to='/' onClick={() => setFotChange('')}><img className='dataLogo' src={DataLogo} /></Link>
-                    {/* respansive holati uchun navbarda chiqodon konopkala ==== START*/}
-                    <div className="navBtnsRes">
-                        <Link to='/korzinka' onClick={() => setFotChange('none')}><button><img src={shopIcon} alt="" /> </button></Link>
-                        <Link to='/Избранное'><button><img src={izbIcon} alt="" /> </button></Link>
-                        <button onClick={profil}><img src={profilIcon} alt="" /></button>
-                        {/* <span className='kLenght'>{addKorzinka.length}</span> */}
-                        <div className={pr}>
-                            <p className="profilTitle">Name</p>
-                            <div className="profilPage">
-                            <Link to='/kabinet'><span><img src={profilIcon1} alt="" /> Личный кабинет</span></Link>
-                            <Link to='/profilZakaz'><span><img src={profilIcon2} alt="" /> Мои заказы</span></Link>
-                            <Link to='/xabar'><span><img src={profilIcon3} alt="" /> Уведомления </span></Link>
-                            <Link to='/'><span><img src={profilIcon4} alt="" /> Выйти </span></Link>
-                            </div>
-                        </div>
+                        <Link to='/' onClick={() => setFotChange('')}><img className='dataLogo' src={DataLogo} /></Link>
                     </div>
-                    </div>
-                    {/* respansive holati uchun navbarda chiqodon konopkala ==== CLOSE*/}
                     <button onClick={addCategory} className="CategoryBtn">{icon} Категория</button>
                     <div className="resMenuSearchCon">
-                        <button className='menuBtn'><CgMenu /></button>
                         <div className="navSearch">
                             <input type="text" placeholder='Введите запрос...' />
                             <button className='navSearchBtn'><HiOutlineSearch color='#ffffff' size='24px' /></button>
