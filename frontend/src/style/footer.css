@@ -102,3 +102,78 @@ footer {
         width: 1140px;
     }
 }
+
+/* mobile respansive ===================== START  */
+
+@media screen  and  (max-width : 414px) and (min-width: 360px) {
+    footer {
+        padding: 0px 10px;
+        width: 100%;
+        height: 476px;
+        background-color: #E81D1C;
+    }
+    .Footerlogo img {
+        width: 132px;
+    }
+    .footerInfo {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 30px;
+    }
+    .footContact {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .tel label  , .addres label , .email label {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        color: #DBDBDB;
+    }
+
+    .tel h4  , .addres h4 , .email h4  {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+    .footServis {
+        grid-row: 1 ;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .footServis ul  {
+        width: 100%;
+    }
+    .footServis ul li a{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+    .footPay {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    .footPayTitle {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+        color: #DBDBDB;
+    }
+    .payments button {
+        width: 70px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .payments button img {
+        width: 57px;
+    }
+}
+
+/* mobile respansive ===================== END  */
