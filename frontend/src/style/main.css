@@ -194,7 +194,16 @@ main {
     align-items: center;
     justify-content: space-between;
 }
-
+.mySwiper3 {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-wrapper {
+    justify-self: center;
+    align-self: center;
+}
 .brandLogo {
     width: 150px;
     height: 112px;
@@ -204,6 +213,14 @@ main {
     justify-content: center;
     border-radius: 10px;
 }
+.brendCon {
+    height: 0px;
+    width: 0px;
+    border-radius: 20px;
+    align-self: center;
+}
+
+
 .services {
     width: 1440px;
     margin: auto;
@@ -436,6 +453,11 @@ main {
   .lapIcon {
     font-size: 36px;    
 }
+
+.brendContainer {
+    width: 100%;
+    background-color: #E81D1C;
+}
 /* mobile respansive ===================== START  */
 
   @media screen  and  (max-width : 414px) and (min-width: 360px) {
@@ -505,7 +527,34 @@ main {
     .mainFooterLine {
         display: none;
     }
-
+    .brend {
+        width: 100%;
+        height: 105px;
+    }
+    .brandTitle {
+        padding: 0px 10px;
+    }
+    .brend h3 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #3C3C3C;
+    }
+    .brandLogos {
+        width: 100%;
+        height: 105px;   
+    }
+    .joys {
+        width: 100%;
+        height: 105px;
+    }
+    .brandLogo {
+        width: 80px;
+        height: 45px;
+    }
+    .brandLogo img {
+        width: 50px;
+    }
   }
 
   /* mobile respansive ===================== END  */

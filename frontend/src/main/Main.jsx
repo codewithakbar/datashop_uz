@@ -16,6 +16,10 @@ import s6 from '../texnoimg/s6.png'
 import mainFooterImg from '../texnoimg/mainFooterImg.png'
 import googlepaly from '../media/googleplay.svg'
 import appeicon from '../media/apppleicon.svg'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
 
 function Main({ laptops, monitors, add }) {
     const [openShopBtn, setopenShopBtn] = useState('goShopBtnClose')
@@ -97,34 +101,101 @@ function Main({ laptops, monitors, add }) {
                     }
                 </div>
             </div>
-            <div className="brend">
-                <span className="brandTitle">
-                    <BiCategoryAlt size='38px' />
-                    <h3>Бренды</h3>
-                </span>
-                <div className="brandLogos">
-                    <div className="joys">
-                        <div className="brandLogo">
-                            <img src={asusLogo} alt="" />
-                        </div>
-                        <div className="brandLogo">
-                            <img src={asusLogo} alt="" />
-                        </div>
-                        <div className="brandLogo">
-                            <img src={asusLogo} alt="" />
-                        </div>
-                        <div className="brandLogo">
-                            <img src={asusLogo} alt="" />
-                        </div>
-                        <div className="brandLogo">
-                            <img src={asusLogo} alt="" />
-                        </div>
-                        <div className="brandLogo">
-                            <img src={asusLogo} alt="" />
+            <div className="brendContainer">
+                <Swiper
+                style={{
+                    'background':'#E81D1C' ,
+                    'display':'flex',
+                    'flexDirection':'column',
+                    'justifyContent':'center',
+                    'alignItems':'center',
+                    'justifySelf':'center',
+                    'alignSelf':'center'
+                }}
+                slidesPerView={1}
+                spaceBetween={10}
+
+                pagination={{
+                  clickable: true,
+                }}
+                breakpoints={{
+                  "@0.00": {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                  },
+                  "@0.75": {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  "@1.00": {
+                    slidesPerView: 7,
+                    spaceBetween: 20,
+                  },
+                  "@1.50": {
+                    slidesPerView: 7,
+                    spaceBetween: 20,
+                  },
+                }}
+                modules={[Pagination]}
+                className="mySwiper3"
+                > 
+                <div className="brend">
+                    <span className="brandTitle">
+                        <BiCategoryAlt size='38px' />
+                        <h3>Бренды</h3>
+                    </span>
+                    <div className="brandLogos">
+                        <div className="joys">
+                            <SwiperSlide className='brendCon'>
+                                <div className="brandLogo">
+                                    <img src={asusLogo} alt="" />
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide className='brendCon'>
+                                <div className="brandLogo">
+                                    <img src={asusLogo} alt="" />
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide className='brendCon'>
+                                <div className="brandLogo">
+                                    <img src={asusLogo} alt="" />
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide className='brendCon'>
+                                <div className="brandLogo">
+                                    <img src={asusLogo} alt="" />
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide className='brendCon'>
+                                <div className="brandLogo">
+                                    <img src={asusLogo} alt="" />
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide className='brendCon'>
+                                <div className="brandLogo">
+                                    <img src={asusLogo} alt="" />
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide className='brendCon'>
+                                <div className="brandLogo">
+                                    <img src={asusLogo} alt="" />
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide className='brendCon'>
+                                <div className="brandLogo">
+                                    <img src={asusLogo} alt="" />
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide className='brendCon'>
+                                <div className="brandLogo">
+                                    <img src={asusLogo} alt="" />
+                                </div>
+                            </SwiperSlide>
                         </div>
                     </div>
                 </div>
-            </div>
+                </Swiper>
+            </div>   
             <div className="services">
                 <span className="brandTitle">
                     <BiCategoryAlt size='38px' />

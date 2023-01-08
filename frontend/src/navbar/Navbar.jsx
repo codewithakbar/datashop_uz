@@ -71,8 +71,23 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
         window.addEventListener('scroll', scrollFixed)
     })
     // navbar fixed function ==============================
+    // navbar respansive uchun fixed START ======================
+    const [scrolledRes, setScrolledRes] = useState('navResBottom');
 
+    const scrollFixedRes = () => {
+        const scrol = window.scrollY;
 
+        if (scrol > 100) {
+            setScrolled('nav');
+        } else {
+            setScrolled(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', scrollFixedRes)
+    })
+    // navbar respansive uchun fixed END ======================
 
     return (
         <nav className={scrolled}>
@@ -148,7 +163,7 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                         </div>
                     </div>
                 </div>
-                <div className="navResBottom">
+                <div className={scrolledRes}>
                     <button onClick={addCategory} className="CategoryBtn">{icon}</button>
                     <div className="navSearch">
                         <input type="text" />
