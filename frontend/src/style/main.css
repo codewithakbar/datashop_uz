@@ -487,6 +487,18 @@ main {
         line-height: 15px;
         color: #000000;
     }
+    #productPrice {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        color: #3C3C3C;
+    }
+    .goShopBtnClose {
+        width: 120px;
+        height: 30px;
+        top: 30px;
+        font-size: 12px;
+    }
   }
 
   /* mobile respansive ===================== END  */

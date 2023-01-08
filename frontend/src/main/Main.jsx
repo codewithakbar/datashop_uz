@@ -49,7 +49,7 @@ function Main({ laptops, monitors, add }) {
                                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
                                                         <AiOutlineStar className='evaCompanent' color='#E81D1C' />
                                                     </div>
-                                                    <span className='price'>{laptop.prise}00 000 UZS</span>
+                                                    <span id='productPrice' className='price'>{laptop.prise}00 000 UZS</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -161,7 +161,6 @@ function Main({ laptops, monitors, add }) {
                                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                                     <img src={laptop.img} alt="" />
                                                     <Link to='/laptop' onClick={() => add({ img: laptop.img })}>  <button className="goShopBtnClose"><FiShoppingCart />В корзину</button> </Link>
-
                                                 </div>
                                                 <div className="laptopInfo">
                                                     <span>{laptop.name}</span>
