@@ -433,4 +433,60 @@ main {
     transition: all 0.5s ease;
     filter: blur(2px);
   }
-  
+  .lapIcon {
+    font-size: 36px;    
+}
+/* mobile respansive ===================== START  */
+
+  @media screen  and  (max-width : 414px) and (min-width: 360px) {
+
+    .mainlaptops {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .laptopsHeaader {
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .laptopsHeaader span h3 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #3C3C3C;
+    }
+    .laptopsHeaader button h3 {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: right;
+        color: #3C3C3C;
+    }
+    .lapIcon {
+        font-size: 30px;
+    }
+    .laptops {
+        padding: 0px 10px;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    .laptop {
+        width: 168px;
+        height: 230px;
+    }
+    .laptop img {
+        width: 105px;
+    }
+    .laptopInfo {
+        padding: 0px 10px;
+    }
+    .laptopInfo span {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #000000;
+    }
+  }
+
+  /* mobile respansive ===================== END  */

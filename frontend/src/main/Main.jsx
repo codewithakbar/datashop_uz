@@ -25,8 +25,8 @@ function Main({ laptops, monitors, add }) {
         <main>
             <div className="mainlaptops">
                 <div className="laptopsHeaader">
-                    <span><BsLaptop size='36px' color='#3C3C3C' /><h3>Ноутбуки</h3></span>
-                    <button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px' /></button>
+                    <span><BsLaptop className='lapIcon'  color='#3C3C3C' /><h3>Ноутбуки</h3></span>
+                    <button><h3>Смотреть еще</h3> <GrFormNextLink className='lapIcon' color='#3C3C3C' /></button>
                 </div>
                 <div className="laptops">
                     {
@@ -41,7 +41,7 @@ function Main({ laptops, monitors, add }) {
                                                     <img src={laptop.img} alt="" />
                                                 </div>
                                                 <div className="laptopInfo">
-                                                    <Link to='/laptop'>  <span>{laptop.name}</span></Link>
+                                                    <Link to='/laptop'>  <span className='lapName'>{laptop.name}</span></Link>
                                                     <div className="eva">
                                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
                                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
