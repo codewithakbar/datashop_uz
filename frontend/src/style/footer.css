@@ -113,6 +113,7 @@ footer {
         background-color: #E81D1C;
     }
     .Footerlogo img {
+        padding-top: 50px;
         width: 132px;
     }
     .footerInfo {
