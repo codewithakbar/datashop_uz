@@ -447,7 +447,7 @@ main {
 
     .laptopsHeaader {
         width: 100%;
-        padding: 0px 10px;
+        padding: 0px 20px;
     }
     .laptopsHeaader span h3 {
         font-weight: 600;
@@ -466,6 +466,7 @@ main {
         font-size: 30px;
     }
     .laptops {
+        width: 100%;
         padding: 0px 10px;
         gap: 10px;
         display: grid;
@@ -474,6 +475,8 @@ main {
     .laptop {
         width: 168px;
         height: 230px;
+        justify-self: center;
+        align-self: center;
     }
     .laptop img {
         width: 105px;
@@ -499,6 +502,10 @@ main {
         top: 30px;
         font-size: 12px;
     }
+    .mainFooterLine {
+        display: none;
+    }
+
   }
 
   /* mobile respansive ===================== END  */

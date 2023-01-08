@@ -86,7 +86,7 @@ function Main({ laptops, monitors, add }) {
                                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
                                                         <AiOutlineStar className='evaCompanent' color='#E81D1C' />
                                                     </div>
-                                                    <span className='price'>{monitor.prise}00 000 UZS</span>
+                                                    <span className='price' id='productPrice'>{monitor.prise}00 000 UZS</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -171,7 +171,7 @@ function Main({ laptops, monitors, add }) {
                                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
                                                         <AiOutlineStar className='evaCompanent' color='#E81D1C' />
                                                     </div>
-                                                    <span className='price'>{laptop.prise}00 000 UZS</span>
+                                                    <span className='price' id='productPrice'>{laptop.prise}00 000 UZS</span>
                                                 </div>
                                             </div>
                                         </div>
