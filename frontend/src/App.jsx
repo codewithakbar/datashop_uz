@@ -23,6 +23,11 @@ import Account from './profil/Accaunt';
 import MoyZakaz from './profil/MoyZakaz';
 import Xabar from './profil/Xabar';
 import Izb from './izbronoe/Izb'
+// booto bar uchun icoon ================= START
+import {FiHome , FiShoppingCart} from 'react-icons/fi'
+import {AiOutlineStar} from 'react-icons/ai'
+import {RxPerson} from 'react-icons/rx'
+// booto bar uchun icoon ================= END
 
 
 function App() {
@@ -258,6 +263,24 @@ function AddAksesuar() {
           <Route path='/Избранное' element={<Izb add={add} laptops={laptops}/>} />
         </Routes>
         <Footer fotChange={fotChange}/>
+        <div className="bottomBar">
+          <button>
+            <FiHome size={'18px'}/>
+            <span>Главная</span>
+          </button>
+          <button>
+            <AiOutlineStar size={'18px'}/>
+            <span>Избранное</span>
+          </button>
+          <button>
+            <FiShoppingCart size={'18px'}/>
+            <span>Корзина</span>
+          </button>
+          <button>
+            <RxPerson size={'18px'}/>
+            <span>Профиль</span>
+          </button>
+        </div>
       </BrowserRouter>
     </>
   );

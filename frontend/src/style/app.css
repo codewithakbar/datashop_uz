@@ -43,12 +43,41 @@ body {
   ::-webkit-scrollbar-thumb {
     background: #ff2627; 
   }
+  .bottomBar {
+    display: none;
+  }
 
   @media screen  and  (max-width : 414px) and (min-width: 360px) {
     * {
-      
+      max-width: 100%;
     }
     .container {
       width: 100%;
+    }
+    .bottomBar {
+      width: 100%;
+      height: 71px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #E81D1C;
+      position: fixed;
+      top: 90vh;
+      z-index: 100;
+      padding: 0px 10px;
+    }
+    .bottomBar button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      gap: 5px;
+      cursor: pointer;
     }
   }
