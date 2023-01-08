@@ -264,22 +264,22 @@ function AddAksesuar() {
         </Routes>
         <Footer fotChange={fotChange}/>
         <div className="bottomBar">
-          <button>
+          <Link to='/'><button>
             <FiHome size={'18px'}/>
             <span>Главная</span>
-          </button>
-          <button>
+          </button></Link>
+          <Link to='/Избранное'><button>
             <AiOutlineStar size={'18px'}/>
             <span>Избранное</span>
-          </button>
-          <button>
+          </button></Link>
+          <Link to='/korzinka'><button>
             <FiShoppingCart size={'18px'}/>
             <span>Корзина</span>
-          </button>
-          <button>
+          </button></Link>
+          <Link to='/account'><button>
             <RxPerson size={'18px'}/>
             <span>Профиль</span>
-          </button>
+          </button></Link>
         </div>
       </BrowserRouter>
     </>
