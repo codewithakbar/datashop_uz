@@ -19,7 +19,7 @@ import appeicon from '../media/apppleicon.svg'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import { Pagination , Navigation , Autoplay } from "swiper";
 
 function Main({ laptops, monitors, add }) {
     const [openShopBtn, setopenShopBtn] = useState('goShopBtnClose')
@@ -66,7 +66,7 @@ function Main({ laptops, monitors, add }) {
             </div>
             <div className="mainlaptops">
                 <div className="laptopsHeaader">
-                    <span><FiMonitor size='36px' color='#3C3C3C' /><h3>Мониторы</h3></span>
+                    <span><FiMonitor className='lapIcon' color='#3C3C3C' /><h3>Мониторы</h3></span>
                     <button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px' /></button>
                 </div>
                 <div className="laptops">
@@ -101,6 +101,10 @@ function Main({ laptops, monitors, add }) {
                     }
                 </div>
             </div>
+            <span className="brandTitle">
+                <BiCategoryAlt className='lapIcon' />
+                <h3 className='brandName'>Бренды</h3>
+            </span>
             <div className="brendContainer">
                 <Swiper
                 style={{
@@ -114,7 +118,10 @@ function Main({ laptops, monitors, add }) {
                 }}
                 slidesPerView={1}
                 spaceBetween={10}
-
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false
+                }}
                 pagination={{
                   clickable: true,
                 }}
@@ -136,14 +143,10 @@ function Main({ laptops, monitors, add }) {
                     spaceBetween: 20,
                   },
                 }}
-                modules={[Pagination]}
+                modules={[Autoplay, Navigation]}
                 className="mySwiper3"
                 > 
                 <div className="brend">
-                    <span className="brandTitle">
-                        <BiCategoryAlt size='38px' />
-                        <h3>Бренды</h3>
-                    </span>
                     <div className="brandLogos">
                         <div className="joys">
                             <SwiperSlide className='brendCon'>
@@ -198,27 +201,27 @@ function Main({ laptops, monitors, add }) {
             </div>   
             <div className="services">
                 <span className="brandTitle">
-                    <BiCategoryAlt size='38px' />
+                    <BiCategoryAlt className='lapIcon' />
                     <h3>Наша подборка для вас</h3>
                 </span>
                 <div className="servicesImages">
                     <div>
-                        <img src={s1} alt="" />
-                        <img src={s2} alt="" />
+                        <img className='sr1' src={s1} alt="" />
+                        <img className='sr2' src={s2} alt="" />
                     </div>
                     <div>
-                        <img src={s3} alt="" />
-                        <img src={s4} alt="" />
+                        <img className='sr2' src={s3} alt="" />
+                        <img className='sr1' src={s4} alt="" />
                     </div>
                     <div>
-                        <img src={s5} alt="" />
-                        <img src={s6} alt="" />
+                        <img className='sr1' src={s5} alt="" />
+                        <img className='sr2' src={s6} alt="" /> 
                     </div>
                 </div>
             </div>
             <div className="mainlaptops">
                 <div className="laptopsHeaader">
-                    <span><AiOutlineCustomerService size='36px' color='#3C3C3C' /><h3>Аксессуары</h3></span>
+                    <span><AiOutlineCustomerService className='lapIcon' color='#3C3C3C' /><h3>Аксессуары</h3></span>
                     <button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px' /></button>
                 </div>
                 <div className="laptops">
