@@ -687,4 +687,11 @@ input[type=range]:focus::-ms-fill-upper {
   .kategoriLink{
     font-size: 14px;
   }
+
+  .miniBorder{
+    width: 56px;
+height: 59px;
+  }
+
+
 }
