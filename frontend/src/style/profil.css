@@ -270,7 +270,7 @@
 .Accaunt {
     width: 1440px;
     margin: 50px auto;
-    display: flex;
+    display: none!important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -279,6 +279,7 @@
     box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
     border-radius: 5px;
     gap: 30px;
+
 }
 
 .accountTitle {
@@ -357,5 +358,18 @@
 
 .accountbutton:hover{
     background: #b51616;
+
+}
+
+
+@media screen and (max-width : 414px) and (min-width: 360px) {
+
+    /* Account */
+
+    .Accaunt{
+        display: flex!important;
+        box-shadow: none;
+    }
+
 
 }
