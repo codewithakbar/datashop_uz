@@ -35,7 +35,7 @@ function Korzinka({addKorzinka , Delete , setAddKorzinka}) {
                                         <div className="productInfo">
                                             <span className='productInfo1'>HP Victus 15 RTX 3050...</span>
                                             <span className='productInfo2'>Ноутбук</span>
-                                            <span className='productInfo3' onClick={() =>Delete(addKorzin.id)}>Удалить</span>
+                                            <span className='productInfo3' onClick={() => Delete(addKorzin.id)}>Удалить</span>
                                         </div>
                                     </div>
                                     <div className="KproductEnd">
