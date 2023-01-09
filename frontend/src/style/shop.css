@@ -178,269 +178,271 @@ input[type=range] {
   width: 100%;
 }
 
-  .shopMenuCon {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 36px;
-    grid-row-gap: 36px;
-  }
-  .LaptopContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 60px;
-    padding: 30px;
-  
-  }
-  .Laptop{
-    width: 1440px;
-    margin: 50px auto;
-  }
-  .kategoriLink {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #767676;
-  }
-  
-  .LaptopName {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  
-  .LaptopTitle {
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 31px;
-    color: #3C3C3C;
-  }
-  
-  .LaptopTovar {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 200px;
-  }
-  
-  .LaptopImage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .LaptopImgg {
-    width: 439px;
-    height: 409px;
-    background: #FFFFFF;
-    border: 0.5px solid #D1D1D1;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .ImagesMini {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 15px 20px;
-  }
-  
-  .miniBorder img {
-    width: 66px;
-    height: 59px;
-  }
-  
-  .laptopImgg {
-    width: 350px;
-    height: 300px;
-  }
-  
-  .miniBorder {
-    transition: transform 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 64px;
-    height: 71px;
-    border-radius: 5px;
-    padding: 20px 40px;
-    cursor: pointer;
-  }
-  
-  .active {
-    transition: transform 0.5s ease;
-    border: 1px solid #E81D1C;
-    transform: translateY(-20px);
-  }
-  
-  .LaptopInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-  
-  }
-  
-  .InfoTitle {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    color: #000000;
-  }
-  
-  .LaptopInfo div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 280px;
-  
-  }
-  
-  .drection {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    text-decoration-line: underline;
-    color: #565656;
-    cursor: pointer;
-  }
-  
-  .LaptopInfo div span {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #828282;
-  }
-  
-  .LaptopInfo div p {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000;
-  }
-  
-  .LaptopMoneyDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  
-  .LaptopKupit {
-    top: -180px;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 290px;
-    height: 186px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    gap: 10px;
-    padding: 25px;
-  }
-  
-  .LaptopMoneyInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 289px;
-    height: 184px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
-    gap: 15px;
-  }
-  
-  .sum {
-    font-weight: 600;
-    font-size: 23px;
-    line-height: 27px;
-    color: #474747;
-  
-  }
-  
-  .LaptopKupit button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 248px;
-    height: 39px;
-    background: #E81D1C;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    color: #FFFFFF;
-    border: none;
-    gap: 7px;
-    cursor: pointer;
-  
-  }
-  
-  .LaptopMoneyInfo div p {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    color: #000000;
-    width: 200px;
-  
-  }
-  .LaptopMoneyInfo div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  }
-  .LaptopInfo span{
-    color: #000000;
-  }
+.shopMenuCon {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 36px;
+  grid-row-gap: 36px;
+}
 
-  .gobtn {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.LaptopContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  padding: 30px;
+
+}
+
+.Laptop {
+  width: 1440px;
+  margin: 50px auto;
+}
+
+.kategoriLink {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #767676;
+}
+
+.LaptopName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.LaptopTitle {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  color: #3C3C3C;
+}
+
+.LaptopTovar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 200px;
+}
+
+.LaptopImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.LaptopImgg {
+  width: 439px;
+  height: 409px;
+  background: #FFFFFF;
+  border: 0.5px solid #D1D1D1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ImagesMini {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 15px 20px;
+}
+
+.miniBorder img {
+  width: 66px;
+  height: 59px;
+}
+
+.laptopImgg {
+  width: 350px;
+  height: 300px;
+}
+
+.miniBorder {
+  transition: transform 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 71px;
+  border-radius: 5px;
+  padding: 20px 40px;
+  cursor: pointer;
+}
+
+.active {
+  transition: transform 0.5s ease;
+  border: 1px solid #E81D1C;
+  transform: translateY(-20px);
+}
+
+.LaptopInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+
+}
+
+.InfoTitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.LaptopInfo div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+
+}
+
+.drection {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration-line: underline;
+  color: #565656;
+  cursor: pointer;
+}
+
+.LaptopInfo div span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+}
+
+.LaptopInfo div p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.LaptopMoneyDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.LaptopKupit {
+  top: -180px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 290px;
+  height: 186px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  gap: 10px;
+  padding: 25px;
+}
+
+.LaptopMoneyInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 289px;
+  height: 184px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  gap: 15px;
+}
+
+.sum {
+  font-weight: 600;
+  font-size: 23px;
+  line-height: 27px;
+  color: #474747;
+
+}
+
+.LaptopKupit button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 248px;
+  height: 39px;
+  background: #E81D1C;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  border: none;
+  gap: 7px;
+  cursor: pointer;
+
+}
+
+.LaptopMoneyInfo div p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  width: 200px;
+
+}
+
+.LaptopMoneyInfo div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.LaptopInfo span {
+  color: #000000;
+}
+
+.gobtn {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laptopImg {
+  transition: all 0.5s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.laptopImg:hover .goShopBtnClose {
+  transition: all 0.5s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.laptopImg:hover img {
+  transition: all 0.5s ease;
+  filter: blur(2px);
+}
 
 
-  .goShopBtnClose {
-
-  }
-  
-  .laptopImg {
-    transition: all 0.5s ease;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .laptopImg:hover .goShopBtnClose {
-    transition: all 0.5s ease;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-  }
-  .laptopImg:hover img{
-    transition: all 0.5s ease;
-    filter: blur(2px);
-  }
-  
-  
 /* input renge */
 input[type=range] {
   height: 22px;
@@ -448,9 +450,11 @@ input[type=range] {
   margin: 10px 0;
   width: 100%;
 }
+
 input[type=range]:focus {
   outline: none;
 }
+
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 5px;
@@ -461,6 +465,7 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: 50px;
   border: 1px solid #FF1414;
 }
+
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 0px 0px 3px #FF1717;
   border: 1px solid #FF0000;
@@ -472,9 +477,11 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   margin-top: -6px;
 }
+
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #FF0000;
 }
+
 input[type=range]::-moz-range-track {
   width: 100%;
   height: 5px;
@@ -485,6 +492,7 @@ input[type=range]::-moz-range-track {
   border-radius: 50px;
   border: 1px solid #FF1414;
 }
+
 input[type=range]::-moz-range-thumb {
   box-shadow: 0px 0px 3px #FF1717;
   border: 1px solid #FF0000;
@@ -494,6 +502,7 @@ input[type=range]::-moz-range-thumb {
   background: #FFFFFF;
   cursor: pointer;
 }
+
 input[type=range]::-ms-track {
   width: 100%;
   height: 5px;
@@ -503,18 +512,21 @@ input[type=range]::-ms-track {
   border-color: transparent;
   color: transparent;
 }
+
 input[type=range]::-ms-fill-lower {
   background: #FF0000;
   border: 1px solid #FF1414;
   border-radius: 100px;
   box-shadow: 0px 0px 0px #FF0000;
 }
+
 input[type=range]::-ms-fill-upper {
   background: #FF0000;
   border: 1px solid #FF1414;
   border-radius: 100px;
   box-shadow: 0px 0px 0px #FF0000;
 }
+
 input[type=range]::-ms-thumb {
   margin-top: 1px;
   box-shadow: 0px 0px 3px #FF1717;
@@ -525,9 +537,11 @@ input[type=range]::-ms-thumb {
   background: #FFFFFF;
   cursor: pointer;
 }
+
 input[type=range]:focus::-ms-fill-lower {
   background: #FF0000;
 }
+
 input[type=range]:focus::-ms-fill-upper {
   background: #FF0000;
 }
@@ -574,7 +588,95 @@ input[type=range]:focus::-ms-fill-upper {
   0% {
     transform: translateX(400px);
   }
+
   100% {
     transform: translateX(-0px);
+  }
+}
+
+
+
+@media screen and (max-width : 414px) and (min-width: 360px) {
+  .Laptop {
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  .LaptopContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 10px;
+  }
+
+  .LaptopTovar {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .LaptopMoneyDiv {
+    grid-row: 2;
+  }
+
+  .LaptopImgg {
+    width: 355px;
+    height: 317.79px;
+    background: #FFFFFF;
+    border: 0.5px solid #D1D1D1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .laptopImgg {
+    height: 213px;
+    width: 253px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .LaptopInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+  }
+
+  .LaptopKupit {
+    top: -180px;
+    z-index: 3;
+
+    width: 355px;
+    height: 186px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    gap: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .LaptopMoneyInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 331px;
+    height: 184px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    gap: 15px;
   }
 }
