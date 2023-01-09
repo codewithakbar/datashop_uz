@@ -266,6 +266,9 @@ function AddAksesuar() {
         </Routes>
         <Footer fotChange={fotChange}/>
         <div className="bottomBar">
+          <div className="shopLenght">
+            <span>{addKorzinka.length}</span>
+          </div>
           <Link to='/'><button>
             <FiHome size={'18px'}/>
             <span>Главная</span>
