@@ -10,7 +10,7 @@ import profilIcon2 from '../media/boxtick3.png'
 import profilIcon3 from '../media/bell.png'
 import profilIcon4 from '../media/x-circle.png'
 import { useState } from 'react'
-import { IoClose, IoPhonePortraitOutline } from 'react-icons/io5'
+import { IoClose, IoPhonePortraitOutline} from 'react-icons/io5'
 import { BsLaptop } from 'react-icons/bs'
 import { BsTv } from 'react-icons/bs'
 import { AiOutlineCustomerService } from 'react-icons/ai'
@@ -41,7 +41,7 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
 
     function addCategory() {
         if (trm == 0) {
-            setTrm(1000)
+            setTrm(1500)
             setIcon(<BiCategory size='27px' color='#ffffff' />)
             setNoneBoreder('')
         } else {
@@ -52,6 +52,19 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
             }, 100);
         }
     }
+
+    // ADD KATEGOY RESPANSIVE =================== START //
+    function addCategoryRes() {
+        if (trm == 1500) {
+            setIcon(<BiCategory size='27px' color='#ffffff' />)
+            setTrm(0)
+        }
+        else {
+            setIcon(<BiCategory size='27px' color='#ffffff' />) 
+            setTrm(1500)
+        }
+    }
+    // ADD KATEGOY RESPANSIVE =================== END //
     
     // navbar fixed function ==============================
 
@@ -137,6 +150,12 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                 </div>
             </div>
             <div className="category" style={{ transform: `translateY(-${trm}px)` }}>
+                <div className="categoryCloseRes">
+                    <div className="LogoBtnCon">
+                        <Link to='/' onClick={() => setFotChange('')}><img className='dataLogo' src={DataLogo} /></Link>
+                    </div>
+                    <IoClose onClick={addCategoryRes} color="#FFFFFF" size={'30px'}/>
+                </div>
                 <div className="categoryCon">
                     <ul className="ctMenu">
                         <li onClick={() => setSt('laptop')}>  <button>  <span><BsLaptop className='ctIcon' size='26px' /> <span>Ноутбуки</span></span> <MdOutlineNavigateNext className='ctIcon' size='22px' /></button></li>

@@ -346,6 +346,9 @@ nav {
 .pr{
     display: flex!important;
 }
+.categoryCloseRes {
+    display: none;
+}
 
 /*desktop versiyada none bolib duradon narsalar === START */
     .navRes {
@@ -413,6 +416,8 @@ nav {
     }
     .category {
         width: 100%;
+        height: 100vh;
+        top: 0;
     }
     .categoryCon {
         flex-direction: column;
@@ -433,6 +438,15 @@ nav {
     }
     .ctInfo {
         padding: 0px 10px;
+    }
+    .categoryCloseRes {
+        width: 100%;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 10px;
+        background-color: #E81D1C;
     }
 }
 /* Respansive mobile ============================================ END*/
