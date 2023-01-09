@@ -679,4 +679,19 @@ input[type=range]:focus::-ms-fill-upper {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     gap: 15px;
   }
+
+  .LaptopTitle {
+    font-size: 18px;
+  }
+
+  .kategoriLink {
+    font-size: 14px;
+  }
+
+  .miniBorder img {
+    width: 56px;
+    height: 59px;
+  }
+
+
 }
