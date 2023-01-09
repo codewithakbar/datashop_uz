@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ugd)8a7_jehn49ja!e@ndm+_+kmb%6w8q*5p6=emk@&-(r)!+l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".datashop.uz", "localhost"]
+ALLOWED_HOSTS = [".datashop.uz", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'users',
 
 ]
+
+APPEND_SLASH=False
 
 
 REST_FRAMEWORK = {
