@@ -52,7 +52,7 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
             }, 100);
         }
     }
-
+    
     // navbar fixed function ==============================
 
     const [scrolled, setScrolled] = useState('');

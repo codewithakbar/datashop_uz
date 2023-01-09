@@ -411,6 +411,28 @@ nav {
         width: 50px;
         height: 100%;
     }
+    .category {
+        width: 100%;
+    }
+    .categoryCon {
+        flex-direction: column;
+    }
+    .ctMenu {
+        
+    }
+    .ctMenu li{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .ctMenu li button {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .categoryCon {
+        gap: 30px;
+    }
+    .ctInfo {
+        padding: 0px 10px;
+    }
 }
-
 /* Respansive mobile ============================================ END*/
