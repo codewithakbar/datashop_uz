@@ -680,17 +680,17 @@ input[type=range]:focus::-ms-fill-upper {
     gap: 15px;
   }
 
-  .LaptopTitle{
+  .LaptopTitle {
     font-size: 18px;
   }
 
-  .kategoriLink{
+  .kategoriLink {
     font-size: 14px;
   }
 
-  .miniBorder img{
+  .miniBorder img {
     width: 56px;
-height: 59px;
+    height: 59px;
   }
 
 
