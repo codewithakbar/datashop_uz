@@ -34,7 +34,7 @@ function Izb({setopenShopBtn , add , laptops }) {
                                     <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                         <Link to='/laptop' onClick={() => add({ img: laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
                                         <img src={laptop.img} alt="" />
-                                    </div>
+                                    </div>  
                                     <div className="laptopInfo">
                                         <Link to='/laptop'>  <span>{laptop.name}</span></Link>
                                         <div className="eva">

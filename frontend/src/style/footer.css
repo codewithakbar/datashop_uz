@@ -110,7 +110,7 @@ footer {
         padding: 0px 10px;
         width: 100%;
         height: 476px;
-        background-color: #E81D1C
+        background-color: #E81D1C;
     }
     .Footerlogo img {
         padding-top: 50px;
@@ -123,7 +123,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-row-gap: 30px;
-        padding-bottom: 60px;
+        padding-bottom: 30px;
     }
     .footContact {
         grid-row: 2;
@@ -132,7 +132,7 @@ footer {
     .tel label  , .addres label , .email label {
         font-weight: 500;
         font-size: 10px;
-        line-height: 12px;
+        line-height: 12px;  
         color: #DBDBDB;
     }
 

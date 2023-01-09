@@ -118,7 +118,7 @@ function Header() {
                     </SwiperSlide>
             </Swiper>
             <div className="headerCategory">
-                {
+{                                                                           
                     Categors.map(category => (
                     <div className="headerCategory-card" style={{background: category.bc}}>
                         <h2>{category.name}</h2>

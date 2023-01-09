@@ -212,7 +212,8 @@ function AddAksesuar() {
 
   // korzinka ischindagi nasani dalete atadi
   function Delete(id) {
-    const filtered = addKorzinka.filter(korzinka => korzinka.id !== id)    // korzinka ischindagi nasani dalete atadi
+    console.log(id);
+    const filtered = addKorzinka.filter(korzinka => korzinka.id != id)    // korzinka ischindagi nasani dalete atadi
     setAddKorzinka(filtered)
     console.log(filtered)
   }
