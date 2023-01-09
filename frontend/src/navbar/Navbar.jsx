@@ -60,7 +60,7 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
     const scrollFixed = () => {
         const scrol = window.scrollY;
 
-        if (scrol > 100) {
+        if (scrol > 600) {
             setScrolled('nav');
         } else {
             setScrolled(false);
@@ -77,7 +77,7 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
     const scrollFixedRes = () => {
         const scrol = window.scrollY;
 
-        if (scrol > 100) {
+        if (scrol > 600) {
             setScrolled('nav');
         } else {
             setScrolled(false);

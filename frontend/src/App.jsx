@@ -224,7 +224,6 @@ function AddAksesuar() {
     const filtered = addKorzinka.filter(addKorzin => addKorzin.id !== id) 
     setAddKorzinka(filtered)
   }
-  console.log(addKorzinka);
   // ikki element qoshilsa count qoshiladi
 
 
