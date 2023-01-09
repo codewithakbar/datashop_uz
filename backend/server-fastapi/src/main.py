@@ -65,10 +65,7 @@ admin_user = {
 
 
 origins = [
-    "http://admin.datashop.uz",
-    "https://admin.datashop.uz",
-    "http://localhost",
-    "http://localhost:3000",
+    "*"
 ]
 
 app.add_middleware(
