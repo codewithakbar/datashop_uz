@@ -41,7 +41,7 @@ function Main({ laptops, monitors, add }) {
                                         <div className="box">
                                             <div className="inner">
                                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
-                                                    <Link to='/laptop' onClick={() => add({ img: laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
+                                                    <Link to='/laptop' onClick={() => add({ id: laptop.id , img: laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
                                                     <img src={laptop.img} alt="" />
                                                 </div>
                                                 <div className="laptopInfo">

@@ -219,13 +219,15 @@ function AddAksesuar() {
   }
   // korzinka ischindagi nasani dalete atadi
 
-
+  // ikki element qoshilsa count qoshiladi
   function FilterAdd(id) {
     const filtered = addKorzinka.filter(addKorzin => addKorzin.id !== id) 
     setAddKorzinka(filtered)
   }
   console.log(addKorzinka);
-  
+  // ikki element qoshilsa count qoshiladi
+
+
   return (
     <>
       <BrowserRouter>
