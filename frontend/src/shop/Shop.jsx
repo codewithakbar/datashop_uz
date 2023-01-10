@@ -9,7 +9,7 @@ import {MdClose} from 'react-icons/md'
 
 function Shop({shops}) {
 
-    const [openFilter , setOpenFilter] = useState(-1500)
+    const [openFilter , setOpenFilter] = useState(-1000)
 
     return (
         <div className="shop">
@@ -50,9 +50,9 @@ function Shop({shops}) {
                 </div>
                 <div className="shopMainS">
                     <div className="shopMenuAside" style={{left: `${openFilter}px`}}>
-                        <div className="filterTitle">
+                        <div className="filterTitle" onClick={() => setOpenFilter(-1000)}>
                             <span>Фильтры</span>
-                            <MdClose size={'20px'} onClick={() => setOpenFilter(-1000)}/>
+                            <MdClose size={'20px'}/>
                         </div>
                         <div className="rengePrice">
                             <h1>Цена(сум)</h1>
