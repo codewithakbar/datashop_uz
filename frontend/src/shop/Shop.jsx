@@ -9,7 +9,7 @@ import {MdClose} from 'react-icons/md'
 
 function Shop({shops}) {
 
-    const [openFilter , setOpenFilter] = useState(0)
+    const [openFilter , setOpenFilter] = useState(-1500)
 
     return (
         <div className="shop">
