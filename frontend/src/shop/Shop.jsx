@@ -5,9 +5,11 @@ import {Link} from 'react-router-dom'
 import { useState } from 'react'
 import {VscSettings} from 'react-icons/vsc'
 import {RiMenu5Fill} from 'react-icons/ri'
+import {MdClose} from 'react-icons/md'
 
 function Shop({shops}) {
 
+    const [openFilter , setOpenFilter] = useState(0)
 
     return (
         <div className="shop">
@@ -24,7 +26,7 @@ function Shop({shops}) {
                     </div>
                     <div className="resFilterBtn">
                         <button>
-                            <VscSettings size={'26px'}/>
+                            <VscSettings size={'26px'}  onClick={() => setOpenFilter(0)}/>
                             <span>Фильтры</span>
                         </button>
                         <button>
@@ -47,7 +49,11 @@ function Shop({shops}) {
                     </div>
                 </div>
                 <div className="shopMainS">
-                    <div className="shopMenuAside">
+                    <div className="shopMenuAside" style={{left: `${openFilter}px`}}>
+                        <div className="filterTitle">
+                            <span>Фильтры</span>
+                            <MdClose size={'20px'} onClick={() => setOpenFilter(-1000)}/>
+                        </div>
                         <div className="rengePrice">
                             <h1>Цена(сум)</h1>
                             <div className="priceMin">

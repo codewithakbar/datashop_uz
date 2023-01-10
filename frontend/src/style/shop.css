@@ -597,6 +597,9 @@ input[type=range]:focus::-ms-fill-upper {
 .shopHeaderRes {
   display: none;
 }
+.filterTitle {
+  display: none;
+}
 
 @media screen and (max-width : 414px) and (min-width: 360px) {
   .Laptop {
@@ -699,9 +702,6 @@ input[type=range]:focus::-ms-fill-upper {
     padding: 0px 10px;
     padding-bottom: 60px;
   }
-  .shopMenuAside {
-    display: none;
-  }
   .shopMenuCon {
     width: 100%;
     gap: 10px;
@@ -743,5 +743,30 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 10px;
     line-height: 12px;  
     color: #5A5A5A;
+  }
+  .shopMenuAside {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 5px;
+    height: 100vh;
+    width: 290px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 15px 5px rgba(119, 116, 116, 0.514);
+    z-index: 101;
+    transition:  0.3s ease;
+  }
+  .filterTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .filterTitle span {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3C3C3C;
   }
 }
