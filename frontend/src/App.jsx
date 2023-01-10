@@ -123,7 +123,7 @@ const [monitors , setMonitors] = useState([
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
       prise: '????'
   },
-  {
+  { 
       img: m2 ,
       name: 'Gigabyte — 32″ G32QC-EK Curved...' ,
       prise: '????'
@@ -172,7 +172,7 @@ const [monitors , setMonitors] = useState([
 
 const [smartfon , setSmartfon] = useState([
   {
-    img: 'https://www.tescomobile.com/media/catalog/product/i/p/iphone_14_pro_max_space_black_pdp_image_position-3__gben.png?width=290&height=430&canvas=290:430&optimize=low&fit=bounds' ,
+    img: 'https://free-png.ru/wp-content/uploads/2021/02/TENC_6.5_iPhone_11_PC-658CC-3_1024x1024-7ccac3cc.png' ,
     name: 'Iphone 14 Pro Max' ,
     prise: '14.500'
   }
