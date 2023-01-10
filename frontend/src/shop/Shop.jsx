@@ -25,8 +25,8 @@ function Shop({shops}) {
                         <span>36 товаров</span>
                     </div>
                     <div className="resFilterBtn">
-                        <button>
-                            <VscSettings size={'26px'}  onClick={() => setOpenFilter(0)}/>
+                        <button onClick={() => setOpenFilter(0)}>
+                            <VscSettings size={'26px'} />
                             <span>Фильтры</span>
                         </button>
                         <button>
@@ -50,9 +50,9 @@ function Shop({shops}) {
                 </div>
                 <div className="shopMainS">
                     <div className="shopMenuAside" style={{left: `${openFilter}px`}}>
-                        <div className="filterTitle" onClick={() => setOpenFilter(-1000)}>
+                        <div className="filterTitle">
                             <span>Фильтры</span>
-                            <MdClose size={'20px'}/>
+                            <MdClose size={'20px'} onClick={() => setOpenFilter(-1000)}/>
                         </div>
                         <div className="rengePrice">
                             <h1>Цена(сум)</h1>
