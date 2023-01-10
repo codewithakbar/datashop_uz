@@ -167,6 +167,9 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                         <Pr AddSmartfon={AddSmartfon} AddAksesuar={AddAksesuar} AddMonitor={AddMonitor} st={st} setSt={setSt} addCategory={addCategory} AddLaptop={AddLaptop} />
                     </div>
                 </div>
+                <div className="categoryClose" onClick={addCategory}>
+                    
+                </div>
             </div>
             <div className="navRes">
                 <div className="navResTop">

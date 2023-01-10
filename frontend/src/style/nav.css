@@ -222,7 +222,6 @@ nav {
     line-height: 15px;
     color: #666363;
 }
-
 @media screen and (max-width: 1440px ){
     .navBottom {
         width: 1140px;
@@ -448,5 +447,14 @@ nav {
         padding: 20px 10px;
         background-color: #E81D1C;
     }
+    .categoryClose {
+        display: none;
+    }
 }
 /* Respansive mobile ============================================ END*/
+
+.categoryClose {
+    width: 100%;
+    height: 100%;
+    background-color: #3c3c3c00;
+}
