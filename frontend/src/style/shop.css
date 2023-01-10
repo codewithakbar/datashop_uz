@@ -758,7 +758,7 @@ input[type=range]:focus::-ms-fill-upper {
     display: flex;
     background-color: #FFFFFF;
     z-index: 101;
-    transition:  0.3s ease;
+    transition:  0.2s ease;
   }
   .filterTitle {
     display: flex;
