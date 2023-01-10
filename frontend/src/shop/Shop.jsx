@@ -10,12 +10,14 @@ import {MdClose} from 'react-icons/md'
 function Shop({shops}) {
 
     const [openFilter , setOpenFilter] = useState(-1000)
+    const [closeFilter , setCloseFilter] = useState('none')
+    
 
     return (
         <div className="shop">
             <ul className="linkCategory">
                 <li>Menu/</li>
-                <li>Categor/</li>  
+                <li>Categor/</li>   
                 <li>Laptop</li>
             </ul>
             <div className="shopMain">
@@ -25,7 +27,7 @@ function Shop({shops}) {
                         <span>36 товаров</span>
                     </div>
                     <div className="resFilterBtn">
-                        <button onClick={() => setOpenFilter(0)}>
+                        <button onClick={() => setOpenFilter(0) + setCloseFilter('asideClose')}>
                             <VscSettings size={'26px'} />
                             <span>Фильтры</span>
                         </button>
@@ -52,7 +54,7 @@ function Shop({shops}) {
                     <div className="shopMenuAside" style={{left: `${openFilter}px`}}>
                         <div className="filterTitle">
                             <span>Фильтры</span>
-                            <MdClose size={'20px'} onClick={() => setOpenFilter(-1000)}/>
+                            <MdClose size={'20px'} onClick={() => setOpenFilter(-1000) + setCloseFilter('none')}/>
                         </div>
                         <div className="rengePrice">
                             <h1>Цена(сум)</h1>
@@ -120,6 +122,9 @@ function Shop({shops}) {
                                     <option value="">1 TB</option>
                                 </select>
                             </div>
+                        </div>
+                        <div className={closeFilter} onClick={() => setOpenFilter(-1000) + setCloseFilter('none')}>
+
                         </div>
                     </div>
                     <div className="shopMenuCon">

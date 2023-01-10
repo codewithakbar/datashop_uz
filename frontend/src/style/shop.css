@@ -600,6 +600,9 @@ input[type=range]:focus::-ms-fill-upper {
 .filterTitle {
   display: none;
 }
+.asideClose {
+  display: none;
+}
 
 @media screen and (max-width : 414px) and (min-width: 360px) {
   .Laptop {
@@ -749,12 +752,11 @@ input[type=range]:focus::-ms-fill-upper {
     padding-left: 10px;
     padding-right: 5px;
     height: 100vh;
-    width: 290px;
+    width: 80%;
     position: fixed;
     top: 0;
     display: flex;
     background-color: #FFFFFF;
-    box-shadow: 10px 10px 15px 5px rgba(119, 116, 116, 0.514);
     z-index: 101;
     transition:  0.3s ease;
   }
@@ -768,5 +770,26 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 18px;
     line-height: 22px;
     color: #3C3C3C;
+  }
+  @keyframes closeAnime {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  .asideClose {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20%;
+    background: rgba(81, 81, 81, 0.3);
+    animation: closeAnime 0.5s ease;
   }
 }
