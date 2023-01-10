@@ -115,6 +115,8 @@ function App() {
         prise: '????'
     },
 ])
+
+
 const [monitors , setMonitors] = useState([
   {
       img: m1 ,
