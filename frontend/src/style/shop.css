@@ -594,7 +594,9 @@ input[type=range]:focus::-ms-fill-upper {
   }
 }
 
-
+.shopHeaderRes {
+  display: none;
+}
 
 @media screen and (max-width : 414px) and (min-width: 360px) {
   .Laptop {
@@ -692,6 +694,54 @@ input[type=range]:focus::-ms-fill-upper {
     width: 56px;
     height: 59px;
   }
-
-
+  .shop {
+    width: 100%;
+    padding: 0px 10px;
+    padding-bottom: 60px;
+  }
+  .shopMenuAside {
+    display: none;
+  }
+  .shopMenuCon {
+    width: 100%;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+  }
+  .shopMainHeader {
+    display: none;
+  }
+  .shopHeaderRes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .resFilterBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+  }
+  .resFilterBtn button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+  }
+  .shopMainTitle h1 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3C3C3C;
+  }
+  .shopMainTitle span{
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;  
+    color: #5A5A5A;
+  }
 }

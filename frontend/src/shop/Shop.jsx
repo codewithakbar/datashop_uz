@@ -3,6 +3,8 @@ import {AiFillStar , AiOutlineStar , AiOutlineCustomerService} from 'react-icons
 import {FiShoppingCart} from 'react-icons/fi'
 import {Link} from 'react-router-dom'
 import { useState } from 'react'
+import {VscSettings} from 'react-icons/vsc'
+import {RiMenu5Fill} from 'react-icons/ri'
 
 function Shop({shops}) {
 
@@ -15,6 +17,22 @@ function Shop({shops}) {
                 <li>Laptop</li>
             </ul>
             <div className="shopMain">
+                <div className="shopHeaderRes">
+                    <div className="shopMainTitle">
+                        <h1>Ноутбуки HP</h1>
+                        <span>36 товаров</span>
+                    </div>
+                    <div className="resFilterBtn">
+                        <button>
+                            <VscSettings size={'26px'}/>
+                            <span>Фильтры</span>
+                        </button>
+                        <button>
+                            <RiMenu5Fill size={'26px'}/>
+                            <span>Сортировать по</span>
+                        </button>
+                    </div>
+                </div>
                 <div className="shopMainHeader">
                     <div className="shopMainTitle">
                         <h1>Ноутбуки HP</h1>
