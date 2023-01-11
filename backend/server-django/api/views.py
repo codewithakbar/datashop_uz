@@ -47,9 +47,12 @@ class MyTokenObtainPairView(TokenObtainPairView):
 
 @api_view(['GET'])
 def getRoutes(request):
-    router = routers.DefaultRouter()
-    router.register(r'products', ProductViewSet)
+    # router = routers.DefaultRouter()
+    # router.register(r'products', ProductViewSet)
     
+    router = {
+        "GET": "/products",
+    }
 
     return Response(router)
 
