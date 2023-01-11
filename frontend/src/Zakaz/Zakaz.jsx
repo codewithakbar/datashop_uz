@@ -117,14 +117,14 @@ export default function Zakaz() {
                     <div className="ZakazSelects">
                         <div className="select">
                             <span>Область</span>
-                            <select name="Viloyat">
+                            <select  className="selectt" name="Viloyat">
                                 <option selected disabled hidden value="">Выберите область</option>
                                 <option value="">Xorazm</option>
                             </select>
                         </div>
                         <div className="select">
                             <span>Город</span>
-                            <select name="Viloyat">
+                            <select  className="selectt" name="Viloyat">
                                 <option selected disabled hidden value="">Выберите город</option>
                                 <option value="">Shovot</option>
                                 <option value="">Urganch</option>
