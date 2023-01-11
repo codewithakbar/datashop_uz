@@ -1,13 +1,13 @@
-.ZakazInfo{
+.ZakazInfo {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 380px;
     width: 1440px;
-margin: auto;
-
+    margin: auto;
 }
-.Zakaz{
+
+.Zakaz {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,33 +15,38 @@ margin: auto;
     gap: 30px;
     margin: 30px auto;
 }
-.Zakaz span{
+
+.Zakaz span {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     color: #767676;
 
 }
-.ZakazDastavka{
+
+.ZakazDastavka {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
 }
-.ZakazDastavka h1{
+
+.ZakazDastavka h1 {
     font-weight: 600;
     font-size: 26px;
     line-height: 31px;
     color: #3C3C3C;
 }
-.DastavkaBtn{
+
+.DastavkaBtn {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-.ZakazVizf{
+
+.ZakazVizf {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,20 +60,23 @@ margin: auto;
     line-height: 19px;
     color: #3C3C3C;
 }
-.ZakazAdres{
+
+.ZakazAdres {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
 }
-.ZakazAdres h1{
+
+.ZakazAdres h1 {
     font-weight: 600;
     font-size: 26px;
     line-height: 31px;
     color: #3C3C3C;
 }
-.ZakazSelects{
+
+.ZakazSelects {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -76,33 +84,44 @@ margin: auto;
     gap: 20px;
     width: 600px;
 }
-.select{
+
+.select {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 15px;
 }
-.select span{
+
+.select span {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #636363;
 }
-.select select{
+
+.select select {
     width: 270px;
     height: 50px;
     border: 1px solid #BCBCBC;
     border-radius: 3px;
     background-color: transparent;
 }
-.select select option{
+
+.tolov {
+    display: flex;
+gap: 10px;
+}
+
+
+.select select option {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
     color: #919191;
 }
-.ZakazInput input{
+
+.ZakazInput input {
     width: 270px;
     height: 50px;
     border: 1px solid #BCBCBC;
@@ -114,26 +133,30 @@ margin: auto;
     padding: 5px;
 
 }
-.ZakazMoney{
+
+.ZakazMoney {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
 }
-.ZakazMoney h1{
+
+.ZakazMoney h1 {
     font-weight: 600;
     font-size: 26px;
     line-height: 31px;
     color: #3C3C3C;
 }
-.ZakazImg{
+
+.ZakazImg {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-.Click{
+
+.Click {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,20 +166,23 @@ margin: auto;
     border-radius: 3px;
     cursor: pointer;
 }
-.ZakazRes{
+
+.ZakazRes {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
 }
-.ZakazRes h1{
+
+.ZakazRes h1 {
     font-weight: 600;
     font-size: 26px;
     line-height: 31px;
     color: #3C3C3C;
 }
-.inputs{
+
+.inputs {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -164,14 +190,16 @@ margin: auto;
     gap: 20px;
     width: 600px;
 }
-.Kinput{
+
+.Kinput {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 15px;
 }
-.Kinput input{
+
+.Kinput input {
     width: 270px;
     height: 50px;
     border: 1px solid #BCBCBC;
@@ -180,19 +208,22 @@ margin: auto;
     color: black;
     padding: 5px;
 }
-.Kinput span{
+
+.Kinput span {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     color: #636363;
 }
-.input input::placeholder{
+
+.input input::placeholder {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
     color: #919191;
 }
-.brond{
+
+.brond {
     cursor: pointer;
     transition: all 0.3s ease;
     transform: scale(95%);
@@ -200,7 +231,78 @@ margin: auto;
     background-color: #ff262617;
     color: white;
 }
-.none{
+
+.none {
     transition: all 0.3s ease;
     cursor: pointer;
+}
+
+
+/* Respansive mobile ============================================ START*/
+
+@media screen and (max-width : 414px) and (min-width: 360px) {
+    .ZakazInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        width: 100%;
+        margin: auto;
+        padding: 0 10px;
+    }
+
+    .ZakazDastavka h1,
+    .ZakazAdres h1,
+    .ZakazMoney h1,
+    .ZakazRes h1 {
+        font-size: 16px;
+    }
+
+    .ZakazVizf {
+        width: 168px;
+        height: 50px;
+        border: 1px solid #BCBCBC;
+        border-radius: 3px;
+    }
+
+    select {
+        width: 168px;
+        height: 50px;
+        border: 1px solid #BCBCBC;
+        border-radius: 3px;
+        background: transparent;
+    }
+
+    .ZakazSelects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ZakazInput input {
+        width: 355px;
+        height: 50px;
+    }
+
+    .ZakazImg {
+        flex-direction: column;
+
+    }
+
+    .tolov {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .d {
+        width: 355px;
+        height: 50px;
+    }
+    .ZakazRes{
+        display: none!important;
+    }
 }

@@ -96,7 +96,7 @@ export default function Zakaz() {
             <div className="Zakaz">
                 <span>Главная  /  Корзина / Оформить заказ   </span>
                 <div className="ZakazDastavka">
-                    <h1 className="">1. Как вы хотите получить заказ?</h1>
+                    <h1 className="e">1. Как вы хотите получить заказ?</h1>
                     <div className="DastavkaBtn">
                         <span onClick={brond2} className={`ZakazVizf ${brund2}`} >
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -136,7 +136,7 @@ export default function Zakaz() {
                         </div>
                         <div className="select ZakazInput">
                             <span>Полный адрес</span>
-                            <input type="text" placeholder="Введите полный адрес"/>
+                            <input type="text" placeholder="Введите полный адрес" />
                         </div>
                     </div>
 
@@ -144,13 +144,16 @@ export default function Zakaz() {
                 <div className="ZakazMoney">
                     <h1>3. Выберите способ оплаты</h1>
                     <div className="ZakazImg">
-                        <div onClick={brond3} className={`Click ${brund3}`}>
-                            <img src={click} alt="" />
+                        <div className="tolov">
+                            <div onClick={brond3} className={`Click ${brund3}`}>
+                                <img src={click} alt="" />
+                            </div>
+                            <div onClick={brond4} className={`Click ${brund4}`}>
+                                <img src={payme} alt="" />
+                            </div>
                         </div>
-                        <div onClick={brond4} className={`Click ${brund4}`}>
-                            <img src={payme} alt="" />
-                        </div>
-                        <div onClick={brond5} className={`Click ${brund5}`}>
+
+                        <div onClick={brond5} className={`Click d ${brund5}`}>
                             <img src={nalichi} alt="" />
                         </div>
                     </div>
@@ -172,7 +175,7 @@ export default function Zakaz() {
                         </div>
                         <div className="Kinput">
                             <span>Дополнительный телефон</span>
-                            <input type="text" placeholder="Введите Дополнительный телефон"/>
+                            <input type="text" placeholder="Введите Дополнительный телефон" />
                         </div>
                     </div>
                 </div>
