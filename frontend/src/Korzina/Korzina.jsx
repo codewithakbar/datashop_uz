@@ -60,25 +60,25 @@ function Korzinka({addKorzinka , Delete , setAddKorzinka}) {
                 <div className="korzinkaInfoBar">
                     <div className="korzinkaInfoBarInfo">
                         <div className="korzinkaInfoBarTitle">
-                            <h1>Итого</h1>
+                            <h1>Итого:</h1>
                             <span>6 800 000 СУМ</span>
                         </div>
                         <div className="korzinkaInfoBarFon">
                             <span className='korzinkaInfoBarFon1'>
-                                <h5>Промокод: </h5>
-                                <h5>0 сум</h5>
+                                <h5 className='korzinkaPriceInfo'>Промокод: </h5>
+                                <h5 className='korzinkaInfoBarFon1Prise'>0 сум</h5>
                             </span>
                             <span className='korzinkaInfoBarFon1'>
                                 <h5>Сумма доставки: </h5>
-                                <h5>30.000 сум</h5>
+                                <h5 className='korzinkaInfoBarFon1Prise'>30.000 сум</h5>
                             </span>
                             <span className='korzinkaInfoBarFon1'>
                                 <h5>Сумма товара:</h5>
-                                <h5>736.000 сум</h5>
+                                <h5 className='korzinkaInfoBarFon1Prise'>736.000 сум</h5>
                             </span>
                             <span className='korzinkaInfoBarFon1'>
                                 <h5> Доставка:</h5>
-                                <h5>Курьером</h5>
+                                <h5 className='korzinkaInfoBarFon1Prise'>Курьером</h5>
                             </span>
                         </div>
                         <div className="korzinkaInfoBarPrice">
@@ -86,7 +86,10 @@ function Korzinka({addKorzinka , Delete , setAddKorzinka}) {
                             <h3>6 800 000 СУМ</h3>
                         </div>
                     </div>
-                    <Link to='/zakaz'> <button>Оформить заказ</button> </Link>
+                    <div className="zakazBtn">
+                        <Link to='/zakaz'> <button>Оформить заказ</button> </Link>
+                        <span>Нажимая 'Оформить заказ', я соглашаюсь с публичным договором оферты</span>
+                    </div>
                 </div>
             </div>
         </div>

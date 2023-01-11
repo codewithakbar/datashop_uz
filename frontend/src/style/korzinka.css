@@ -181,13 +181,13 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 100px;
+    padding: 100px 0px;
 }
 
 
 .korzinkaInfoBar {
     width: 400px;
-    height: 410px;
+    height: 440px;
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -282,7 +282,18 @@
 .resPrise {
     display: none;
 }
+.zakazBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.zakazBtn span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+}
 /* mobile respansive ===================== START  */
 @media screen  and  (max-width : 414px) and (min-width: 360px) {
     .korzinka {
@@ -381,6 +392,56 @@
         padding-top: 0px;
         padding: 10px 0px;
     }
-    
+    .korzinkaInfoBarTitle {
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .korzinkaInfoBarTitle h1 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #3C3C3C;
+    }
+    .korzinkaInfoBarTitle span {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: #3C3C3C;
+    }
+    .korzinkaInfoBarFon1Prise {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #888888;
+    }
+    .korzinkaPriceInfo {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #3C3C3C;
+    }
+    .korzinkaInfoBar {
+        width: 400px;
+        padding: 0px 20px;
+    }
+    .zakazBtn {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .zakazBtn span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #888888;
+    }
+    .zakazBtn button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+    }
  }
 /* mobile respansive ===================== END */

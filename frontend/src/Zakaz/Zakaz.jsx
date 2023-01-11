@@ -210,7 +210,10 @@ export default function Zakaz() {
                             <h3>6 800 000 СУМ</h3>
                         </div>
                     </div>
-                    <button type='submit'>Оформить заказ</button>
+                    <div className="zakazBtn">
+                        <button>Оформить заказ</button>
+                        <span>Нажимая 'Оформить заказ', я соглашаюсь с публичным договором оферты</span>
+                    </div>
                 </div>
             </div>
         </div>
