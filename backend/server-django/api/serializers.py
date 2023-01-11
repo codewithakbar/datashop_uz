@@ -1,10 +1,28 @@
 from rest_framework import serializers
-from projects.models import Project
 from rest_framework.response import Response
-from users.models import Profile
 from rest_framework import status
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
+
+
+#apps
+from store.models import Product, Category
+from projects.models import Project
+from users.models import Profile
+
+
+class ProductSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Product
+        fields = '__all__'
+
+
+class CategorySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Category
+        fields = '__all__'
 
 
 class ProjectSerializer(serializers.ModelSerializer):
