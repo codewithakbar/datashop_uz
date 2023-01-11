@@ -273,7 +273,7 @@ gap: 10px;
     }
 
     .select select {
-        width: 168px;
+        width: 170px;
         height: 50px;
         border: 1px solid #BCBCBC;
         border-radius: 3px;
@@ -285,7 +285,7 @@ gap: 10px;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 11px;
     }
 
     .ZakazInput input {
