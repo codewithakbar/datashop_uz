@@ -326,5 +326,14 @@
     .productInfo {
         gap: 10px;
     }
+    .KproductImg {
+        margin-left: 20px;
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+    }
+    .KproductImg img {
+        transform: translateX(-20px);
+    }
 }
 /* mobile respansive ===================== END */
