@@ -20,14 +20,14 @@ function Korzinka({addKorzinka , Delete , setAddKorzinka}) {
                         <div className="korzinkaElmentTitle">
                             <h3>Детали продуктов</h3>
                             <span>
-                                <h3>Количество</h3>
-                                <h3>Цена</h3>
+                                <h3 id='none'>Количество</h3>
+                                <h3 id='none'>Цена</h3>
                             </span>
                         </div>
                         <div className="korzinkaProducts">
                             {
-                                addKorzinka.map(addKorzin =>(
-                                    <div className="Kproduct">
+                                addKorzinka.map(addKorzin => (
+                                <div className="Kproduct">
                                     <div className="KproductInfo">
                                         <div className="KproductImg">
                                             <img src={addKorzin.img} alt="" />
@@ -35,6 +35,7 @@ function Korzinka({addKorzinka , Delete , setAddKorzinka}) {
                                         <div className="productInfo">
                                             <span className='productInfo1'>HP Victus 15 RTX 3050...</span>
                                             <span className='productInfo2'>Ноутбук</span>
+                                            <span className='resPrise'>6 800 000 СУМ</span>
                                             <span className='productInfo3' onClick={() => Delete(addKorzin.id)}>Удалить</span>
                                         </div>
                                     </div>
