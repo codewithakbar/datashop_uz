@@ -13,7 +13,7 @@ function Korzinka({addKorzinka , Delete , setAddKorzinka}) {
                 </ul>
                 <div className="korzinkaProduct">
                     <div className="korzinkaTitle">
-                     <h1>Корзина</h1> 
+                        <h1>Корзина</h1> 
                         <span>Товаров в корзине ({addKorzinka.length})</span>
                     </div>
                     <div className="korzinkaElment">

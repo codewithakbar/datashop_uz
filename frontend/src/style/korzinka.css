@@ -290,6 +290,7 @@
         height: 100%;
         padding: 0px 10px;
         flex-direction: column;
+        gap: 0;
     }
     .Kproduct {
         width: 100%;
@@ -352,5 +353,34 @@
         line-height: 12px;
         color: #878787;
     }
-}
+    .korzinkaTitle h1 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #3C3C3C;
+    }
+    .korzinkaTitle span {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #3C3C3C;
+    }
+    .linkCategory li {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #767676;
+    }
+    .korzinkaElmentTitle h3 {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #7D7D7D;
+    }
+    .KorzinkaCon {
+        padding-top: 0px;
+        padding: 10px 0px;
+    }
+    
+ }
 /* mobile respansive ===================== END */
