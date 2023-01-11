@@ -7,3 +7,6 @@ db.sqlite3-wal
 database.sqlite3
 database.sqlite3-shm
 database.sqlite3-wal
+
+__pycache__
+
