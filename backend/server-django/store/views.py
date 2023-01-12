@@ -14,9 +14,9 @@ def product_list(request):
     if request.method == 'GET':
         products = Product.objects.all()
 
-        title = request.query_params.get('name', None)
-        if title is not None:
-            products = products.filter(title__icontains=title)
+        name = request.query_params.get('name', None)
+        if name is not None:
+            products = products.filter(name__icontains=name)
 
         product_serializer = ProductSerializer(products, many=True)
         return JsonResponse(product_serializer.data, safe=False)
