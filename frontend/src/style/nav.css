@@ -225,9 +225,19 @@ nav {
 @media screen and (max-width: 1440px ){
     .navBottom {
         width: 1140px;
+        align-items: center;
     }
     .categoryCon {
         width: 1140px;
+    }
+    .navBtns {
+        gap: 20px;
+    }
+    .LogoBtnCon {
+        margin-bottom: -3px;
+    }
+    .kLenght {
+        left: 15px;
     }
 }
 

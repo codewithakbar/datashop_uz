@@ -41,3 +41,8 @@
     flex-wrap: wrap;
     gap: 60px;
 }
+@media screen and (max-width: 1440px ) {
+    .izbCon {
+        width: 1140px;
+    }
+}

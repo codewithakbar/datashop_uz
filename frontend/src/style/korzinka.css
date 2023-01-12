@@ -294,6 +294,17 @@
     line-height: 17px;
     color: #888888;
 }
+
+@media screen and (max-width: 1440px ) {
+    .korzinka {
+        width: 1140px;
+        gap: 20px;
+    }
+    .korzinkaTitle {
+        width: auto;
+    }
+}
+
 /* mobile respansive ===================== START  */
 @media screen  and  (max-width : 414px) and (min-width: 360px) {
     .korzinka {

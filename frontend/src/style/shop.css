@@ -603,6 +603,14 @@ input[type=range]:focus::-ms-fill-upper {
 .asideClose {
   display: none;
 }
+@media screen and (max-width: 1440px ) {
+  .shop {
+    width: 1140px;
+  }
+  .shopMenuCon {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 @media screen and (max-width : 414px) and (min-width: 360px) {
   .Laptop {
