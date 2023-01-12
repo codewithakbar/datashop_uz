@@ -18,6 +18,10 @@ def product_list(request):
         if name is not None:
             products = products.filter(name__icontains=name)
 
+        category = request.query_params.get('category', None)
+        if category is not None:
+            products = products.filter(category__icontains=category)
+
         product_serializer = ProductSerializer(products, many=True)
         return JsonResponse(product_serializer.data, safe=False)
 
