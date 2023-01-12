@@ -23,7 +23,7 @@ import { Pagination , Navigation , Autoplay } from "swiper";
 
 function Main({ laptops, monitors, add }) {
     const [openShopBtn, setopenShopBtn] = useState('goShopBtnClose')
-
+    
 
     return (
         <main>
@@ -41,7 +41,7 @@ function Main({ laptops, monitors, add }) {
                                         <div className="box">
                                             <div className="inner">
                                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
-                                                    <Link to='/laptop' onClick={() => add({ id: laptop.id , img: laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
+                                                    <Link to='/laptop' onClick={() => add({ id: laptop.id ,img :laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
                                                     <img src={laptop.img} alt="" />
                                                 </div>
                                                 <div className="laptopInfo">
@@ -53,7 +53,7 @@ function Main({ laptops, monitors, add }) {
                                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
                                                         <AiOutlineStar className='evaCompanent' color='#E81D1C' />
                                                     </div>
-                                                    <span id='productPrice' className='price'>{laptop.prise}00 000 UZS</span>
+                                                    <span id='productPrice' className='price'>${laptop.price}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -131,7 +131,7 @@ function Main({ laptops, monitors, add }) {
                     spaceBetween: 10,
                   },
                   "@0.75": {
-                    slidesPerView: 2,
+                    slidesPerView: 7,
                     spaceBetween: 20,
                   },
                   "@1.00": {

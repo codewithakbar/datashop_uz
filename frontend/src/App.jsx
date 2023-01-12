@@ -42,14 +42,14 @@ function App() {
 
 
 //   async function GetTack() {
-//     const response = await axios.get('https://fakestoreapi.com/products')
+//     const response = await axios.get('https://api.datashop.uz/api/products?name=sam')
 //     setLaptops(response.data);
 //     console.log(response.data);
 //  }
 //  useEffect( () => {
 //   GetTack()
-//  })
-
+//  }, [])
+ let baseURL = 'https://api.datashop.uz'
 
 
 
@@ -227,7 +227,16 @@ function AddAksesuar() {
     setAddKorzinka(filtered)
   }
   // ikki element qoshilsa count qoshiladi
-
+  const [count , setCount ] = useState(1)
+  function CountPlus() {
+    setCount(count + 1)
+  }
+  function CountMinus() {
+    setCount(count - 1)
+    if (count == 0) {
+      setCount(0)
+    }
+  }
 
   return (
     <>
@@ -255,10 +264,10 @@ function AddAksesuar() {
         AddAksesuar={AddAksesuar} 
         setFotChange={setFotChange}/>
         <Routes>
-          <Route path='/' element={<WebMenu laptops={laptops} monitors={monitors} add={add}/> }/>
+          <Route path='/' element={<WebMenu baseURL={baseURL} laptops={laptops} monitors={monitors} add={add}/> }/>
           <Route path='/shop' element={<Shop shops={shops} />}/> 
           <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} FilterAdd={FilterAdd}/>} />
-          <Route path='/korzinka' element={<Korzinka addKorzinka={addKorzinka} Delete={Delete} setAddKorzinka={setAddKorzinka}/>} />
+          <Route path='/korzinka' element={<Korzinka count={count} CountPlus={CountPlus} CountMinus={CountMinus} addKorzinka={addKorzinka} Delete={Delete} setAddKorzinka={setAddKorzinka}/>} />
           <Route path='/zakaz' element={<Zakaz />} />
           <Route path='/kabinet' element={<Kabinet />} />
           <Route path='/profilZakaz' element={<MoyZakaz />} />

@@ -1,7 +1,7 @@
 import victus from '../media/laptop.png'
 import { Link } from 'react-router-dom'
 
-function Korzinka({addKorzinka , Delete , setAddKorzinka}) {
+function Korzinka({addKorzinka , Delete , setAddKorzinka , CountPlus , count , CountMinus}) {
 
 
     return (
@@ -41,9 +41,9 @@ function Korzinka({addKorzinka , Delete , setAddKorzinka}) {
                                     </div>
                                     <div className="KproductEnd">
                                         <div className="KproductCount">
-                                            <button>-</button>
-                                            <span>1</span>
-                                            <button>+</button>
+                                            <button onClick={CountMinus}>-</button>
+                                            <span>{count}</span>
+                                            <button onClick={CountPlus}>+</button>
                                         </div>
                                         <div className="KproductPrice">
                                             <span>6 800 000 СУМ</span>

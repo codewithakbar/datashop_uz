@@ -1,11 +1,11 @@
 import Header from "./header/Header";
 import Main from "./main/Main";
 
-function WebMenu({laptops , monitors , add}) {
+function WebMenu({laptops , monitors , add ,baseURL}) {
     return (
         <>
             <Header/>
-            <Main laptops={laptops} monitors={monitors} add={add} />
+            <Main baseURL={baseURL} laptops={laptops} monitors={monitors} add={add} />
         </>
     )
 }
