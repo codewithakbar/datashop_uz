@@ -20,10 +20,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination , Navigation , Autoplay } from "swiper";
+import {AiFillHeart , AiOutlineHeart } from 'react-icons/ai'
 
 function Main({ laptops, monitors, add }) {
     const [openShopBtn, setopenShopBtn] = useState('goShopBtnClose')
     
+    const [hear , setHear] = useState(<AiFillHeart/>)
+    function addIzb() {
+        
+    }
+
 
     return (
         <main>
@@ -41,6 +47,7 @@ function Main({ laptops, monitors, add }) {
                                         <div className="box">
                                             <div className="inner">
                                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
+                                                    {/* <AiFillHeart className='hear'/> */}
                                                     <Link to='/laptop' onClick={() => add({ id: laptop.id ,img :laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
                                                     <img src={laptop.img} alt="" />
                                                 </div>

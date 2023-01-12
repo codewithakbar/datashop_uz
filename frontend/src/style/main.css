@@ -399,6 +399,14 @@ main {
 	animation: fade 0.8s both ease;
 }
 
+.hear {
+    top: 0;
+    right: 10px;
+    position: absolute;
+    color: #E81D1C;
+    font-size: 24px;
+    cursor: pointer;
+}
 
 
 @keyframes fade {
