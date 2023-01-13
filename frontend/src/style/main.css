@@ -408,6 +408,17 @@ main {
     cursor: pointer;
 }
 
+.hearBtn {
+    top: 0;
+    right: 0;
+    position: absolute;
+    color: #E81D1C;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    background: none;
+    border: none;
+}
 
 @keyframes fade {
 	0%{

@@ -25,9 +25,16 @@ import {AiFillHeart , AiOutlineHeart } from 'react-icons/ai'
 function Main({ laptops, monitors, add }) {
     const [openShopBtn, setopenShopBtn] = useState('goShopBtnClose')
     
-    const [hear , setHear] = useState(<AiFillHeart/>)
+    const [hear , setHear] = useState(<AiOutlineHeart className='hear'/>)
+    const [hearOn , setHearOn] = useState(true)    
     function addIzb() {
-        
+        if (hearOn == false) {
+            setHear(<AiOutlineHeart className='hear'/>)
+            setHearOn(true)
+        }if (hearOn == true) {
+            setHear(<AiFillHeart className='hear'/>)
+            setHearOn(false)
+        }
     }
 
 
@@ -47,7 +54,7 @@ function Main({ laptops, monitors, add }) {
                                         <div className="box">
                                             <div className="inner">
                                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
-                                                    {/* <AiFillHeart className='hear'/> */}
+                                                    <button className='hearBtn' onClick={addIzb}>{hear}</button>
                                                     <Link to='/laptop' onClick={() => add({ id: laptop.id ,img :laptop.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
                                                     <img src={laptop.img} alt="" />
                                                 </div>
