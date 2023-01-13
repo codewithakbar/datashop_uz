@@ -135,7 +135,7 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                     <div className="navBtns">
                         <Link to='/korzinka' onClick={() => setFotChange('none')}><button><img src={shopIcon} alt="" /> <span>Корзина</span></button></Link>
                         <Link to='/Избранное'><button><img src={izbIcon} alt="" /> <span>Избранное</span></button></Link>
-                        <Link to='/account'> <button onClick={profil}><img src={profilIcon} alt="" /> <span>Профиль</span></button></Link>
+                        <Link to='/account'> <button  onClick={profil}> <span className='navProfilbutton'><img src={profilIcon} alt="" />  Профиль</span></button></Link>
                         <span className='kLenght'>{addKorzinka.length}</span>
                         <div className={pr}>
                             <p className="profilTitle">Name</p>

@@ -138,11 +138,31 @@ nav {
     font-size: 14px;
     line-height: 17px;
     border: none;
-    background-color: transparent;
+    background: transparent;
     cursor: pointer;
+    border-radius: 6px;
+
 }
 
+.navProfilbutton{
+    background: transparent!important;
+    transition: all 0.5s ease;
+    border-radius: 6px;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
 
+}
+
+.navProfilbutton:hover{
+
+    background-color: rgba(128, 128, 128, 0.176)!important;
+
+}
 .category {
     width: 100%;
     height: 500px;
