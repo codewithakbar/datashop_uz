@@ -110,7 +110,7 @@
 
 .tolov {
     display: flex;
-gap: 10px;
+    gap: 10px;
 }
 
 
@@ -252,7 +252,7 @@ gap: 10px;
         padding: 0 10px;
     }
 
-    .Zakaz{
+    .Zakaz {
         display: flex;
         flex-direction: column;
         gap: 50px;
@@ -309,7 +309,8 @@ gap: 10px;
         width: 355px;
         height: 60px;
     }
-    .ZakazRes{
-        display: none!important;
+
+    .ZakazRes {
+        display: none !important;
     }
 }

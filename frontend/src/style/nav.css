@@ -82,7 +82,7 @@ nav {
     color: #FFFFFF;
     font-weight: 400;
     font-size: 14px;
-    line-height: 17px;  
+    line-height: 17px;
     cursor: pointer;
     border-radius: 10px;
 }
@@ -97,7 +97,7 @@ nav {
     border-radius: 10px;
 }
 
-.navSearch input{
+.navSearch input {
     border: none;
     outline: none;
     flex: 1;
@@ -144,8 +144,8 @@ nav {
 
 }
 
-.navProfilbutton{
-    background: transparent!important;
+.navProfilbutton {
+    background: transparent !important;
     transition: all 0.5s ease;
     border-radius: 6px;
     padding: 10px 30px;
@@ -158,11 +158,12 @@ nav {
 
 }
 
-.navProfilbutton:hover{
+.navProfilbutton:hover {
 
-    background-color: rgba(128, 128, 128, 0.176)!important;
+    background-color: rgba(128, 128, 128, 0.176) !important;
 
 }
+
 .category {
     width: 100%;
     height: 500px;
@@ -173,7 +174,7 @@ nav {
     -webkit-box-shadow: 4px 36px 30px -5px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 4px 36px 30px -5px rgba(0, 0, 0, 0.11);
     box-shadow: 4px 36px 30px -5px rgba(0, 0, 0, 0.11);
-    transition: transform 0.3s ;
+    transition: transform 0.3s;
     z-index: 100;
 }
 
@@ -200,7 +201,7 @@ nav {
     padding: 5px 7px;
     cursor: pointer;
     transition: all 0.4s ease;
-    
+
 }
 
 .ctMenu li button {
@@ -233,7 +234,7 @@ nav {
 }
 
 .ctMenuOn {
-   border: 1px solid #E81D1C;
+    border: 1px solid #E81D1C;
 }
 
 .ctMenu li span {
@@ -246,20 +247,25 @@ nav {
     line-height: 15px;
     color: #666363;
 }
-@media screen and (max-width: 1440px ){
+
+@media screen and (max-width: 1440px) {
     .navBottom {
         width: 1140px;
         align-items: center;
     }
+
     .categoryCon {
         width: 1140px;
     }
+
     .navBtns {
         gap: 20px;
     }
+
     .LogoBtnCon {
         margin-bottom: -3px;
     }
+
     .kLenght {
         left: 15px;
     }
@@ -295,7 +301,7 @@ nav {
 
 
 .kLenght {
-    color: #FFFFFF ;
+    color: #FFFFFF;
     position: absolute;
     top: -5px;
     font-size: 12px;
@@ -313,6 +319,7 @@ nav {
     0% {
         transform: translateY(-100px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -322,10 +329,11 @@ nav {
     top: 0;
     position: fixed;
     z-index: 101;
-    animation: navAnimation 0.5s ease ;
+    animation: navAnimation 0.5s ease;
 }
-.navProfil{
-    display: none!important;
+
+.navProfil {
+    display: none !important;
     position: absolute;
     top: 45px;
     right: 0px;
@@ -341,14 +349,16 @@ nav {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
     border-radius: 5px 0px 5px 5px;
 }
-.profilPage{
+
+.profilPage {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 10px;
 }
-.profilPage span{
+
+.profilPage span {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -364,11 +374,13 @@ nav {
     border-radius: 5px;
     border: 1px solid transparent;
 }
-.profilPage span:hover{
-        
-   transform: translateX(5px);
+
+.profilPage span:hover {
+
+    transform: translateX(5px);
 }
-.profilTitle{
+
+.profilTitle {
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
@@ -376,28 +388,33 @@ nav {
     border-bottom: 1px solid #666363;
     padding: 5px;
 }
-.pr{
-    display: flex!important;
+
+.pr {
+    display: flex !important;
 }
+
 .categoryCloseRes {
     display: none;
 }
 
 /*desktop versiyada none bolib duradon narsalar === START */
-    .navRes {
-        display: none;
-    }
+.navRes {
+    display: none;
+}
+
 /*desktop versiyada none bolib duradon narsalar === END */
 
 /* Respansive mobile ============================================ START*/
 
-@media screen  and  (max-width : 414px) and (min-width: 360px) {
+@media screen and (max-width : 414px) and (min-width: 360px) {
     .nav-b {
         display: none;
     }
+
     .navTop {
         display: none;
     }
+
     .navRes {
         padding: 10px 0px;
         display: flex;
@@ -405,41 +422,50 @@ nav {
         gap: 10px;
         background-color: white;
     }
+
     .navResTop {
         width: 100%;
         padding: 0px 10px;
-        display: flex ;
+        display: flex;
         align-items: center;
         justify-content: space-between;
     }
+
     .dataLogo {
         width: 11em;
     }
+
     .navResTopBtn {
         display: flex;
         align-items: center;
         gap: 25px;
     }
-    .til img{
+
+    .til img {
         width: 20px;
     }
+
     .til select {
         color: black;
         gap: 0;
     }
+
     .navResBottom {
         width: 100%;
         padding: 0px 10px;
         display: flex;
         gap: 10px;
     }
+
     .CategoryBtn {
         height: 40px;
         width: 70px;
     }
+
     .navSearch {
         height: auto;
     }
+
     .navSearch button {
         display: flex;
         align-items: center;
@@ -447,31 +473,37 @@ nav {
         width: 50px;
         height: 100%;
     }
+
     .category {
         width: 100%;
         height: 100vh;
         top: 0;
     }
+
     .categoryCon {
         flex-direction: column;
     }
-    .ctMenu {
-        
-    }
-    .ctMenu li{
+
+    .ctMenu {}
+
+    .ctMenu li {
         width: 100%;
         justify-content: space-between;
     }
+
     .ctMenu li button {
         width: 100%;
         justify-content: space-between;
     }
+
     .categoryCon {
         gap: 30px;
     }
+
     .ctInfo {
         padding: 0px 10px;
     }
+
     .categoryCloseRes {
         width: 100%;
         height: 45px;
@@ -481,10 +513,12 @@ nav {
         padding: 20px 10px;
         background-color: #E81D1C;
     }
+
     .categoryClose {
         display: none;
     }
 }
+
 /* Respansive mobile ============================================ END*/
 
 .categoryClose {
