@@ -1,11 +1,12 @@
 .Kabinet {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: flex-start;
     gap: 30px;
     width: 1440px;
     margin: auto;
+    padding-top: 30px;
 }
 
 .kabinetProfil {
@@ -20,7 +21,6 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 10px 20px;
-
 }
 
 .kabinetUserIcon {
@@ -49,13 +49,11 @@
     border: 1px solid #9593932f;
 }
 
-
 .kabinetInfo {
+    width: 100%;
     display: flex;
-    justify-content: center;
     align-items: flex-start;
-    gap: 150px;
-    height: 60vh;
+    gap: 100px;
 }
 
 .kabinetRegiser {
@@ -64,6 +62,7 @@
     align-items: flex-start;
     justify-content: center;
     gap: 40px;
+    padding-bottom: 200px;
 }
 
 .registerTel {
@@ -148,7 +147,6 @@
     line-height: 19px;
     color: #3C3C3C;
     padding: 20px;
-
 }
 
 .moyZakaz {
@@ -198,7 +196,6 @@
     border-radius: 15px;
 }
 
-
 .zakazData {
     font-weight: 400;
     font-size: 14px;
@@ -242,7 +239,6 @@
 }
 
 .xabarData {
-
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -357,7 +353,14 @@
 
 .accountbutton:hover{
     background: #b51616;
-
+}
+@media screen and (max-width: 1440px) {
+    .Kabinet {
+        width: 1140px;
+    }
+    .kabinetInfo {
+        gap:20px;
+    }
 }
 
 
@@ -368,6 +371,7 @@
     .Accaunt{
         display: flex!important;
         box-shadow: none;
+        margin: 0px;
     }
 
 

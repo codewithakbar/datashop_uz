@@ -14,15 +14,12 @@ export default function Accaunt() {
                         <img src={userIcon} alt="" /> <input type="text" placeholder='Имя' />
                     </div>
                 </div>
-
-
                 <div className="inputInfo">
                     <p>Email</p>
                     <div className="inputIcon">
                         <img src={emailIcon} alt="" /> <input type="email" placeholder='example@gmail.com' />
                     </div>
                 </div>
-
                 <div className="inputInfo">
                     <p>Пароль</p>
                     <div className="inputIcon">
