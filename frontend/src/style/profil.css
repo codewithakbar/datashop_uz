@@ -373,6 +373,32 @@
         box-shadow: none;
         margin: 0px;
     }
-
-
+    .Kabinet {
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .kabinetInfo {
+        flex-direction: column;
+    }
+    .kabinetProfil {
+        width: 100%;
+    }
+    .registerTitle {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #3C3C3C;
+    }
+    .telInput {
+        width: 100%;
+    } 
+    .userInfo {
+        width: 100%;
+    }
+    .userInfo input {
+        width: 100%;
+    }
+    .kabinetRegiser {
+        padding-bottom: 20px;
+    }
 }

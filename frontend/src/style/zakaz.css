@@ -246,14 +246,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 80px;
+        gap: 20px;
         width: 100%;
         margin: auto;
         padding: 0 10px;
     }
-
     .Zakaz {
         display: flex;
+        justify-content: center;
         flex-direction: column;
         gap: 50px;
     }
@@ -312,5 +312,8 @@
 
     .ZakazRes {
         display: none !important;
+    }
+    .ZakazSelects {
+        justify-content: start;
     }
 }
