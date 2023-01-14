@@ -258,12 +258,10 @@ input[type=range] {
 
 .miniBorder img {
   width: 66px;
-  height: 59px;
 }
 
 .laptopImgg {
   width: 350px;
-  height: 300px;
 }
 
 .miniBorder {
@@ -290,7 +288,6 @@ input[type=range] {
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
-
 }
 
 .InfoTitle {
@@ -604,6 +601,17 @@ input[type=range]:focus::-ms-fill-upper {
   display: none;
 }
 @media screen and (max-width: 1440px ) {
+  .Laptop {
+    width: 1140px;
+  }
+  .LaptopContainer {
+    padding: 0px;
+  }
+  .LaptopTovar {
+    gap: 0px;
+    width: 100%;
+    justify-content: space-between;
+  }
   .shop {
     width: 1140px;
   }

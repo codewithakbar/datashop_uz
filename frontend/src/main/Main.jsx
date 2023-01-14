@@ -37,7 +37,7 @@ function Main({ laptops, monitors, add }) {
         }
     }
 
-
+    
     return (
         <main>
             <div className="mainlaptops">
