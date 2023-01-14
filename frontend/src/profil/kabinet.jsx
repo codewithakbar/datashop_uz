@@ -37,8 +37,6 @@ export default function Kabinet() {
                             </div>
                         </div>
                     </div>
-
-
                     <div className="registerTel">
                         <h1 className='registerTitle'>Информация об учетной записи пользователя</h1>
                         <div className="inputFic">

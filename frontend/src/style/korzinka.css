@@ -457,3 +457,12 @@
     }
  }
 /* mobile respansive ===================== END */
+
+.KorzinkaPustoy {
+    height: 80vh;
+    width: 1440px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

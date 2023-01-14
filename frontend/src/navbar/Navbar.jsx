@@ -23,7 +23,7 @@ import {CgMenu} from 'react-icons/cg'
 import {FiPhone} from 'react-icons/fi'
 
 
-function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange, addKorzinka }) {
+function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange, addKorzinka , korzinkaOn }) {
     const [trm, setTrm] = useState(1000)
     const [icon, setIcon] = useState(<BiCategory size='27px' color='#ffffff' />)
     const [noneBorder, setNoneBoreder] = useState('')

@@ -2,7 +2,7 @@ import Footer from './footer/Footer';
 import Navbar from './navbar/Navbar'
 import snowLogo from './christmas-snowflake-winter-free-png.png'
 import Snowfall from 'react-snowfall'
-import {BrowserRouter , Link, Route , Routes } from 'react-router-dom'
+import {BrowserRouter , Link, Route , Routes , useNavigate , redirect} from 'react-router-dom'  
 import WebMenu from './WebMenu';
 import Shop from './shop/Shop';
 import { useState } from 'react';
@@ -27,6 +27,7 @@ import Izb from './izbronoe/Izb'
 import {FiHome , FiShoppingCart} from 'react-icons/fi'
 import {AiOutlineStar} from 'react-icons/ai'
 import {RxPerson} from 'react-icons/rx'
+import KorzinkaPustoy from './Korzina/KorzinkaPustoy';
 // booto bar uchun icoon ================= END
 
 
@@ -227,6 +228,8 @@ function AddAksesuar() {
     setAddKorzinka(filtered)
   }
   // ikki element qoshilsa count qoshiladi
+
+  // Korzinka Count ===== START
   const [count , setCount ] = useState(1)
   function CountPlus() {
     setCount(count + 1)
@@ -237,6 +240,19 @@ function AddAksesuar() {
       setCount(0)
     }
   }
+  // Korzinka Count ===== END
+
+  // Korzinka On-Off Function ==== START
+    // const navigate = useNavigate()
+    // function korzinkaOn() {
+    //   if (addKorzinka.length == 0) {
+    //    navigate("/korzinkaNoneProduct")
+    //   }
+    //   if (addKorzinka.length > 0) {
+    //     navigate("/korzinka")
+    //   }
+    // }
+  // Korzinka On-Off Function ==== END
 
   return (
     <>
@@ -262,7 +278,7 @@ function AddAksesuar() {
         AddMonitor={AddMonitor} 
         AddSmartfon={AddSmartfon} 
         AddAksesuar={AddAksesuar} 
-        setFotChange={setFotChange}/>
+        setFotChange={setFotChange} />
         <Routes>
           <Route path='/' element={<WebMenu baseURL={baseURL} laptops={laptops} monitors={monitors} add={add}/> }/>
           <Route path='/shop' element={<Shop shops={shops} />}/> 
@@ -274,6 +290,7 @@ function AddAksesuar() {
           <Route path='/xabar' element={<Xabar />} />
           <Route path='/account' element={<Account />} />
           <Route path='/Избранное' element={<Izb add={add} laptops={laptops}/>} />
+          <Route path='/korzinkaNoneProduct' element={<KorzinkaPustoy/>}/>
         </Routes>
         <Footer fotChange={fotChange}/>
         <div className="bottomBar">
