@@ -124,14 +124,13 @@ nav {
 .navBtns {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 0px;
     position: relative;
 }
 
 .navBtns button {
     display: flex;
     align-items: center;
-    width: 93px;
     height: 24px;
     gap: 14px;
     font-weight: 400;
@@ -141,27 +140,53 @@ nav {
     background: transparent;
     cursor: pointer;
     border-radius: 6px;
-
 }
 
 .navProfilbutton {
     background: transparent !important;
     transition: all 0.5s ease;
     border-radius: 6px;
-    padding: 10px 30px;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
     gap: 14px;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-
+}
+.navKorzinkabutton {
+    background: transparent !important;
+    transition: all 0.5s ease;
+    border-radius: 6px;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+.navIzbbutton {
+    background: transparent !important;
+    transition: all 0.5s ease;
+    border-radius: 6px;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
 }
 
 .navProfilbutton:hover {
-
     background-color: rgba(128, 128, 128, 0.176) !important;
-
+}
+.navIzbbutton:hover {
+    background-color: rgba(128, 128, 128, 0.176) !important;
+}
+.navKorzinkabutton:hover {
+    background-color: rgba(128, 128, 128, 0.176) !important;
 }
 
 .category {
@@ -224,8 +249,6 @@ nav {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     transition: all 0.6s ease;
-
-
 }
 
 .ctMenu li:hover .ctIcon,
@@ -252,6 +275,7 @@ nav {
     .navBottom {
         width: 1140px;
         align-items: center;
+        gap: 10px;
     }
 
     .categoryCon {
@@ -259,7 +283,8 @@ nav {
     }
 
     .navBtns {
-        gap: 20px;
+        gap: 0px;
+        justify-content: space-between;
     }
 
     .LogoBtnCon {
@@ -267,7 +292,7 @@ nav {
     }
 
     .kLenght {
-        left: 15px;
+        left: 33px;
     }
 }
 
@@ -303,9 +328,9 @@ nav {
 .kLenght {
     color: #FFFFFF;
     position: absolute;
-    top: -5px;
+    top: 3px;
     font-size: 12px;
-    right: 330px;
+    right: 360px;
     width: 15px;
     height: 15px;
     display: flex;

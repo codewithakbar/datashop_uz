@@ -484,6 +484,11 @@ main {
     width: 100%;
     background-color: #E81D1C;
 }
+.servicess {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
 /* mobile respansive ===================== START  */
 
   @media screen  and  (max-width : 414px) and (min-width: 360px) {
@@ -519,12 +524,21 @@ main {
         gap: 10px;
         display: grid;
         grid-template-columns: repeat(2 , 1fr);
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        align-self: center;
+    }
+    .services {
+        display: flex;
+        justify-self: center;
+        align-self: center;
     }
     .laptop {
         width: 168px;
         height: 230px;
-        justify-self: center;
-        align-self: center;
+        justify-items: center;
+        align-items: center;
     }
     .laptop img {
         width: 105px;

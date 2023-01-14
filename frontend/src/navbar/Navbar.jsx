@@ -133,8 +133,8 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                             <button className='navSearchBtn'><HiOutlineSearch color='#ffffff' size='24px' /></button>
                         </div>
                     <div className="navBtns">
-                        <Link to='/korzinka' onClick={() => setFotChange('none')}><button><img src={shopIcon} alt="" /> <span>Корзина</span></button></Link>
-                        <Link to='/Избранное'><button><img src={izbIcon} alt="" /> <span>Избранное</span></button></Link>
+                        <Link to='/korzinka' onClick={() => setFotChange('none')}><button className='navKorzinkabutton'><img src={shopIcon} alt="" /> <span>Корзина</span></button></Link>
+                        <Link to='/Избранное'><button className='navIzbbutton'><img src={izbIcon} alt="" /> <span>Избранное</span></button></Link>
                         <Link to='/account'> <button  onClick={profil}> <span className='navProfilbutton'><img src={profilIcon} alt="" />  Профиль</span></button></Link>
                         <span className='kLenght'>{addKorzinka.length}</span>
                         <div className={pr}>
