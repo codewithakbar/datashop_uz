@@ -5,6 +5,10 @@ from models.productmodels import ProductModel, ReviewModel
 from dto.productschema import ProductSchema
 from config.hashing import Hashing
 
+from models.usermodels import User
+from config.token import get_currentUser
+
+
 import uuid
 import os
 
@@ -13,9 +17,13 @@ class ProductService:
     def get_all_product(db: Session):
         return db.query(ProductModel).all()
 
-    def create_product(request: ProductSchema, db: Session):
+    def create_product(
+        request: ProductSchema,
+        db: Session = Depends(get_db),
+        current_user: User = Depends(get_currentUser),
+    ):
         new_product = ProductModel(
-            name=request.name,
+            name=current_user.name,
             image=request.image,
             category=request.category,
             description=request.description,

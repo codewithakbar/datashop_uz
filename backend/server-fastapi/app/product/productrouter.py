@@ -3,6 +3,9 @@ from sqlalchemy.orm import Session
 from dto.productschema import ProductSchema
 from config.database import get_db
 
+from models.usermodels import User
+from config.token import get_currentUser
+
 from .productservice import ProductService
 
 router = APIRouter(prefix="/product", tags=["Products"])
@@ -14,8 +17,14 @@ def getallProduct(db: Session = Depends(get_db)):
 
 
 @router.post("/")
-def createProduct(request: ProductSchema, db: Session = Depends(get_db)):
-    return ProductService.create_product(request=request, db=db)
+def createProduct(
+    request: ProductSchema,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_currentUser),
+):
+    return ProductService.create_product(
+        request=request, db=db, current_user=current_user
+    )
 
 
 @router.get("/{productid}")
