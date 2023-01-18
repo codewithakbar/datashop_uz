@@ -34,6 +34,8 @@ conf = ConnectionConfig(
     MAIL_SERVER = "smtp.gmail.com",
     MAIL_STARTTLS = False,
     MAIL_SSL_TLS = True,
+    # MAIL_TLS=True,
+    # MAIL_SSL=False,
     USE_CREDENTIALS = True,
     VALIDATE_CERTS = True
 )

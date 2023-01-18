@@ -266,7 +266,7 @@ async def upload_product_image(
 async def add_new_product(
     product: product_pydanticIn,
     user: user_pydantic = Depends(get_current_user),
-    file: UploadFile = File(..., max_length=10485760)
+    file: UploadFile = File(...)
 ):
 
     FILEPATH = "./static/images/"
