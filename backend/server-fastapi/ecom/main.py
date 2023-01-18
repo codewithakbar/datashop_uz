@@ -296,7 +296,7 @@ async def add_new_product(
 
         product_obj = await Product.create(**product, business=user)
         product_obj = await product_pydantic.from_tortoise_orm(product_obj)
-        return product_obj, file_name
+        return product_obj
 
     else:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
