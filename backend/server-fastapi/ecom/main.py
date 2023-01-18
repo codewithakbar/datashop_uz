@@ -24,6 +24,8 @@ from typing import List, Optional, Type
 # email
 from emails import send_mail
 
+from fastapi.middleware.cors import CORSMiddleware
+
 # images
 from fastapi import File, UploadFile
 from fastapi.staticfiles import StaticFiles
@@ -35,7 +37,7 @@ from config import get_settings
 SITE_URL = get_settings().SITE_URL
 
 
-app = FastAPI(title="E-commerce API", version="0.1.1",
+app = FastAPI(title="Datashop API", version="0.1.1",
               description=" E-commerce API created with FastAPI and jwt Authenticated")
 
 
@@ -43,6 +45,20 @@ oauth_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # static file setup config
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+
+origins = [
+    "*"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 
 @app.post("/token", tags=["User"])
