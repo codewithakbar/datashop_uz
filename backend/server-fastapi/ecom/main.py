@@ -266,11 +266,11 @@ async def upload_product_image(
 async def add_new_product(
     product: product_pydanticIn,
     user: user_pydantic = Depends(get_current_user),
-    file: UploadFile = File(...)
+    prod_img: UploadFile = File(...)
 ):
 
     FILEPATH = "./static/images/"
-    file_name =  file.filename
+    file_name =  prod_img.filename
 
     try:
         extension = file_name.split(".")[1]
@@ -281,7 +281,7 @@ async def add_new_product(
 
     token_name = "product_image" + secrets.token_hex(10) + "." + extension
     generated_name = FILEPATH + token_name
-    file_content = await file.read()
+    file_content = await prod_img.read()
 
     with open(generated_name, "wb") as f:
         f.write(file_content)
