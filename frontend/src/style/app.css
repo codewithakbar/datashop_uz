@@ -13,6 +13,7 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .container {
@@ -97,5 +98,91 @@ body {
       font-size: 10px;
       line-height: 12px;
       color: #E81D1C;
+    }
+  }
+  .blur {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.13);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.4px);
+-webkit-backdrop-filter: blur(7.4px);
+border: 1px solid rgba(255, 255, 255, 0.03);
+z-index: 2198;
+display: flex;
+align-items: center;
+justify-content: center;
+  }
+
+
+
+  /* timer */
+
+
+  .clock {
+    position: relative;
+    margin: a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #051817, #0e3839);
+    height: 180px;
+    width: 420px;
+    color: #06f1f6;
+    text-shadow: 1px 1px 7px;
+    border-radius: 15px;
+    border: 2px solid silver;
+    box-shadow: 0 0 5px 25px;
+  }
+  
+  .clock section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .clock section p {
+    font-size: 4rem;
+  }
+  .clock section small {
+    color: silver;
+    text-shadow: none;
+  }
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
