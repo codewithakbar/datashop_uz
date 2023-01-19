@@ -282,29 +282,11 @@ async def upload_product_image(
 async def add_new_product(
     product: product_pydanticIn,
     user: user_pydantic = Depends(get_current_user),
-    prod_img: UploadFile = File(...)
 ):
 
-    FILEPATH = "./static/images/"
-    file_name =  prod_img.filename
-
-    try:
-        extension = file_name.split(".")[1]
-    finally:
-        if extension not in ["png", "jpg", "jpeg"]:
-            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
-                                detail="File extension not allowed")
-
-    token_name = "product_image" + secrets.token_hex(10) + "." + extension
-    generated_name = FILEPATH + token_name
-    file_content = await prod_img.read()
-
-    with open(generated_name, "wb") as f:
-        f.write(file_content)
-
-    
 
     product = product.dict(exclude_unset=True)
+
 
     if product["original_price"] > 0:
         product["percentage_discount"] = (
@@ -312,7 +294,7 @@ async def add_new_product(
 
         product_obj = await Product.create(**product, business=user)
         product_obj = await product_pydantic.from_tortoise_orm(product_obj)
-        return product_obj, file_name
+        return product_obj
 
     else:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
