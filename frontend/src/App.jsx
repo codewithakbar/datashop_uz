@@ -309,6 +309,7 @@ function AddAksesuar() {
         timerMinutes={timerMinutes}
         timerSeconds={timerSeconds}
       />
+        <h1>Ishga tushadi</h1>
       </div>
         <Snowfall 
           style={{ 

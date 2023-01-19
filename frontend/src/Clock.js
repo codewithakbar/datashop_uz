@@ -8,22 +8,22 @@ const Clock = ({ timerDays, timerHours, timerMinutes, timerSeconds }) => {
           <div className="clock">
             <section>
               <p>{timerDays}</p>
-              <small>Days</small>
+              <small>Kun</small>
             </section>
             <span>:</span>
             <section>
               <p>{timerHours}</p>
-              <small>Hours</small>
+              <small>soat</small>
             </section>{" "}
             <span>:</span>
             <section>
               <p>{timerMinutes}</p>
-              <small>Minutes</small>
+              <small>daqiqa</small>
             </section>{" "}
             <span>:</span>
             <section>
               <p>{timerSeconds}</p>
-              <small>Seconds</small>
+              <small>soniya</small>
             </section>
           </div>
         </section>
