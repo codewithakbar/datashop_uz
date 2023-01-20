@@ -70,6 +70,13 @@ def getNotes(request):
 @api_view(['GET'])
 # @permission_classes([IsAuthenticated])
 def getProduct(request):
-    queryset = Product.objects.all()
-    serializer = ProductSerializer(queryset, many=True)
+    prod = Product.objects.all()
+    serializer = ProductSerializer(prod, many=True)
     return Response(serializer.data)
+
+
+
+@api_view(['POST'])
+def postProduct(request):
+
+    pass

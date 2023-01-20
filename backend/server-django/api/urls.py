@@ -16,6 +16,7 @@ urlpatterns = [
     
     path('', views.getRoutes),
     path('notes/', views.getNotes),
+    path('prod/', views.getProduct),  
 
     # Urls
     url(r'^products$', product_list),
