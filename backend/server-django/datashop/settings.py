@@ -49,6 +49,10 @@ INSTALLED_APPS = [
     'users',
     'store',
 
+    'shop',
+    'orders',
+    'payment',
+
 ]
 
 APPEND_SLASH=False
