@@ -1,19 +1,20 @@
 import victus from '../media/laptop.png'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import KorzinkaProduct from './korzinkaProduct'
 
-function Korzinka({addKorzinka , Delete , setAddKorzinka , CountPlus , count , CountMinus}) {
-
+function Korzinka({ addKorzinka, Delete, setAddKorzinka }) {
 
     return (
         <div className="korzinka">
             <div className="products">
                 <ul className="linkCategory">
                     <li>Главная</li>
-                    <li> / Корзина</li>  
+                    <li> / Корзина</li>
                 </ul>
                 <div className="korzinkaProduct">
                     <div className="korzinkaTitle">
-                        <h1>Корзина</h1> 
+                        <h1>Корзина</h1>
                         <span>Товаров в корзине ({addKorzinka.length})</span>
                     </div>
                     <div className="korzinkaElment">
@@ -27,29 +28,7 @@ function Korzinka({addKorzinka , Delete , setAddKorzinka , CountPlus , count , C
                         <div className="korzinkaProducts">
                             {
                                 addKorzinka.map(addKorzin => (
-                                <div className="Kproduct">
-                                    <div className="KproductInfo">
-                                        <div className="KproductImg">
-                                            <img src={addKorzin.img} alt="" />
-                                        </div>
-                                        <div className="productInfo">
-                                            <span className='productInfo1'>HP Victus 15 RTX 3050...</span>
-                                            <span className='productInfo2'>Ноутбук</span>
-                                            <span className='resPrise'>6 800 000 СУМ</span>
-                                            <span className='productInfo3' onClick={() => Delete(addKorzin.id)}>Удалить</span>
-                                        </div>
-                                    </div>
-                                    <div className="KproductEnd">
-                                        <div className="KproductCount">
-                                            <button onClick={CountMinus}>-</button>
-                                            <span>{count}</span>
-                                            <button onClick={CountPlus}>+</button>
-                                        </div>
-                                        <div className="KproductPrice">
-                                            <span>6 800 000 СУМ</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <KorzinkaProduct addKorzinka={addKorzinka} Delete={Delete} addKorzin={addKorzin}/>
                                 ))
                             }
                         </div>

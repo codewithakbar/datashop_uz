@@ -231,16 +231,7 @@ function AddAksesuar() {
   // ikki element qoshilsa count qoshiladi
 
   // Korzinka Count ===== START
-  const [count , setCount ] = useState(1)
-  function CountPlus() {
-    setCount(count + 1)
-  }
-  function CountMinus() {
-    setCount(count - 1)
-    if (count == 0) {
-      setCount(0)
-    }
-  }
+
   // Korzinka Count ===== END
 
   // Korzinka On-Off Function ==== START
@@ -256,45 +247,45 @@ function AddAksesuar() {
   // Korzinka On-Off Function ==== END
   // TIMER ============================================================================ START
 
-  const [timerDays, setTimerDays] = useState();
-  const [timerHours, setTimerHours] = useState();
-  const [timerMinutes, setTimerMinutes] = useState();
-  const [timerSeconds, setTimerSeconds] = useState();
+  // const [timerDays, setTimerDays] = useState();
+  // const [timerHours, setTimerHours] = useState();
+  // const [timerMinutes, setTimerMinutes] = useState();
+  // const [timerSeconds, setTimerSeconds] = useState();
 
-  let interval;
+  // let interval;
 
-  const startTimer = () => {
-    const countDownDate = new Date("jan ,29 , 2023 ").getTime();
+  // const startTimer = () => {
+  //   const countDownDate = new Date("jan ,29 , 2023 ").getTime();
 
-    interval = setInterval(() => {
-      const now = new Date().getTime();
+  //   interval = setInterval(() => {
+  //     const now = new Date().getTime();
 
-      const distance = countDownDate - now;
+  //     const distance = countDownDate - now;
 
-      const days = Math.floor(distance / (24 * 60 * 60 * 1000));
-      const hours = Math.floor(
-        (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60));
-      const seconds = Math.floor((distance % (60 * 1000)) / 1000);
+  //     const days = Math.floor(distance / (24 * 60 * 60 * 1000));
+  //     const hours = Math.floor(
+  //       (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
+  //     );
+  //     const minutes = Math.floor((distance % (60 * 60 * 1000)) / (1000 * 60));
+  //     const seconds = Math.floor((distance % (60 * 1000)) / 1000);
 
-      if (distance < 0) {
-        // Stop Timer
+  //     if (distance < 0) {
+  //       // Stop Timer
 
-        clearInterval(interval.current);
-      } else {
-        // Update Timer
-        setTimerDays(days);
-        setTimerHours(hours);
-        setTimerMinutes(minutes);
-        setTimerSeconds(seconds);
-      }
-    });
-  };
+  //       clearInterval(interval.current);
+  //     } else {
+  //       // Update Timer
+  //       setTimerDays(days);
+  //       setTimerHours(hours);
+  //       setTimerMinutes(minutes);
+  //       setTimerSeconds(seconds);
+  //     }
+  //   });
+  // };
 
-  useEffect(() => {
-    startTimer();
-  });
+  // useEffect(() => {
+  //   startTimer();
+  // });
 
 
   // TIMER ============================================================================ END
@@ -302,7 +293,7 @@ function AddAksesuar() {
   return (
     <>
       <BrowserRouter>
-      <div className="blur">
+      {/* <div className="blur">
       <Clock
         timerDays={timerDays}
         timerHours={timerHours}
@@ -310,7 +301,7 @@ function AddAksesuar() {
         timerSeconds={timerSeconds}
       />
         <h1>Ishga tushadi</h1>
-      </div>
+      </div> */}
         <Snowfall 
           style={{ 
             position: 'fixed', 
@@ -337,7 +328,7 @@ function AddAksesuar() {
           <Route path='/' element={<WebMenu baseURL={baseURL} laptops={laptops} monitors={monitors} add={add}/> }/>
           <Route path='/shop' element={<Shop shops={shops} />}/> 
           <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} FilterAdd={FilterAdd}/>} />
-          <Route path='/korzinka' element={<Korzinka count={count} CountPlus={CountPlus} CountMinus={CountMinus} addKorzinka={addKorzinka} Delete={Delete} setAddKorzinka={setAddKorzinka}/>} />
+          <Route path='/korzinka' element={<Korzinka  addKorzinka={addKorzinka} Delete={Delete} setAddKorzinka={setAddKorzinka}/>} />
           <Route path='/zakaz' element={<Zakaz />} />
           <Route path='/kabinet' element={<Kabinet />} />
           <Route path='/profilZakaz' element={<MoyZakaz />} />
