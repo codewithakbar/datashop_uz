@@ -6,7 +6,7 @@ import lockIcon from '../media/lock.svg'
 export default function Accaunt() {
     return (
         <div className="Accaunt">
-            <h1 className="accountTitle">Вход / Регистрация</h1>
+            <h1 className="accountTitle">Вход / Регистрация </h1>
             <div className="accountInputs">
                 <div className="inputInfo">
                     <p>Введите имя</p>

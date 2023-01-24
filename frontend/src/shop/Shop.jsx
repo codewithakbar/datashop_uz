@@ -1,13 +1,14 @@
 import {IoIosArrowDown} from 'react-icons/io'
 import {AiFillStar , AiOutlineStar , AiOutlineCustomerService} from 'react-icons/ai'
 import {FiShoppingCart} from 'react-icons/fi'
-import {Link} from 'react-router-dom'
+import {Link, Route, Routes} from 'react-router-dom'
 import { useState } from 'react'
 import {VscSettings} from 'react-icons/vsc'
 import {RiMenu5Fill} from 'react-icons/ri'
 import {MdClose} from 'react-icons/md'
+import ShopSicke from './ShopSicke'
 
-function Shop({shops}) {
+function Shop({shops , laptops}) {
 
     const [openFilter , setOpenFilter] = useState(-1000)
     const [closeFilter , setCloseFilter] = useState('none')
@@ -128,38 +129,8 @@ function Shop({shops}) {
                         </div>
                     </div>
                     <div className="shopMenuCon">
-                    {
-                        shops.map(shop => (
-                            <div className="servicess">
-                                <div className="laptop">
-                                    <div className="content">
-                                        <div className="box">
-                                            <div className="inner">
-                                                <div className="laptopImg">
-                                                    <div className="gobtn">
-                                                        <Link to='/laptop'> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
-                                                    </div>
-                                                    <img src={shop.img} alt="" />
-                                                </div>
-                                                <div className="laptopInfo">
-                                                    <Link to='/laptop'>  <span>{shop.name}</span></Link>
-                                                    <div className="eva">
-                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                                        <AiFillStar className='evaCompanent' color='#E81D1C' />
-                                                        <AiOutlineStar className='evaCompanent' color='#E81D1C' />
-                                                    </div>
-                                                    <span className='price'>{shop.prise}00 000 UZS</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                       ))
-                    }
-                    </div>
+
+                    </div>  
                 </div>
             </div>
         </div>

@@ -20,8 +20,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Navigation, Autoplay } from "swiper";
-import Laptop from './laptop'
 import Monitor from './monitor'
+import Laptops from './laptop'
 
 function Main({ laptops, monitors, add , setIzbProducts}) {
     const [openShopBtn, setopenShopBtn] = useState('goShopBtnClose')
@@ -37,7 +37,7 @@ function Main({ laptops, monitors, add , setIzbProducts}) {
                 <div className="laptops">
                     {
                         laptops.map(laptop => (
-                            <Laptop laptop={laptop} add={add} setIzbProducts={setIzbProducts}/>
+                            <Laptops laptop={laptop} add={add} setIzbProducts={setIzbProducts}/>
                         ))
                     }
                 </div>
@@ -180,7 +180,7 @@ function Main({ laptops, monitors, add , setIzbProducts}) {
                 <div className="laptops">
                     {
                         laptops.map(laptop => (
-                            <Laptop laptop={laptop} add={add} setIzbProducts={setIzbProducts} />
+                            <Laptops laptop={laptop} add={add} setIzbProducts={setIzbProducts} />
                         ))
                     }
                 </div>

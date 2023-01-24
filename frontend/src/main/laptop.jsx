@@ -5,7 +5,7 @@ import { AiFillStar, AiOutlineStar, AiOutlineCustomerService } from 'react-icons
 import { FiShoppingCart } from 'react-icons/fi'
 
 
-function Laptop({laptop , add , setIzbProducts}) {
+function Laptops({laptop , add , setIzbProducts}) {
     const [openShopBtn, setopenShopBtn] = useState('goShopBtnClose')
     const [hear , setHear] = useState(<AiOutlineHeart className='hear'/>)
     const [hearOn , setHearOn] = useState(true)    
@@ -58,4 +58,4 @@ function Laptop({laptop , add , setIzbProducts}) {
     )
 }
 
-export default Laptop
+export default Laptops

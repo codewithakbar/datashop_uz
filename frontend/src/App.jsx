@@ -29,6 +29,7 @@ import {AiOutlineStar} from 'react-icons/ai'
 import {RxPerson} from 'react-icons/rx'
 import KorzinkaPustoy from './Korzina/KorzinkaPustoy';
 import Clock from './Clock';
+import ShopSicke from './shop/ShopSicke';
 // booto bar uchun icoon ================= END
 
 
@@ -332,7 +333,10 @@ function AddAksesuar() {
         setFotChange={setFotChange} />
         <Routes>
           <Route path='/' element={<WebMenu setIzbProducts={setIzbProducts} baseURL={baseURL} laptops={laptops} monitors={monitors} add={add}/> }/>
-          <Route path='/shop' element={<Shop shops={shops} />}/> 
+          <Route path='/shop'>
+            <Route index element={<Shop shops={shops} laptops={laptops}/>}/>
+            {/* <Route path='/lap' element={<ShopSicke laptops={laptops}/>}/>  */}
+          </Route> 
           <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} FilterAdd={FilterAdd}/>} />
           <Route path='/korzinka' element={<Korzinka  addKorzinka={addKorzinka} Delete={Delete} setAddKorzinka={setAddKorzinka}/>} />
           <Route path='/zakaz' element={<Zakaz />} />
