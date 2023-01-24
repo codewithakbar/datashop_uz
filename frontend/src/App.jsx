@@ -290,6 +290,11 @@ function AddAksesuar() {
 
   // TIMER ============================================================================ END
 
+
+  // izbrena add product ======================================= START
+  const [izbProducts , setIzbProducts] = useState([])
+  // izbrena add product ======================================= END
+
   return (
     <>
       <BrowserRouter>
@@ -325,7 +330,7 @@ function AddAksesuar() {
         AddAksesuar={AddAksesuar} 
         setFotChange={setFotChange} />
         <Routes>
-          <Route path='/' element={<WebMenu baseURL={baseURL} laptops={laptops} monitors={monitors} add={add}/> }/>
+          <Route path='/' element={<WebMenu setIzbProducts={setIzbProducts} baseURL={baseURL} laptops={laptops} monitors={monitors} add={add}/> }/>
           <Route path='/shop' element={<Shop shops={shops} />}/> 
           <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} FilterAdd={FilterAdd}/>} />
           <Route path='/korzinka' element={<Korzinka  addKorzinka={addKorzinka} Delete={Delete} setAddKorzinka={setAddKorzinka}/>} />
@@ -334,7 +339,7 @@ function AddAksesuar() {
           <Route path='/profilZakaz' element={<MoyZakaz />} />
           <Route path='/xabar' element={<Xabar />} />
           <Route path='/account' element={<Account />} />
-          <Route path='/Избранное' element={<Izb add={add} laptops={laptops}/>} />
+          <Route path='/Избранное' element={<Izb izbProducts={izbProducts} add={add} laptops={laptops}/>} />
           <Route path='/korzinkaNoneProduct' element={<KorzinkaPustoy/>}/>
         </Routes>
         <Footer fotChange={fotChange}/>

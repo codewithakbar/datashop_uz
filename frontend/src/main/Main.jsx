@@ -23,7 +23,7 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 import Laptop from './laptop'
 import Monitor from './monitor'
 
-function Main({ laptops, monitors, add }) {
+function Main({ laptops, monitors, add , setIzbProducts}) {
     const [openShopBtn, setopenShopBtn] = useState('goShopBtnClose')
 
 
@@ -180,7 +180,7 @@ function Main({ laptops, monitors, add }) {
                 <div className="laptops">
                     {
                         laptops.map(laptop => (
-                            <Laptop laptop={laptop} add={add} />
+                            <Laptop laptop={laptop} add={add} setIzbProducts={setIzbProducts} />
                         ))
                     }
                 </div>

@@ -46,3 +46,52 @@
         width: 1140px;
     }
 }
+
+/* mobile respansive ============== START */
+
+@media screen  and  (max-width : 414px) and (min-width: 360px)  {
+    .izb {
+        width: 100%;
+        padding: 0px 20px;
+        padding-bottom: 40px;
+    }
+    .izbTitle h1 {
+        display: none;
+    }
+    .izbMain {
+        width: 100%;
+        padding: 0px 10px;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        align-self: center;
+    }
+    .services {
+        display: flex;
+        justify-self: center;
+        align-self: center;
+    }
+    .laptop {
+        width: 168px;
+        height: 230px;
+        justify-items: center;
+        align-items: center;
+    }
+    .laptop img {
+        width: 105px;
+    }
+    .laptopInfo {
+        padding: 0px 10px;
+    }
+    .laptopInfo span {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #000000;
+    }
+}
+
+/* mobile respansive ============== END */

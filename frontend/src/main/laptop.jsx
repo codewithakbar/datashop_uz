@@ -5,7 +5,7 @@ import { AiFillStar, AiOutlineStar, AiOutlineCustomerService } from 'react-icons
 import { FiShoppingCart } from 'react-icons/fi'
 
 
-function Laptop({laptop , add}) {
+function Laptop({laptop , add , setIzbProducts}) {
     const [openShopBtn, setopenShopBtn] = useState('goShopBtnClose')
     const [hear , setHear] = useState(<AiOutlineHeart className='hear'/>)
     const [hearOn , setHearOn] = useState(true)    
@@ -13,6 +13,13 @@ function Laptop({laptop , add}) {
         if (hearOn == false) {
             setHear(<AiOutlineHeart className='hear'/>)
             setHearOn(true)
+            setIzbProducts([
+                {
+                    img:laptop.img ,
+                    name: laptop.name ,
+                    price: laptop.price
+                }
+            ])
         }if (hearOn == true) {
             setHear(<AiFillHeart className='hear'/>)
             setHearOn(false)
