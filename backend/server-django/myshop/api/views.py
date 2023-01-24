@@ -1,11 +1,22 @@
+import json
+
 from django.shortcuts import render, get_object_or_404
 
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from shop.models import Product, Category
 from .serializers import ProductSerializer
 from rest_framework import serializers
 from rest_framework import status
+
+from rest_framework.parsers import JSONParser, MultiPartParser, FormParser
+
+from django.core.exceptions import ObjectDoesNotExist
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.permissions import IsAuthenticated
+from django.http import JsonResponse
+
+
   
 
 @api_view(['GET'])
@@ -22,23 +33,50 @@ def ApiOverview(request):
 	return Response(api_urls)
 
 
-@api_view(['POST'])
-def add_items(request):
-    item = ProductSerializer(data=request.data)
+# @api_view(['POST'])
+# @csrf_exempt
+# @permission_classes([IsAuthenticated])
+# def add_products(request):
+#     item = ProductSerializer(data=request.data)
   
-    # validating for already existing data
-    if Product.objects.filter(**request.data).exists():
-        raise serializers.ValidationError('This data already exists')
+#     # validating for already existing data
+#     if Product.objects.filter(**request.data).exists():
+#         raise serializers.ValidationError('This data already exists')
   
-    if item.is_valid():
-        item.save()
-        return Response(item.data)
-    else:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+#     if item.is_valid():
+#         item.save()
+#         return Response(item.data)
+#     else:
+#         return Response(status=status.HTTP_404_NOT_FOUND)
+
+
+@api_view(["POST"])
+@csrf_exempt
+@permission_classes([IsAuthenticated])
+def add_book(request):
+    # payload = json.loads(request.body)
+    payload = FormParser().parse(request)
+    # user = request.user
+    try:
+        # author = Author.objects.get(id=payload["author"])
+        product = Product.objects.create(
+            name=payload["name"],
+            description=payload["description"],
+            price=payload['price'],
+            image=payload["image"],
+            category=payload["category"],
+        )
+
+        serializer = ProductSerializer(product)
+        return JsonResponse(serializer.data, safe=False, status=status.HTTP_201_CREATED)
+    except ObjectDoesNotExist as e:
+        return JsonResponse({'error': str(e)}, safe=False, status=status.HTTP_404_NOT_FOUND)
+    except Exception:
+        return JsonResponse({'error': 'Something terrible went wrong'}, safe=False, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 @api_view(['GET'])
-def view_items(request):
+def view_products(request):
     # checking for the parameters from the URL
     items = Product.objects.all()
 
@@ -54,8 +92,8 @@ def view_items(request):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
 
-@api_view(['POST'])
-def update_items(request, pk):
+@api_view(['PUT'])
+def update_products(request, pk):
 	item = Product.objects.get(pk=pk)
 	data = ProductSerializer(instance=item, data=request.data)
 
@@ -67,7 +105,7 @@ def update_items(request, pk):
 
 
 @api_view(['DELETE'])
-def delete_items(request, pk):
+def delete_products(request, pk):
 	item = get_object_or_404(Product, pk=pk)
 	item.delete()
 	return Response(status=status.HTTP_202_ACCEPTED)
