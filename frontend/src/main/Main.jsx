@@ -37,7 +37,7 @@ function Main({ laptops, monitors, add , setIzbProducts}) {
                 <div className="laptops">
                     {
                         laptops.map(laptop => (
-                            <Laptop laptop={laptop} add={add} />
+                            <Laptop laptop={laptop} add={add} setIzbProducts={setIzbProducts}/>
                         ))
                     }
                 </div>

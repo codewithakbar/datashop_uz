@@ -13,16 +13,17 @@ function Laptop({laptop , add , setIzbProducts}) {
         if (hearOn == false) {
             setHear(<AiOutlineHeart className='hear'/>)
             setHearOn(true)
-            setIzbProducts([
-                {
-                    img:laptop.img ,
-                    name: laptop.name ,
-                    price: laptop.price
-                }
-            ])
         }if (hearOn == true) {
             setHear(<AiFillHeart className='hear'/>)
             setHearOn(false)
+            setIzbProducts(value =>([
+                ...value ,
+                {
+                    img: laptop.img ,
+                    name: laptop.name ,
+                    price: laptop.price ,
+                }
+            ]))
         }
     }
     return (
