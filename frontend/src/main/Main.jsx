@@ -98,8 +98,7 @@ function Main({ laptops, monitors, add }) {
                         },
                     }}
                     modules={[Autoplay, Navigation]}
-                    className="mySwiper3"
-                >
+                    className="mySwiper3">
                     <div className="brend">
                         <div className="brandLogos">
                             <div className="joys">

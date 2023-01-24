@@ -42,26 +42,26 @@ function Header() {
             name: 'Электроника' ,
             img: CategoryAcses
         },
-        {
-            bc: 'linear-gradient(180deg, #D89551 0%, #BD7C3A 100%)' ,
-            name: 'Электроника' ,
-            img: CategoryAcses
-        },
-        {
-            bc: 'linear-gradient(180deg, #47BEE3 0%, rgba(0, 26, 255, 0.39) 100%)' ,
-            name: 'Телевизоры' ,
-            img: CategoryTv
-        },
-        {
-            bc: 'linear-gradient(180deg, #6B3C81 0%, #AC44A2 100%)' ,
-            name: 'Смартфоны' ,
-            img: CategoryPhone
-        },
-        {
-            bc: 'linear-gradient(180deg, #60B3FF 0%, rgba(41, 90, 185, 0.76) 100%)' ,
-            name: 'Ноутбуки' ,
-            img: CategoryLaptop
-        },
+        // {
+        //     bc: 'linear-gradient(180deg, #D89551 0%, #BD7C3A 100%)' ,
+        //     name: 'Электроника' ,
+        //     img: CategoryAcses
+        // },
+        // {
+        //     bc: 'linear-gradient(180deg, #47BEE3 0%, rgba(0, 26, 255, 0.39) 100%)' ,
+        //     name: 'Телевизоры' ,
+        //     img: CategoryTv
+        // },
+        // {
+        //     bc: 'linear-gradient(180deg, #6B3C81 0%, #AC44A2 100%)' ,
+        //     name: 'Смартфоны' ,
+        //     img: CategoryPhone
+        // },
+        // {
+        //     bc: 'linear-gradient(180deg, #60B3FF 0%, rgba(41, 90, 185, 0.76) 100%)' ,
+        //     name: 'Ноутбуки' ,
+        //     img: CategoryLaptop
+        // },
     ])
 
 
