@@ -293,6 +293,7 @@ function AddAksesuar() {
 
   // izbrena add product ======================================= START
   const [izbProducts , setIzbProducts] = useState([])
+  console.log(izbProducts);
   // izbrena add product ======================================= END
 
   return (
