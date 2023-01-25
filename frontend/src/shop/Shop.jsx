@@ -6,7 +6,8 @@ import { useState } from 'react'
 import {VscSettings} from 'react-icons/vsc'
 import {RiMenu5Fill} from 'react-icons/ri'
 import {MdClose} from 'react-icons/md'
-import ShopSicke from './ShopSicke'
+import Laptops from '../main/laptop'
+import ShopProducts from './shopProducts'
 
 function Shop({shops , laptops}) {
 
@@ -129,7 +130,7 @@ function Shop({shops , laptops}) {
                         </div>
                     </div>
                     <div className="shopMenuCon">
-
+                        <ShopProducts />
                     </div>  
                 </div>
             </div>
