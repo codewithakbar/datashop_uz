@@ -1,25 +1,25 @@
-import {IoIosArrowDown} from 'react-icons/io'
-import {AiFillStar , AiOutlineStar , AiOutlineCustomerService} from 'react-icons/ai'
-import {FiShoppingCart} from 'react-icons/fi'
-import {Link, Route, Routes} from 'react-router-dom'
+import { IoIosArrowDown } from 'react-icons/io'
+import { AiFillStar, AiOutlineStar, AiOutlineCustomerService } from 'react-icons/ai'
+import { FiShoppingCart } from 'react-icons/fi'
+import { Link, Route, Routes } from 'react-router-dom'
 import { useState } from 'react'
-import {VscSettings} from 'react-icons/vsc'
-import {RiMenu5Fill} from 'react-icons/ri'
-import {MdClose} from 'react-icons/md'
+import { VscSettings } from 'react-icons/vsc'
+import { RiMenu5Fill } from 'react-icons/ri'
+import { MdClose } from 'react-icons/md'
 import Laptops from '../main/laptop'
 import ShopProducts from './shopProducts'
 
-function Shop({shops , laptops}) {
+function Shop({ shops, laptops }) {
 
-    const [openFilter , setOpenFilter] = useState(-1000)
-    const [closeFilter , setCloseFilter] = useState('none')
-    
+    const [openFilter, setOpenFilter] = useState(-1000)
+    const [closeFilter, setCloseFilter] = useState('none')
+
 
     return (
         <div className="shop">
             <ul className="linkCategory">
                 <li>Menu/</li>
-                <li>Categor/</li>   
+                <li>Categor/</li>
                 <li>Laptop</li>
             </ul>
             <div className="shopMain">
@@ -34,7 +34,7 @@ function Shop({shops , laptops}) {
                             <span>Фильтры</span>
                         </button>
                         <button>
-                            <RiMenu5Fill size={'26px'}/>
+                            <RiMenu5Fill size={'26px'} />
                             <span>Сортировать по</span>
                         </button>
                     </div>
@@ -53,10 +53,10 @@ function Shop({shops , laptops}) {
                     </div>
                 </div>
                 <div className="shopMainS">
-                    <div className="shopMenuAside" style={{left: `${openFilter}px`}}>
+                    <div className="shopMenuAside" style={{ left: `${openFilter}px` }}>
                         <div className="filterTitle">
                             <span>Фильтры</span>
-                            <MdClose size={'20px'} onClick={() => setOpenFilter(-1000) + setCloseFilter('none')}/>
+                            <MdClose size={'20px'} onClick={() => setOpenFilter(-1000) + setCloseFilter('none')} />
                         </div>
                         <div className="rengePrice">
                             <h1>Цена(сум)</h1>
@@ -64,15 +64,15 @@ function Shop({shops , laptops}) {
                                 <div className="priceMinInputs">
                                     <input type="range" />
                                     <input type="range" />
-                                </div>  
+                                </div>
                                 <div className="prices">
                                     <div className="minPrice">
                                         <label htmlFor="">min</label>
-                                        <input type="text" value='200'/>
+                                        <input type="text" value='200' />
                                     </div>
                                     <div className="maxPrice">
                                         <label htmlFor="">max</label>
-                                        <input type="text" value='2200'/>
+                                        <input type="text" value='2200' />
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@ function Shop({shops , laptops}) {
                             <div className="brendChenge">
                                 <ul>
                                     <li>Бренд</li>
-                                    <li><IoIosArrowDown/></li>
+                                    <li><IoIosArrowDown /></li>
                                 </ul>
                                 <select>
                                     <option value="">All</option>
@@ -91,7 +91,7 @@ function Shop({shops , laptops}) {
                             <div className="cpuChenge">
                                 <ul>
                                     <li>Видеокарта</li>
-                                    <li><IoIosArrowDown/></li>
+                                    <li><IoIosArrowDown /></li>
                                 </ul>
                                 <select>
                                     <option value="">All</option>
@@ -103,7 +103,7 @@ function Shop({shops , laptops}) {
                             <div className="ramChenge">
                                 <ul>
                                     <li>Оперативный память</li>
-                                    <li><IoIosArrowDown/></li>
+                                    <li><IoIosArrowDown /></li>
                                 </ul>
                                 <select>
                                     <option value="">All</option>
@@ -115,7 +115,7 @@ function Shop({shops , laptops}) {
                             <div className="ssdChenge">
                                 <ul>
                                     <li>SSD</li>
-                                    <li><IoIosArrowDown/></li>
+                                    <li><IoIosArrowDown /></li>
                                 </ul>
                                 <select>
                                     <option value="">All</option>
@@ -130,9 +130,12 @@ function Shop({shops , laptops}) {
                         </div>
                     </div>
                     <div className="shopMenuCon">
-                        <ShopProducts/>
-                        {/* <Route path='shops' element={<ShopProducts/>}/> */}
-                    </div>  
+                        {
+                            laptops.map(laptop => (
+                                <Laptops laptop={laptop}/>
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </div>
