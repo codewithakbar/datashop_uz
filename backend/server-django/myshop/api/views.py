@@ -9,13 +9,67 @@ from .serializers import ProductSerializer
 from rest_framework import serializers
 from rest_framework import status
 
-from rest_framework.parsers import JSONParser, MultiPartParser, FormParser
+from rest_framework.parsers import JSONParser, MultiPartParser, FormParser, FileUploadParser
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.generics import ListAPIView
 from django.http import JsonResponse
 
+
+class ProductUploadView(ListAPIView):
+    parser_class = (FileUploadParser,)
+    serializer_class = ProductSerializer
+
+    def get_queryset(self):
+        queryset = Product.objects.all()
+        return queryset
+
+    def post(self, request, *args, **kwargs):
+        print(request.data)
+        file_serializer = ProductSerializer(data=request.data)
+        print(file_serializer)
+        if file_serializer.is_valid():
+            file_serializer.save()
+            return Response(
+                file_serializer.data,
+                status=status.HTTP_201_CREATED
+            )
+        else:
+            return Response(
+                file_serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+    def put(self, request):
+        imageid = self.request.POST.get('id')
+        f_obj = Product.objects.filter(id=image) #File is my model name
+        file_serializer = ProductSerializer(f_obj, data=request.data)
+        print(file_serializer)
+        if file_serializer.is_valid():
+            file_serializer.save()
+            return Response(
+                file_serializer.data,
+                status=status.HTTP_201_CREATED
+            )
+        else:
+            return Response(
+                file_serializer.errors,
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+    def delete(self, request):
+        imageid = self.request.POST.get('id')
+        f_obj = Product.objects.filter(id=image) #File is my model name
+        if f_obj.exists():
+            f_obj.delete()
+            return Response(
+                {
+                    "Status": True,
+                    "Message": "image deleted"
+                }
+            )
 
   
 
@@ -37,42 +91,63 @@ def ApiOverview(request):
 # @csrf_exempt
 # @permission_classes([IsAuthenticated])
 # def add_products(request):
-#     item = ProductSerializer(data=request.data)
   
 #     # validating for already existing data
-#     if Product.objects.filter(**request.data).exists():
-#         raise serializers.ValidationError('This data already exists')
+#     # if Product.objects.filter(**request.data).exists():
+#     #     raise serializers.ValidationError('This data already exists')
   
-#     if item.is_valid():
-#         item.save()
-#         return Response(item.data)
-#     else:
-#         return Response(status=status.HTTP_404_NOT_FOUND)
+    # prod = ProductSerializer(data=request.data)
+    # if prod.is_valid():
+    #     prod.save()
+    #     return Response(prod.data)
+    # else:
+    #     return Response(status=status.HTTP_404_NOT_FOUND)
 
 
-@api_view(["POST"])
+@api_view(['POST'])
 @csrf_exempt
 @permission_classes([IsAuthenticated])
-def add_book(request):
-    # payload = json.loads(request.body)
-    payload = FormParser().parse(request)
-    # user = request.user
-    try:
-        # author = Author.objects.get(id=payload["author"])
-        product = Product.objects.create(
-            name=payload["name"],
-            description=payload["description"],
-            price=payload['price'],
-            image=payload["image"],
-            category=payload["category"],
-        )
+def add_products(request):
+  
+    if request.method == 'POST':
+        prod = ProductSerializer()
+        prod.name = request.POST.get('name')
+        prod.slug = request.POST.get('slug')
+        prod.description = request.POST.get('description')
+        prod.price = request.POST.get('price')
+        prod.category = request.POST.get('category')
 
-        serializer = ProductSerializer(product)
-        return JsonResponse(serializer.data, safe=False, status=status.HTTP_201_CREATED)
-    except ObjectDoesNotExist as e:
-        return JsonResponse({'error': str(e)}, safe=False, status=status.HTTP_404_NOT_FOUND)
-    except Exception:
-        return JsonResponse({'error': 'Something terrible went wrong'}, safe=False, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        if len(request.FILES) != 0:
+            prod.image = request.FILES['image']
+
+        prod.save()
+
+        # return Response(prod.data)
+
+
+# @api_view(["POST"])
+# @csrf_exempt
+# @permission_classes([IsAuthenticated])
+# def add_book(request):
+#     # payload = json.loads(request.body)
+#     payload = FormParser().parse(request)
+#     # user = request.user
+#     try:
+#         # author = Author.objects.get(id=payload["author"])
+#         product = Product.objects.create(
+#             name=payload["name"],
+#             description=payload["description"],
+#             price=payload['price'],
+#             image=payload["image"],
+#             category=payload["category"],
+#         )
+
+#         serializer = ProductSerializer(product)
+#         return JsonResponse(serializer.data, safe=False, status=status.HTTP_201_CREATED)
+#     except ObjectDoesNotExist as e:
+#         return JsonResponse({'error': str(e)}, safe=False, status=status.HTTP_404_NOT_FOUND)
+#     except Exception:
+#         return JsonResponse({'error': 'Something terrible went wrong'}, safe=False, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 @api_view(['GET'])
