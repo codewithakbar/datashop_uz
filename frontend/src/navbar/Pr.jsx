@@ -41,7 +41,7 @@ function Pr({setSt ,st , addCategory , AddLaptop , AddMonitor , AddAksesuar , Ad
     if (st == 'phone') {
         return (
             <div className="prMenu">
-                <Link to='/shop' onClick={SmartfonAdd}>
+                <Link to='/shop/smartfon' onClick={SmartfonAdd}>
                     <h1>Смартфоны</h1>
                 </Link>
                 <ul>

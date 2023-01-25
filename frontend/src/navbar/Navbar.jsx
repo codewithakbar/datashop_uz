@@ -158,10 +158,10 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                 </div>
                 <div className="categoryCon">
                     <ul className="ctMenu">
-                        <li onClick={() => setSt('laptop')}>  <button>  <span><BsLaptop className='ctIcon' size='26px' /> <span>Ноутбуки</span></span> <MdOutlineNavigateNext className='ctIcon' size='22px' /></button></li>
-                        <li onClick={() => setSt('phone')}>   <button>  <span><IoPhonePortraitOutline className='ctIcon' size='26px' /> <span>Смартфоны</span></span> <MdOutlineNavigateNext className='ctIcon' size='22px' /></button></li>
-                        <li onClick={() => setSt('monitor')}> <button>  <span><BsTv className='ctIcon' size='26px' /> <span>Мониторы</span></span> <MdOutlineNavigateNext className='ctIcon' size='22px' /></button></li>
-                        <li onClick={() => setSt('acsesuar')}><button>  <span><AiOutlineCustomerService className='ctIcon' size='26px' /> <span>Аксессуары</span></span> <MdOutlineNavigateNext className='ctIcon' size='22px' /></button></li>
+                        <li onMouseOver={() => setSt('laptop')}>  <button>  <span><BsLaptop className='ctIcon' size='26px' /> <span>Ноутбуки</span></span> <MdOutlineNavigateNext className='ctIcon' size='22px' /></button></li>
+                        <li onMouseOver={() => setSt('phone')}>   <button>  <span><IoPhonePortraitOutline className='ctIcon' size='26px' /> <span>Смартфоны</span></span> <MdOutlineNavigateNext className='ctIcon' size='22px' /></button></li>
+                        <li onMouseOver={() => setSt('monitor')}> <button>  <span><BsTv className='ctIcon' size='26px' /> <span>Мониторы</span></span> <MdOutlineNavigateNext className='ctIcon' size='22px' /></button></li>
+                        <li onMouseOver={() => setSt('acsesuar')}><button>  <span><AiOutlineCustomerService className='ctIcon' size='26px' /> <span>Аксессуары</span></span> <MdOutlineNavigateNext className='ctIcon' size='22px' /></button></li>
                     </ul>
                     <div className="ctInfo">
                         <Pr AddSmartfon={AddSmartfon} AddAksesuar={AddAksesuar} AddMonitor={AddMonitor} st={st} setSt={setSt} addCategory={addCategory} AddLaptop={AddLaptop} />
