@@ -63,7 +63,7 @@ export default function Laptop({ adds , setAddKorzinka , FilterAdd}) {
             <div className="LaptopContainer">
                 <span className="kategoriLink">Главная  /  Категория / Ноутбуки / HP / HP Victus 15 RTX 3050 ...   </span>
                 <div className="LaptopName">
-                    <h1 className="LaptopTitle">HP Victus 15 RTX 3050 / i5-12400F / 8 GB RAM</h1>
+                    <h1 className="LaptopTitle">{adds.name}</h1>
                     <div className="eva">
                         <AiFillStar className='evaCompanent' color='#E81D1C' />
                         <AiFillStar className='evaCompanent' color='#E81D1C' />

@@ -29,9 +29,10 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
     const [noneBorder, setNoneBoreder] = useState('')
     const [st, setSt] = useState('laptop')
     const [pr, setPr] = useState('navProfil')
+    const loginUser = false
 
     function profil(){
-        if(pr == 'navProfil'){
+        if(pr == 'navProfil' && loginUser == true){
             setPr('navProfil pr')
         }
         if(pr == 'navProfil pr'){

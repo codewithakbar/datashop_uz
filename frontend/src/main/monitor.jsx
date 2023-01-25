@@ -28,7 +28,7 @@ function Monitor({ monitor , add}) {
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                 <button className='hearBtn' onClick={addIzb}>{hear}</button>
                                     <img src={monitor.img} alt="" />
-                                    <Link to='/laptop' onClick={() => add({ img: monitor.img })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
+                                    <Link to='/laptop' onClick={() => add({ id: monitor.id , img: monitor.img , name: monitor.name })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
                                 </div>
                                 <div className="laptopInfo">
                                     <span>{monitor.name}</span>
