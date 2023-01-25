@@ -130,7 +130,8 @@ function Shop({shops , laptops}) {
                         </div>
                     </div>
                     <div className="shopMenuCon">
-                        <ShopProducts />
+                        <ShopProducts/>
+                        {/* <Route path='shops' element={<ShopProducts/>}/> */}
                     </div>  
                 </div>
             </div>

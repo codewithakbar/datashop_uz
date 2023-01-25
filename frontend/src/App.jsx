@@ -337,7 +337,8 @@ function AddAksesuar() {
           <Route path='/' element={<WebMenu setIzbProducts={setIzbProducts} baseURL={baseURL} laptops={laptops} monitors={monitors} add={add}/> }/>
           <Route path='shop'>
             <Route index element={<Shop shops={shops} laptops={laptops}/>}/>
-            <Route path='shops' element={<ShopProducts/>}/>
+            <Route path='shops' element={<Shop shops={shops} laptops={laptops}/>}/>
+            {/* <Route path='shops' element={<ShopProducts/>}/>  */}
           </Route> 
           <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} FilterAdd={FilterAdd}/>} />
           <Route path='/korzinka' element={<Korzinka  addKorzinka={addKorzinka} Delete={Delete} setAddKorzinka={setAddKorzinka}/>} />
