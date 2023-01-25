@@ -43,7 +43,7 @@ class ProductUploadView(ListAPIView):
             )
 
     def put(self, request):
-        imageid = self.request.POST.get('id')
+        image = self.request.POST.get('id')
         f_obj = Product.objects.filter(id=image) #File is my model name
         file_serializer = ProductSerializer(f_obj, data=request.data)
         print(file_serializer)
@@ -60,7 +60,7 @@ class ProductUploadView(ListAPIView):
             )
 
     def delete(self, request):
-        imageid = self.request.POST.get('id')
+        image = self.request.POST.get('id')
         f_obj = Product.objects.filter(id=image) #File is my model name
         if f_obj.exists():
             f_obj.delete()
