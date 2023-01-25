@@ -18,6 +18,9 @@ from rest_framework.generics import ListAPIView
 from django.http import JsonResponse
 
 
+
+@csrf_exempt
+@permission_classes([IsAuthenticated])
 class ProductUploadView(ListAPIView):
     parser_class = (FileUploadParser,)
     serializer_class = ProductSerializer
@@ -26,8 +29,7 @@ class ProductUploadView(ListAPIView):
         queryset = Product.objects.all()
         return queryset
 
-    @csrf_exempt
-    @permission_classes([IsAuthenticated])
+
     def post(self, request, *args, **kwargs):
         print(request.data)
         file_serializer = ProductSerializer(data=request.data)
@@ -45,8 +47,6 @@ class ProductUploadView(ListAPIView):
             )
 
 
-    @csrf_exempt
-    @permission_classes([IsAuthenticated])
     def put(self, request):
         image = self.request.POST.get('id')
         f_obj = Product.objects.filter(id=image) #File is my model name
@@ -63,8 +63,8 @@ class ProductUploadView(ListAPIView):
                 file_serializer.errors,
                 status=status.HTTP_400_BAD_REQUEST
             )
-    @csrf_exempt
-    @permission_classes([IsAuthenticated])
+
+
     def delete(self, request):
         image = self.request.POST.get('id')
         f_obj = Product.objects.filter(id=image) #File is my model name
