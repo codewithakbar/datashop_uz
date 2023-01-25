@@ -23,7 +23,7 @@ import { Pagination, Navigation, Autoplay } from "swiper";
 import Monitor from './Monitor'
 import Laptops from './laptop'
 
-function Main({ laptops, monitors, add , setIzbProducts}) {
+function Main({ laptops, monitors, add, setIzbProducts }) {
     const [openShopBtn, setopenShopBtn] = useState('goShopBtnClose')
 
 
@@ -32,12 +32,12 @@ function Main({ laptops, monitors, add , setIzbProducts}) {
             <div className="mainlaptops">
                 <div className="laptopsHeaader">
                     <span><BsLaptop className='lapIcon' color='#3C3C3C' /><h3>Ноутбуки</h3></span>
-                    <button><h3>Смотреть еще</h3> <GrFormNextLink className='lapIcon' color='#3C3C3C' /></button>
+                    <Link to={'/shop/laptops'}><button><h3>Смотреть еще</h3> <GrFormNextLink className='lapIcon' color='#3C3C3C' /></button></Link>
                 </div>
                 <div className="laptops">
                     {
                         laptops.map(laptop => (
-                            <Laptops laptop={laptop} add={add} setIzbProducts={setIzbProducts}/>
+                            <Laptops laptop={laptop} add={add} setIzbProducts={setIzbProducts} />
                         ))
                     }
                 </div>
@@ -45,7 +45,7 @@ function Main({ laptops, monitors, add , setIzbProducts}) {
             <div className="mainlaptops">
                 <div className="laptopsHeaader">
                     <span><FiMonitor className='lapIcon' color='#3C3C3C' /><h3>Мониторы</h3></span>
-                    <button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px' /></button>
+                    <Link to={'/shop/monitors'}><button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px' /></button></Link>
                 </div>
                 <div className="laptops">
                     {
@@ -175,7 +175,7 @@ function Main({ laptops, monitors, add , setIzbProducts}) {
             <div className="mainlaptops">
                 <div className="laptopsHeaader">
                     <span><AiOutlineCustomerService className='lapIcon' color='#3C3C3C' /><h3>Аксессуары</h3></span>
-                    <button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px' /></button>
+                    <Link to={'/shop/acsesuar'}><button><h3>Смотреть еще</h3> <GrFormNextLink color='#3C3C3C' size='30px' /></button></Link>
                 </div>
                 <div className="laptops">
                     {

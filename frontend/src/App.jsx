@@ -218,7 +218,6 @@ function App() {
 
   // korzinka ischindagi nasani dalete atadi
   function Delete(id) {
-    console.log(id);
     const filtered = addKorzinka.filter(korzinka => korzinka.id != id)    // korzinka ischindagi nasani dalete atadi
     setAddKorzinka(filtered)
     console.log(filtered)
@@ -227,7 +226,7 @@ function App() {
 
   // ikki element qoshilsa count qoshiladi
   function FilterAdd(id) {
-    const filtered = addKorzinka.filter(addKorzin => addKorzin.id !== id)
+    const filtered = addKorzinka.filter(addKorzin => addKorzin.id != id)
     setAddKorzinka(filtered)
   }
   // ikki element qoshilsa count qoshiladi
@@ -240,10 +239,10 @@ function App() {
   // const navigate = useNavigate()
   // function korzinkaOn() {
   //   if (addKorzinka.length == 0) {
-  //    navigate("/korzinkaNoneProduct")
+  //    navigate('korzinkaNoneProduct')
   //   }
   //   if (addKorzinka.length > 0) {
-  //     navigate("/korzinka")
+  //     navigate('korzinka')
   //   }
   // }
   // Korzinka On-Off Function ==== END
@@ -341,7 +340,6 @@ function App() {
               <Route path='laptops' element={<Shop shops={shops} laptops={laptops} />} />
               <Route path='smartfon' element={<Shop shops={shops} laptops={smartfon} />} />
               <Route path='acsesuar' element={<Shop shops={shops} laptops={aksesuar} />} />
-              {/* <Route path='shops' element={<ShopProducts/>}/>  */}
             </Route>
             <Route path='/laptop' element={<Laptop adds={adds} setAddKorzinka={setAddKorzinka} FilterAdd={FilterAdd} />} />
             <Route path='/korzinka' element={<Korzinka addKorzinka={addKorzinka} Delete={Delete} setAddKorzinka={setAddKorzinka} />} />
