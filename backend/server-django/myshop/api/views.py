@@ -13,14 +13,19 @@ from rest_framework.parsers import JSONParser, MultiPartParser, FormParser, File
 
 from django.core.exceptions import ObjectDoesNotExist
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import BasePermission, IsAuthenticated, SAFE_METHODS
 from rest_framework.generics import ListAPIView
 from rest_framework.views import APIView
 from django.http import JsonResponse
 
 
+class ReadOnly(BasePermission):
+    def has_permission(self, request, view):
+        return request.method in SAFE_METHODS
+
+
 class ProductUploadView(ListAPIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated|ReadOnly]
     parser_class = (FileUploadParser,)
     serializer_class = ProductSerializer
 
