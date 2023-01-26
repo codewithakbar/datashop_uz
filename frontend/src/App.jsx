@@ -224,12 +224,12 @@ function App() {
   }
   // korzinka ischindagi nasani dalete atadi
 
-  // ikki element qoshilsa count qoshiladi
+  //korzinkaga ikki element qoshilsa count qoshiladi
   function FilterAdd(id) {
-    const filtered = addKorzinka.filter(addKorzin => addKorzin.id != id)
+    const filtered = addKorzinka.filter(addKorzin => addKorzin.id != id)    
     setAddKorzinka(filtered)
   }
-  // ikki element qoshilsa count qoshiladi
+  //korzinkaga ikki element qoshilsa count qoshiladi
 
   // Korzinka Count ===== START
 

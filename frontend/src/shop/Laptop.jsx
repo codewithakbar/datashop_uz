@@ -6,6 +6,7 @@ import laptopbottom from '../media/vectusHeader.png'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {TbCircleCheck } from 'react-icons/tb'
+import Korzinka from '../Korzina/Korzina'
 
 
 
@@ -42,11 +43,13 @@ export default function Laptop({ adds , setAddKorzinka , FilterAdd}) {
 
     function Addkor() {
         let id = 1
+        FilterAdd(adds.id)
         setAddKorzinka(value =>([
           ...value,  
             {  
                 id: adds.id ,
-                img: adds.img
+                img: adds.img ,
+                name: adds.name 
             }
         ]))
         setSavebar('saveK')
