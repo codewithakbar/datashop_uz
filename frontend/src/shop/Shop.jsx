@@ -14,7 +14,6 @@ function Shop({ shops, laptops }) {
     const [openFilter, setOpenFilter] = useState(-1000)
     const [closeFilter, setCloseFilter] = useState('none')
 
-
     return (
         <div className="shop">
             <ul className="linkCategory">
@@ -26,7 +25,7 @@ function Shop({ shops, laptops }) {
                 <div className="shopHeaderRes">
                     <div className="shopMainTitle">
                         <h1>Ноутбуки HP</h1>
-                        <span>36 товаров</span>
+                        <span>{laptops.length} товаров</span>
                     </div>
                     <div className="resFilterBtn">
                         <button onClick={() => setOpenFilter(0) + setCloseFilter('asideClose')}>
@@ -42,7 +41,7 @@ function Shop({ shops, laptops }) {
                 <div className="shopMainHeader">
                     <div className="shopMainTitle">
                         <h1>Ноутбуки HP</h1>
-                        <span>36 товаров</span>
+                        <span>{laptops.length} товаров</span>
                     </div>
                     <div className="shopMainHeaderBtn">
                         <button>HP Victus 15</button>
