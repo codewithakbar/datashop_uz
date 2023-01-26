@@ -20,7 +20,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Navigation, Autoplay } from "swiper";
-import Monitor from './Monitor'
+import Monitor from './monitor'
 import Laptops from './laptop'
 
 function Main({ laptops, monitors, add, setIzbProducts }) {
