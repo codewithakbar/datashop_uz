@@ -297,6 +297,11 @@ function App() {
   console.log(izbProducts);
   // izbrena add product ======================================= END
 
+
+  // serach function ================ START
+    const [search , setSerach] = useState([])
+  // search function =============== END
+
   return (
     <>
       <AppContext.Provider value={{ laptops, monitors , aksesuar , smartfon}}>
