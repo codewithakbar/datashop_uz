@@ -7,3 +7,4 @@ celery==5.2.7
 stripe==4.0.2
 WeasyPrint==56.1
 redis==4.3.4
+django-cors-headers

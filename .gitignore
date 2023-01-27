@@ -9,7 +9,7 @@ db.sqlite3
 
 *shm
 *wal
-db*
+#db*
 static/images/logo*
 static/images/product*
 !productDefault.jpg
