@@ -177,3 +177,9 @@ REDIS_DB = 1
 CORS_ALLOW_ALL_ORIGINS = True  
 CORS_ALLOW_CREDENTIALS = True
 # CORS_ALLOWED_ORIGINS = ["*"]
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://api.datashop.uz',
+    'https://datashop.uz'
+]

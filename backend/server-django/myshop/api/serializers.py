@@ -11,7 +11,6 @@ class ProductSerializer(serializers.ModelSerializer):
 		# fields = "__all__"
 
 
-
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
     password = serializers.CharField()
@@ -23,3 +22,4 @@ class LoginSerializer(serializers.Serializer):
         if not user.is_active:
             raise serializers.ValidationError('User is disabled.')
         return {'user': user}
+
