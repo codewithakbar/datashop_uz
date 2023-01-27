@@ -42,7 +42,7 @@ csrf_protect_method = method_decorator(csrf_protect)
 class LoginView(APIView):
     permission_classes = (AllowAny,)
     authentication_classes = ()
-    @csrf_protect_method
+    # @csrf_protect_method
     def post(self, request):
         serializer = LoginSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
