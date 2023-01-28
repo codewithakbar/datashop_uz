@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiFillStar, AiOutlineStar, AiOutlineCustomerService } from 'react-icons/ai'
 import { FiShoppingCart } from 'react-icons/fi'
+import { useContext } from 'react'
+import { AppContext } from '../AppContext'
 
 
 function Monitor({ monitor , add}) {
@@ -18,6 +20,7 @@ function Monitor({ monitor , add}) {
             setHearOn(false)
         }
     }
+    const {baseURL} = useContext(AppContext)
     return (
         <>
             <div className="servicess">
@@ -27,10 +30,10 @@ function Monitor({ monitor , add}) {
                             <div className="inner">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                 <button className='hearBtn' onClick={addIzb}>{hear}</button>
-                                    <img src={monitor.img} alt="" />
-                                    <Link to='/laptop' onClick={() => add({ id: monitor.id , img: monitor.img , name: monitor.name })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
+                                    <img src={baseURL + monitor.img} alt="" />
+                                    <Link to='/laptop' onClick={() => add({ id: monitor.id , img: baseURL + monitor.img , name: monitor.name })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
                                 </div>
-                                <div className="laptopInfo">
+                                <div className="laptopInfo">    
                                     <span>{monitor.name}</span>
                                     <div className="eva">
                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
@@ -39,7 +42,7 @@ function Monitor({ monitor , add}) {
                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
                                         <AiOutlineStar className='evaCompanent' color='#E81D1C' />
                                     </div>
-                                    <span className='price' id='productPrice'>{monitor.prise}00 000 UZS</span>
+                                    <span className='price' id='productPrice'>${monitor.price}</span>
                                 </div>
                             </div>
                         </div>

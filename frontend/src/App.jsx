@@ -45,133 +45,135 @@ function App() {
 
 
 
-  //   async function GetTack() {
-  //     const response = await axios.get('https://api.datashop.uz/api/products?name=sam')
-  //     setLaptops(response.data);
-  //     console.log(response.data);
-  //  }
-  //  useEffect( () => {
-  //   GetTack()
-  //  }, [])
-  let baseURL = 'https://api.datashop.uz'
+    async function GetTack() {
+      const laptopUrl = await axios.get('https://api.datashop.uz/api/device?typeId=4')
+      const monitorUrl = await axios.get('https://api.datashop.uz/api/device?typeId=1')
+      setLaptops(laptopUrl.data.rows);
+      setMonitors(monitorUrl.data.rows)
+   }
+   useEffect( () => {
+    GetTack()
+   }, [])
+  let baseURL = 'https://api.datashop.uz/'
+
 
 
 
   const [laptops, setLaptops] = useState([
-    {
-      id: 1,
-      img: tufGamingPng,
-      name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
-      prise: '????'
-    },
-    {
-      id: 2,
-      img: aser,
-      name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
-      prise: '????'
-    },
-    {
-      id: 3,
-      img: victus,
-      name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
-      prise: '????'
-    },
-    {
-      id: 4,
-      img: tufGamingPng,
-      name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
-      prise: '????'
-    },
-    {
-      id: 5,
-      img: aser,
-      name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
-      prise: '????'
-    },
-    {
-      id: 6,
-      img: victus,
-      name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
-      prise: '????'
-    },
-    {
-      id: 7,
-      img: tufGamingPng,
-      name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
-      prise: '????'
-    },
-    {
-      id: 8,
-      img: aser,
-      name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
-      prise: '????'
-    },
-    {
-      id: 9,
-      img: victus,
-      name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
-      prise: '????'
-    },
-    {
-      id: 10,
-      img: tufGamingPng,
-      name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
-      prise: '????'
-    },
+    // {
+    //   id: 1,
+    //   img: tufGamingPng,
+    //   name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
+    //   prise: '????'
+    // },
+    // {
+    //   id: 2,
+    //   img: aser,
+    //   name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
+    //   prise: '????'
+    // },
+    // {
+    //   id: 3,
+    //   img: victus,
+    //   name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
+    //   prise: '????'
+    // },
+    // {
+    //   id: 4,
+    //   img: tufGamingPng,
+    //   name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
+    //   prise: '????'
+    // },
+    // {
+    //   id: 5,
+    //   img: aser,
+    //   name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
+    //   prise: '????'
+    // },
+    // {
+    //   id: 6,
+    //   img: victus,
+    //   name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
+    //   prise: '????'
+    // },
+    // {
+    //   id: 7,
+    //   img: tufGamingPng,
+    //   name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
+    //   prise: '????'
+    // },
+    // {
+    //   id: 8,
+    //   img: aser,
+    //   name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
+    //   prise: '????'
+    // },
+    // {
+    //   id: 9,
+    //   img: victus,
+    //   name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
+    //   prise: '????'
+    // },
+    // {
+    //   id: 10,
+    //   img: tufGamingPng,
+    //   name: 'HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..',
+    //   prise: '????'
+    // },
   ])
 
 
   const [monitors, setMonitors] = useState([
-    {
-      img: m1,
-      name: 'Gigabyte — 32″ G32QC-EK Curved...',
-      prise: '????'
-    },
-    {
-      img: m2,
-      name: 'Gigabyte — 32″ G32QC-EK Curved...',
-      prise: '????'
-    },
-    {
-      img: m3,
-      name: 'Gigabyte — 32″ G32QC-EK Curved...',
-      prise: '????'
-    },
-    {
-      img: m4,
-      name: 'Gigabyte — 32″ G32QC-EK Curved...',
-      prise: '????'
-    },
-    {
-      img: m1,
-      name: 'Gigabyte — 32″ G32QC-EK Curved...',
-      prise: '????'
-    },
-    {
-      img: m2,
-      name: 'Gigabyte — 32″ G32QC-EK Curved...',
-      prise: '????'
-    },
-    {
-      img: m3,
-      name: 'Gigabyte — 32″ G32QC-EK Curved...',
-      prise: '????'
-    },
-    {
-      img: m4,
-      name: 'Gigabyte — 32″ G32QC-EK Curved...',
-      prise: '????'
-    },
-    {
-      img: m1,
-      name: 'Gigabyte — 32″ G32QC-EK Curved...',
-      prise: '????'
-    },
-    {
-      img: m2,
-      name: 'Gigabyte — 32″ G32QC-EK Curved...',
-      prise: '????'
-    }
+    // {
+    //   img: m1,
+    //   name: 'Gigabyte — 32″ G32QC-EK Curved...',
+    //   prise: '????'
+    // },
+    // {
+    //   img: m2,
+    //   name: 'Gigabyte — 32″ G32QC-EK Curved...',
+    //   prise: '????'
+    // },
+    // {
+    //   img: m3,
+    //   name: 'Gigabyte — 32″ G32QC-EK Curved...',
+    //   prise: '????'
+    // },
+    // {
+    //   img: m4,
+    //   name: 'Gigabyte — 32″ G32QC-EK Curved...',
+    //   prise: '????'
+    // },
+    // {
+    //   img: m1,
+    //   name: 'Gigabyte — 32″ G32QC-EK Curved...',
+    //   prise: '????'
+    // },
+    // {
+    //   img: m2,
+    //   name: 'Gigabyte — 32″ G32QC-EK Curved...',
+    //   prise: '????'
+    // },
+    // {
+    //   img: m3,
+    //   name: 'Gigabyte — 32″ G32QC-EK Curved...',
+    //   prise: '????'
+    // },
+    // {
+    //   img: m4,
+    //   name: 'Gigabyte — 32″ G32QC-EK Curved...',
+    //   prise: '????'
+    // },
+    // {
+    //   img: m1,
+    //   name: 'Gigabyte — 32″ G32QC-EK Curved...',
+    //   prise: '????'
+    // },
+    // {
+    //   img: m2,
+    //   name: 'Gigabyte — 32″ G32QC-EK Curved...',
+    //   prise: '????'
+    // }
   ])
 
   const [smartfon, setSmartfon] = useState([
@@ -304,7 +306,7 @@ function App() {
 
   return (
     <>
-      <AppContext.Provider value={{ laptops, monitors , aksesuar , smartfon}}>
+      <AppContext.Provider value={{ laptops, monitors , aksesuar , smartfon , baseURL}}>
         <BrowserRouter>
           {/* <div className="blur">
       <Clock

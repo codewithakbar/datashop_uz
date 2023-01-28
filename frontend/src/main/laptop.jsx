@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiFillStar, AiOutlineStar, AiOutlineCustomerService } from 'react-icons/ai'
 import { FiShoppingCart } from 'react-icons/fi'
+import { useContext } from 'react'
+import { AppContext } from '../AppContext'
 
 
 function Laptops({laptop , add , setIzbProducts}) {
@@ -19,13 +21,14 @@ function Laptops({laptop , add , setIzbProducts}) {
             setIzbProducts(value =>([
                 ...value ,
                 {
-                    img: laptop.img ,
+                    img: baseURL + laptop.img ,
                     name: laptop.name ,
                     price: laptop.price ,
                 }
             ]))
         }
     }
+    const {baseURL} = useContext(AppContext) 
     return (
         <>
             <div className="servicess">
@@ -35,8 +38,8 @@ function Laptops({laptop , add , setIzbProducts}) {
                             <div className="inner">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                     <button className='hearBtn' onClick={addIzb}>{hear}</button>
-                                    <Link to='/laptop' onClick={() => add({ id: laptop.id, img: laptop.img , name: laptop.name })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
-                                    <img src={laptop.img} alt="" />
+                                    <Link to='/laptop' onClick={() => add({ id: laptop.id, img: baseURL + laptop.img , name: laptop.name })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
+                                    <img src={baseURL + laptop.img} alt="" />
                                 </div>
                                 <div className="laptopInfo">
                                     <Link to='/laptop'>  <span className='lapName'>{laptop.name}</span></Link>
