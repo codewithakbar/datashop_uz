@@ -31,6 +31,7 @@ import KorzinkaPustoy from './Korzina/KorzinkaPustoy';
 import Laptops from './main/laptop';
 import ShopProducts from './shop/shopProducts';
 import { AppContext } from './AppContext'
+import { BsSkipBackward } from 'react-icons/bs';
 // booto bar uchun icoon ================= END
 
 
@@ -43,21 +44,20 @@ function App() {
   const images = [snowFlake]
   // snow animate
 
-
+  
+  
 
     async function GetTack() {
-      const laptopUrl = await axios.get('https://api.datashop.uz/api/device?typeId=4')
-      const monitorUrl = await axios.get('https://api.datashop.uz/api/device?typeId=1')
-      setLaptops(laptopUrl.data.rows);
-      setMonitors(monitorUrl.data.rows)
+      const respons = await axios.get('https://api.datashop.uz/api/products/' )
+      // const monitorUrl = await axios.get('https://api.datashop.uz/api/products/')
+      setLaptops(respons.data);
+      // setMonitors(monitorUrl.data)
+      console.log(respons.data);
    }
    useEffect( () => {
     GetTack()
    }, [])
   let baseURL = 'https://api.datashop.uz/'
-
-
-
 
   const [laptops, setLaptops] = useState([
     // {
@@ -122,7 +122,6 @@ function App() {
     // },
   ])
 
-
   const [monitors, setMonitors] = useState([
     // {
     //   img: m1,
@@ -177,19 +176,19 @@ function App() {
   ])
 
   const [smartfon, setSmartfon] = useState([
-    {
-      img: 'https://free-png.ru/wp-content/uploads/2021/02/TENC_6.5_iPhone_11_PC-658CC-3_1024x1024-7ccac3cc.png',
-      name: 'Iphone 14 Pro Max',
-      prise: '14.500'
-    }
+    // {
+    //   img: 'https://free-png.ru/wp-content/uploads/2021/02/TENC_6.5_iPhone_11_PC-658CC-3_1024x1024-7ccac3cc.png',
+    //   name: 'Iphone 14 Pro Max',
+    //   prise: '14.500'
+    // }
   ])
 
   const [aksesuar, setAksesuar] = useState([
-    {
-      img: 'https://img.cgaxis.com/2021/11/airpods_max_silver_a.webp',
-      name: 'AirPods Max',
-      prise: '14.500'
-    }
+    // {
+    //   img: 'https://img.cgaxis.com/2021/11/airpods_max_silver_a.webp',
+    //   name: 'AirPods Max',
+    //   prise: '14.500'
+    // }
   ])
 
   // Shop ichindagi productlani chiqishini taminlidi

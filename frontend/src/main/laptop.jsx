@@ -21,8 +21,8 @@ function Laptops({laptop , add , setIzbProducts}) {
             setIzbProducts(value =>([
                 ...value ,
                 {
-                    img: baseURL + laptop.img ,
-                    name: laptop.name ,
+                    img: laptop.image ,
+                    title: laptop.title ,
                     price: laptop.price ,
                 }
             ]))
@@ -38,8 +38,8 @@ function Laptops({laptop , add , setIzbProducts}) {
                             <div className="inner">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                     <button className='hearBtn' onClick={addIzb}>{hear}</button>
-                                    <Link to='/laptop' onClick={() => add({ id: laptop.id, img: baseURL + laptop.img , name: laptop.name })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
-                                    <img src={baseURL + laptop.img} alt="" />
+                                    <Link to='/laptop' onClick={() => add({ id: laptop.id, img: laptop.image , name: laptop.title })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
+                                    <img src={laptop.image} alt="" />
                                 </div>
                                 <div className="laptopInfo">
                                     <Link to='/laptop'>  <span className='lapName'>{laptop.name}</span></Link>
