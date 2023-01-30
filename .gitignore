@@ -143,3 +143,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+node_modules
+
+backend/legacy_server-django
+backend/_server-django
+backend/backup_server-django
+backend/server-django/*.sqlite3
