@@ -24,6 +24,13 @@ DATABASES = {
     }
 }
 
+CORS_ORIGIN_WHITELIST = (
+    # 'http://localhost:3000',
+    # 'https://admin.datashop.uz'
+    "*"
+
+)
+
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
