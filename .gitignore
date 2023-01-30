@@ -145,7 +145,7 @@ dmypy.json
 .pyre/
 node_modules
 
-backend/legacy_server-django
+backend/_legacy_server-django
 backend/_server-django
-backend/backup_server-django
+backend/_backup_server-django
 backend/server-django/*.sqlite3
