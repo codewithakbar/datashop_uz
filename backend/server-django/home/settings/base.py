@@ -83,3 +83,15 @@ REST_FRAMEWORK = {
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+
+CORS_ALLOW_ALL_ORIGINS = True  
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = ["*"]
+
+
+# CSRF_TRUSTED_ORIGINS = [
+#     'https://api.datashop.uz',
+#     'https://datashop.uz',
+#     'https://localhost:3000'
+# ]
