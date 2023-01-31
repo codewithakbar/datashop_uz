@@ -3,7 +3,7 @@
 from .base import *
 
 ALLOWED_HOSTS += ['127.0.0.1']
-DEBUG = False
+DEBUG = True
 
 WSGI_APPLICATION = 'home.wsgi.dev.application'
 
@@ -14,13 +14,12 @@ DATABASES = {
     }
 }
 
-# CORS_ORIGIN_WHITELIST = (
-#     'http://localhost:3000',
-#     'https://admin.datashop.uz',
-#     'https://datashop.uz',
-#     '*'
-# )
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+    'https://datashop.uz'
+)
 
 # Stripe
+
 STRIPE_PUBLIC_KEY = "config('STRIPE_TEST_PUBLIC_KEY')"
 STRIPE_SECRET_KEY = "config('STRIPE_TEST_SECRET_KEY')"

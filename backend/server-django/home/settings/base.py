@@ -91,8 +91,8 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = ["*"]
 
 
-# CSRF_TRUSTED_ORIGINS = [
-#     'https://api.datashop.uz',
-#     'https://datashop.uz',
-#     'https://localhost:3000'
-# ]
+CSRF_TRUSTED_ORIGINS = [
+    'https://api.datashop.uz',
+    'https://datashop.uz',
+    'http://localhost:3000'
+]

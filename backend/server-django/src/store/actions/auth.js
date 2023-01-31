@@ -40,12 +40,10 @@ export const checkAuthTimeout = expirationTime => {
 export const authLogin = (username, password) => {
   return dispatch => {
     dispatch(authStart());
-    axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
     axios
-      .post("https://api.datashop.uz/rest-auth/login/", {
+      .post("http://127.0.0.1:8000/rest-auth/login/", {
         username: username,
         password: password,
-        headers: { "Content-Type": "application/json"}
       })
       .then(res => {
         const token = res.data.key;
