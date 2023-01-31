@@ -30,11 +30,11 @@ function Monitor({ monitor , add}) {
                             <div className="inner">
                                 <div className="laptopImg" onMouseOver={() => setopenShopBtn("goShopBtn")} onMouseOut={() => setopenShopBtn("goShopBtnClose")}>
                                 <button className='hearBtn' onClick={addIzb}>{hear}</button>
-                                    <img src={baseURL + monitor.img} alt="" />
-                                    <Link to='/laptop' onClick={() => add({ id: monitor.id , img: baseURL + monitor.img , name: monitor.name })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
+                                    <img src={monitor.image} alt="" />
+                                    <Link to='/laptop' onClick={() => add({ id: monitor.id , img: monitor.image , title: monitor.title })}> <button className="goShopBtnClose"><FiShoppingCart />В корзину</button></Link>
                                 </div>
                                 <div className="laptopInfo">    
-                                    <span>{monitor.name}</span>
+                                    <span>{monitor.title}</span>
                                     <div className="eva">
                                         <AiFillStar className='evaCompanent' color='#E81D1C' />
                                         <AiFillStar className='evaCompanent' color='#E81D1C' />

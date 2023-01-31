@@ -300,7 +300,19 @@ function App() {
 
 
   // serach function ================ START
-    const [search , setSerach] = useState([])
+    // const [search , setSerach] = useState(item)
+
+    // const item = [
+    //   'apple' ,
+    //   'red' ,
+    //   'blue' ,
+    //   'orange' ,
+    //   'crmidson'
+    // ]
+
+    // function serachFunction() {
+      
+    // }
   // search function =============== END
 
   return (
