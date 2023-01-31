@@ -15,8 +15,7 @@ DATABASES = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
-    'https://admin.datashop.uz'
+    "*"
 )
 
 # Stripe
