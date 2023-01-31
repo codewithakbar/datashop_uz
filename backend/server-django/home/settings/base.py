@@ -15,11 +15,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'corsheaders',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'corsheaders',
     'rest_auth',
     'rest_auth.registration',
     'rest_framework',
@@ -86,13 +86,13 @@ ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 
-CORS_ALLOW_ALL_ORIGINS = True  
-CORS_ALLOW_CREDENTIALS = True   
+# CORS_ALLOW_ALL_ORIGINS = True  
+# CORS_ALLOW_CREDENTIALS = True   
 CORS_ALLOWED_ORIGINS = ["*"]
 
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://api.datashop.uz',
-    'https://datashop.uz',
-    'http://localhost:3000'
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     'https://api.datashop.uz',
+#     'https://datashop.uz',
+#     'http://localhost:3000'
+# ]
