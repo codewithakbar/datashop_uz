@@ -1,9 +1,36 @@
 import userIcon from '../media/User Rounded.svg'
 import emailIcon from '../media/mail.svg'
 import lockIcon from '../media/lock.svg'
+import { useState } from 'react'
+import axios from 'axios'
+import {Navigate} from 'react-router-dom'
 
 
 export default function Accaunt() {
+
+    const [name , setName] = useState()
+    const [email, setEmail] = useState()
+    const [password1 , setPassword1] = useState()
+    const [password2 , setPassword2] = useState()
+    const [navigate , setNavigate] = useState(false)
+    
+    const submit = async e => {
+        e.preventDefault();
+
+        await axios.post('https://api.datashop.uz/rest-auth/registration/' , {
+            name ,
+            email ,
+            password1 ,
+            password2 
+        });
+
+        setNavigate(true)
+    }
+
+    if (navigate) {
+        return <Navigate to="/login" />;
+    }
+
 
 
     return (
@@ -13,31 +40,43 @@ export default function Accaunt() {
                 <div className="inputInfo">
                     <p>Введите имя</p>
                     <div className="inputIcon">
-                        <img src={userIcon} alt="" /> <input type="text" placeholder='Имя' />
+                        <img src={userIcon} alt="" /> 
+                        <input type="text" placeholder='Имя' 
+                            onChange={e => setName(e.target.value)}
+                        />
                     </div>
                 </div>
                 <div className="inputInfo">
                     <p>Email</p>
                     <div className="inputIcon">
-                        <img src={emailIcon} alt="" /> <input type="email" placeholder='example@gmail.com' />
+                        <img src={emailIcon} alt="" /> 
+                        <input type="email" placeholder='example@gmail.com' 
+                            onChange={e => setEmail(e.target.value)}
+                        />
                     </div>
                 </div>
                 <div className="inputInfo">
                     <p>Пароль</p>
                     <div className="inputIcon">
-                        <img src={lockIcon} alt="" /> <input type="password" placeholder='*********' />
+                        <img src={lockIcon} alt="" /> 
+                        <input type="password" placeholder='*********' 
+                            onChange={e => setPassword1(e.target.value)}
+                        />
                     </div>
                 </div>
 
                 <div className="inputInfo">
                     <p>Подтвердите пароль</p>
                     <div className="inputIcon">
-                        <img src={lockIcon} /> <input type="password" placeholder='*********' />
+                        <img src={lockIcon} /> 
+                        <input type="password" placeholder='*********' 
+                            onChange={e => setPassword2(e.target.value)}
+                        />
                     </div>
                 </div>
             </div>
             <p className="login">У меня есть аккаунт <a href="">Войти</a> </p>
-            <span className='accountbutton'>Зарегистрироваться</span>
+            <button onClick={submit} className='accountbutton'>Зарегистрироваться</button>
         </div>
     )
 }
