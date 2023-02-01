@@ -13,6 +13,8 @@
     "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
     "react-snowfall": "^1.2.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "2.3",
     "swiper": "^8.4.5",
     "web-vitals": "^2.1.4"
   },
