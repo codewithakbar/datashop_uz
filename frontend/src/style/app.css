@@ -118,12 +118,20 @@ align-items: center;
 justify-content: center;
   }
 .blur h1 {
+  width: 400px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #e60523;
   transform: translateY(-40px);
   z-index: 1000;
-  color: #06f1f6;
-  font-size: 16px;
+  color: #ec0000;
+  font-size: 18px;
   background: transparent;
   letter-spacing: 4px;
+  background-color: #ffffff46;
 }
 
 

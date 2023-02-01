@@ -303,13 +303,7 @@ function AddAksesuar() {
     <>
       <BrowserRouter>
       <div className="blur">
-      <Clock
-        timerDays={timerDays}
-        timerHours={timerHours}
-        timerMinutes={timerMinutes}
-        timerSeconds={timerSeconds}
-      />
-        <h1>Ishga tushadi</h1>
+        <h1>Dasturlash ishlarai olib borilmoqda!</h1>
       </div>
         <Snowfall 
           style={{ 
