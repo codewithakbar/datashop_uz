@@ -265,7 +265,6 @@
 .Accaunt {
     width: 1440px;
     margin: 50px auto;
-    display: none!important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
