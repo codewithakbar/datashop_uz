@@ -19,7 +19,6 @@ import m4 from './texnoimg/m4.png'
 import Korzinka from './Korzina/Korzina';
 import Zakaz from './Zakaz/Zakaz';
 import Kabinet from './profil/kabinet';
-import Account from './profil/Accaunt';
 import MoyZakaz from './profil/MoyZakaz';
 import Xabar from './profil/Xabar';
 import Izb from './izbronoe/Izb'
@@ -32,6 +31,7 @@ import Laptops from './main/laptop';
 import ShopProducts from './shop/shopProducts';
 import { AppContext } from './AppContext'
 import { BsSkipBackward } from 'react-icons/bs';
+import Register from './profil/Register';
 // booto bar uchun icoon ================= END
 
 
@@ -365,7 +365,7 @@ function App() {
             <Route path='/kabinet' element={<Kabinet />} />
             <Route path='/profilZakaz' element={<MoyZakaz />} />
             <Route path='/xabar' element={<Xabar />} />
-            <Route path='/account' element={<Account />} />
+            <Route path='/account' element={<Register />} />
             <Route path='/Избранное' element={<Izb izbProducts={izbProducts} add={add} laptops={laptops} />} />
             <Route path='/korzinkaNoneProduct' element={<KorzinkaPustoy />} />
           </Routes>
