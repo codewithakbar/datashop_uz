@@ -303,7 +303,7 @@ function AddAksesuar() {
     <>
       <BrowserRouter>
       <div className="blur">
-        <h1>Dasturlash ishlari olib borilmoqda! <br /> Sayt yaqinda ishga tushadi.</h1>
+        <h1>Dasturlash ishlari olib borilmoqda! <br /><br />  Sayt yaqinda ishga tushadi.</h1>
       </div>
         <Snowfall 
           style={{ 
