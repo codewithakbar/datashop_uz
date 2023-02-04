@@ -1,0 +1,11 @@
+django==3.1
+Pillow
+requests
+python-dotenv
+django-ckeditor
+redis
+
+djangorestframework
+markdown
+django-filter
+djangorestframework-simplejwt

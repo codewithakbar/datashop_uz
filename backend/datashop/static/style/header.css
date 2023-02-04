@@ -1,0 +1,37 @@
+header {
+    margin-top: 22px;
+}
+
+.headerCategroy {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.headerCategroyBox {
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerCategroyBoxCon {
+    width: 270px;
+    height: 120px;
+    background: linear-gradient(180deg, #60B3FF 0%, rgba(41, 90, 185, 0.76) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.headerCategroyBoxCon span {
+    padding-left: 15px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+

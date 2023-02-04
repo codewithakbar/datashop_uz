@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datashop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style/app.css' %}">
+    <link rel="stylesheet" href="{% static 'style/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'style/header.css' %}">
+    <link rel="stylesheet" href="{% static 'style/main.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="navtop">
+            <div class="navtopCon">
+                <div class="navtopLocation">
+                    <span>Адрес: Urganch, Darital, 2-этаж</span>
+                </div>
+                <div class="navtopTelefon">
+                    <span>Телефон поддержки: (99) 900 10 10</span>
+                    <div>
+                        <img src="{% static 'media/uzflag.svg' %}" alt="">
+                        <select class="til">
+                            <option value="UZB">UZB</option>
+                            <option value="RUS">RUS</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navBottom">
+            <div class="navBottomCon">
+                <div class="logo">
+                    <img src="{% static 'media/datashoplogi.jpg' %}" alt="">
+                </div>
+                <div class="category">
+                    <button><img src="{% static 'media/categoryLogo.svg' %}" alt="">Категория</button>
+                </div>
+                <div class="navSerach">
+                    <input type="text" placeholder="Введите запрос...">
+                    <button><img src="{% static 'media/search.svg' %}" alt=""></button>
+                </div>
+                <div class="navbottomBtns">
+                    <button>
+                        <img src="{% static 'media/korzinka.svg' %}" alt="">
+                        <span>Корзина</span>
+                    </button>
+                    <button>
+                        <img src="{% static 'media/izbrene.svg' %}" alt="">
+                        <span>Избранное</span>
+                    </button>
+                    <button>
+                        <img src="{% static 'media/person.svg' %}" alt="">
+                        <span>Профиль</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+    
+    {% endblock content %}
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+</html>

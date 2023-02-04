@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<header>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="{% static 'media/swiperImg.png' %}" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'media/swiperImg.png' %}" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="headerCategroy">
+        <div class="headerCategroyBox">
+            <div class="headerCategroyBoxCon">
+                <span>
+                    Ноутбуки
+                </span>
+                <img src="{% static 'media/Category.png' %}" alt="">
+            </div>
+            <div class="headerCategroyBoxCon">
+                <span>
+                    Ноутбуки
+                </span>
+                <img src="{% static 'media/Category.png' %}" alt="">
+            </div>
+            <div class="headerCategroyBoxCon">
+                <span>
+                    Ноутбуки
+                </span>
+                <img src="{% static 'media/Category.png' %}" alt="">
+            </div>
+            <div class="headerCategroyBoxCon">
+                <span>
+                    Ноутбуки
+                </span>
+                <img src="{% static 'media/Category.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="mainProducts">
+        <div class="mainProductsHeader">
+            <div class="mainProductsHeader-title">
+                <img src="../media/laptop.svg" alt="">
+                <span>Ноутбуки</span>
+            </div>
+            <button>
+                <span>Смотреть еще</span>
+                <img src="../media/next.svg" alt="">
+            </button>
+        </div>
+        <div class="products">
+            <div class="product">
+                <div class="productHeader">
+                    <span class="new">new</span>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="productImg">
+                    <img src="https://dlcdnwebimgs.asus.com/gain/6FE37E07-B41F-4238-81D8-433B425405C5" alt="">
+                </div>
+                <div class="productBottomInfo">
+                    <span class="productTitle">
+                        HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..
+                    </span>
+                    <div class="productStar">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="productPrice">$1579</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Monitor -->
+
+    <div class="mainProducts">
+        <div class="mainProductsHeader">
+            <div class="mainProductsHeader-title">
+                <img src="../media/Monitor.svg" alt="">
+                <span>Мониторы</span>
+            </div>
+            <button>
+                <span>Смотреть еще</span>
+                <img src="../media/next.svg" alt="">
+            </button>
+        </div>
+        <div class="products">
+            <div class="product">
+                <div class="productHeader">
+                    <span class="new">new</span>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <div class="productImg">
+                    <img src="https://dlcdnwebimgs.asus.com/gain/6FE37E07-B41F-4238-81D8-433B425405C5" alt="">
+                </div>
+                <div class="productBottomInfo">
+                    <span class="productTitle">
+                        HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..
+                    </span>
+                    <div class="productStar">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <span class="productPrice">$1579</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}

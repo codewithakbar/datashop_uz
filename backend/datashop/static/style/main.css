@@ -1,0 +1,152 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mainProducts {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainProductsHeader {
+    width: 1140px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainProductsHeader-title {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.mainProductsHeader-title span {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: #3C3C3C;
+}
+
+.mainProductsHeader-title img {
+    width: 38px;
+}
+
+.mainProductsHeader button {
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.mainProductsHeader button span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #3C3C3C;
+}
+
+.mainProductsHeader button img {
+    width: 17px;
+}
+
+.products {
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 26px;
+}
+
+.product {
+    height: 301px;
+    width: 206px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.productImg img {
+    max-width: 188px;
+}
+
+.productHeader {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.productHeader i {
+    padding-top: 8px;
+    padding-right: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.productHeader .new {
+    width: 41px;
+    height: 19px;
+    background: #E81D1C;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productImg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productBottomInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.productTitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.productStar {
+    display: flex;
+    gap: 3.94px;
+}
+
+.productStar i {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.productStar .fa-star {
+    color: #E81D1C;
+}
+
+.productPrice {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3C3C3C;
+}

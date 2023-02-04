@@ -1,0 +1,131 @@
+nav {
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.navtop {
+    width: 100%;
+    height: 40px;
+    background-color: #FF201F;
+}
+
+.navtopCon {
+    margin: auto;
+    width: 1140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navtopLocation span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.navtopTelefon {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 44px;
+}
+
+.navtopTelefon span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+.navtopTelefon .til {
+    border: none ;
+    background: none;
+    color: #FFFFFF;
+}
+
+.navtopTelefon div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.navBottom {
+    display: flex;
+}
+
+.navBottomCon {
+    width: 1140px;
+    margin: auto;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navBottomCon .logo img {
+    width: 190px;
+}
+
+.navBottomCon .category button {
+    width: 140px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background: #E81D1C;
+    color: #FFFFFF;
+    border: none;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.navSerach {
+    width: 396px;
+    height: 35px;
+    border: 0.5px solid #ACACAC;
+    display: flex;
+    align-items: center;
+}
+
+.navSerach input {
+    flex: 1;
+    border: none;
+    padding-left: 10px;
+    outline: none;
+}
+
+.navSerach button {
+    width: 67px;
+    height: 35px;
+    background-color: #E81D1C;
+    border: none;
+    cursor: pointer;
+}
+
+.navbottomBtns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbottomBtns button {
+    width: 107px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    justify-content: center;
+    gap: 5px;
+}
+
+.navbottomBtns button:hover {
+    background-color: #acacac20;
+    border-radius: 5px;
+}
