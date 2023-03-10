@@ -302,9 +302,6 @@ function AddAksesuar() {
   return (
     <>
       <BrowserRouter>
-      <div className="blur">
-        <h1>Dasturlash ishlari olib borilmoqda! <br /><br />  Sayt yaqinda ishga tushadi.</h1>
-      </div>
         <Snowfall 
           style={{ 
             position: 'fixed', 
