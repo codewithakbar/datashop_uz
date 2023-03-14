@@ -302,10 +302,6 @@ function AddAksesuar() {
   return (
     <>
       <BrowserRouter>
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
         <Snowfall 
           style={{ 
             position: 'fixed', 
