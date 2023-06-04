@@ -90,7 +90,7 @@ export default function Accaunt() {
                         <img src={lockIcon} />  <input type="password" id="password" value={password1} onChange={handlePassword1Change} placeholder='password' ref={password1Ref}/>
                     </div>
                 </div>
-                <p className="login">У меня есть аккаунт <Link to={"/login"}> <a href="">Войти</a> </Link> </p>
+                <p className="login">У меня есть аккаунт <Link to={"/login"}> Войти</Link> </p>
                 <button className='accountbutton' type="submit" onClick={() => requestRegister()}>Зарегистрироваться</button>
             </form>
             {/* {showAlert && <p>Barcha maydonlar to'ldirilishi kerak!</p>}

@@ -101,6 +101,7 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
         window.addEventListener('scroll', scrollFixedRes)
     })
     // navbar respansive uchun fixed END ======================
+    const ApiUser = JSON.parse(localStorage.getItem('user'))
 
     return (
         <nav className={scrolled}>
@@ -135,7 +136,7 @@ function Navbar({ AddLaptop, AddMonitor, AddSmartfon, AddAksesuar, setFotChange,
                     <div className="navBtns">
                         <Link to='/korzinka' onClick={() => setFotChange('none')}><button className='navKorzinkabutton'><img src={shopIcon} alt="" /> <span>Корзина</span></button></Link>
                         <Link to='/Избранное'><button className='navIzbbutton'><img src={izbIcon} alt="" /> <span>Избранное</span></button></Link>
-                        <Link to='/account'> <button  onClick={profil}> <span className='navProfilbutton'><img src={profilIcon} alt="" />  Профиль</span></button></Link>
+                        <Link to='/account'> <button  onClick={profil}> <span className='navProfilbutton'><img src={profilIcon} alt="" /> {ApiUser.username ? ApiUser.username : "  Профиль" } </span></button></Link>
                         <span className='kLenght'>{addKorzinka.length}</span>
                         <div className={pr}>
                             <p className="profilTitle">Name</p>

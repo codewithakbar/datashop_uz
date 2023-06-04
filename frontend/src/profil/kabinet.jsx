@@ -9,19 +9,25 @@ import axios from 'axios'
 export default function Kabinet() {
 
     const token = JSON.parse(localStorage.getItem('token'))
+    console.log(token);
 
-    const [user, setUser] = useState(null)
+    // const [user, setUser] = useState()
 
     useEffect(() => {
         axios.get("https://api.datashop.uz/api/profile/", {
             headers: {
                 "Authorization": "Bearer" + token.access
-            }.then(response => setUser(response.data))
+            }.then(response =>  localStorage.setItem('user', JSON.stringify(response)))
         })
-        console.log(user);
-        localStorage.setItem('user', JSON.stringify(user))
+
     }, [])
+
     const ApiUser = JSON.parse(localStorage.getItem('user'))
+    console.error(ApiUser);
+
+
+    const [name , setName] = useState(ApiUser.username)
+
     return (
         <div className="Kabinet">
             <ul className="linkCategory">
@@ -45,7 +51,7 @@ export default function Kabinet() {
                         <div className="userInfo">
                             <div className="inputFic">
                                 <span>Имя</span>
-                                <input className='input' type="text" placeholder='Введите Имя' />
+                                <input className='input' type="text" placeholder='Введите Имя' defaultValue={name}/>
                             </div>
 
                             <div className="inputFic">

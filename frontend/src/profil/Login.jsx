@@ -76,7 +76,7 @@ export default function Login() {
                 </div>
 
 
-                <p className="login">У меня есть аккаунт <Link to={"/account"}> <a href="">Register</a> </Link> </p>
+                <p className="login">У меня есть аккаунт <Link to={"/account"}> Register </Link> </p>
                 <button className='accountbutton' type="submit" onClick={() => requestLogin()}>Зарегистрироваться</button>
             </form>
             {/* {showAlert && <p>Barcha maydonlar to'ldirilishi kerak!</p>}
