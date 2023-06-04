@@ -50,8 +50,8 @@ export default function Login() {
         }
         try {
             const postLogin = await axios.post(url, body)
-            localStorage.setItem('user', JSON.stringify(postLogin.data))
-            console.log(postLogin);
+            localStorage.setItem('token', JSON.stringify(postLogin.data))
+            console.log(postLogin.data);
 
         }
         catch (err) {

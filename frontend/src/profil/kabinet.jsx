@@ -2,9 +2,26 @@ import profilIcon1 from '../media/🦆 icon _user_.png'
 import profilIcon2 from '../media/boxtick.png'
 import profilIcon3 from '../media/bell.png'
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 
 export default function Kabinet() {
+
+    const token = JSON.parse(localStorage.getItem('token'))
+
+    const [user, setUser] = useState(null)
+
+    useEffect(() => {
+        axios.get("https://api.datashop.uz/api/profile/", {
+            headers: {
+                "Authorization": "Bearer" + token.access
+            }.then(response => setUser(response.data))
+        })
+        console.log(user);
+        localStorage.setItem('user', JSON.stringify(user))
+    }, [])
+    const ApiUser = JSON.parse(localStorage.getItem('user'))
     return (
         <div className="Kabinet">
             <ul className="linkCategory">
@@ -13,9 +30,9 @@ export default function Kabinet() {
             </ul>
             <div className="kabinetInfo">
                 <div className="kabinetProfil">
-                   <Link to={'/kabinet'} ><span className='kabinetUserIcon red'><img src={profilIcon1} alt="" />  Персональные данные</span></Link> 
-                   <Link to={'/profilZakaz'} >  <span className='kabinetUserIcon' ><img src={profilIcon2} alt="" />  Мои заказы</span> </Link>
-                   <Link to={'/xabar'} >  <span className='kabinetUserIcon' ><img src={profilIcon3} alt="" />  Уведомления</span> </Link>
+                    <Link to={'/kabinet'} ><span className='kabinetUserIcon red'><img src={profilIcon1} alt="" />  Персональные данные</span></Link>
+                    <Link to={'/profilZakaz'} >  <span className='kabinetUserIcon' ><img src={profilIcon2} alt="" />  Мои заказы</span> </Link>
+                    <Link to={'/xabar'} >  <span className='kabinetUserIcon' ><img src={profilIcon3} alt="" />  Уведомления</span> </Link>
                 </div>
                 <div className="kabinetRegiser">
                     <div className="registerTel">
@@ -94,7 +111,7 @@ export default function Kabinet() {
                     </div>
 
 
-                <span className='saveButton'>Сохранить</span>
+                    <span className='saveButton'>Сохранить</span>
 
 
                 </div>
