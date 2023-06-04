@@ -302,7 +302,7 @@ function AddAksesuar() {
   return (
     <>
       <BrowserRouter>
-        <Snowfall 
+        {/* <Snowfall 
           style={{ 
             position: 'fixed', 
             width: '100vw', 
@@ -316,7 +316,7 @@ function AddAksesuar() {
           wind={[-0.5, 2]} 
           images={images} 
           rotationSpeed={[-1, 1]} 
-        />
+        /> */}
         <Navbar 
         addKorzinka={addKorzinka}
         AddLaptop={AddLaptop} 
