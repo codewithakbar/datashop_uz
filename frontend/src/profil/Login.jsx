@@ -6,16 +6,14 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
-export default function Accaunt() {
+export default function Login() {
 
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
-    const [password1, setPassword1] = useState('');
     const [showAlert, setShowAlert] = useState(false);
 
     const nameRef = useRef()
     const passwordRef = useRef()
-    const password1Ref = useRef()
 
     const handleNameChange = (e) => {
         setName(e.target.value);
@@ -28,48 +26,41 @@ export default function Accaunt() {
         setShowAlert(false);
     };
 
-    const handlePassword1Change = (e) => {
-        setPassword1(e.target.value);
-        setShowAlert(false);
-    };
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (name === ''  || password === '' || password1 === '') {
+        if (name === '' || password === '') {
             setShowAlert(true);
             return;
         }
         // Ma'lumotlarni yuborish yoki saqlash logikasi
         console.log('Name:', name);
         console.log('Password:', password);
-        console.log('Password1:', password1);
         // ... qo'shimcha muvaffaqiyatli amallar
     };
-    {showAlert && alert("Barcha maydonlar to'ldirilishi kerak!")}
+    { showAlert && alert("Barcha maydonlar to'ldirilishi kerak!") }
 
 
-    const requestRegister = async () => {
-        const url = "https://api.datashop.uz/api/register/"
+    const requestLogin = async () => {
+        const url = "https://api.datashop.uz/api/token/"
         const body = {
             username: name,
             password: password,
-            password2: password1
         }
-        try{
-            const postRegister = await axios.post(url ,body)
-            console.log(postRegister.data);
+        try {
+            const postLogin = await axios.post(url, body)
+            localStorage.setItem('user', JSON.stringify(postLogin.data))
+            console.log(postLogin);
 
         }
-        catch(err){
+        catch (err) {
             console.log(err);
         }
     }
-
-
     return (
         <div className="Accaunt">
-            
-            <h1 className="accountTitle">Регистрация</h1>
+            <h1 className="accountTitle">Вход </h1>
             <form className="accountInputs" onSubmit={handleSubmit}>
                 <div className="inputInfo">
                     <p>Введите имя</p>
@@ -84,14 +75,9 @@ export default function Accaunt() {
                     </div>
                 </div>
 
-                <div className="inputInfo">
-                    <p>Подтвердите пароль</p>
-                    <div className="inputIcon">
-                        <img src={lockIcon} />  <input type="password" id="password" value={password1} onChange={handlePassword1Change} placeholder='password' ref={password1Ref}/>
-                    </div>
-                </div>
-                <p className="login">У меня есть аккаунт <Link to={"/login"}> <a href="">Войти</a> </Link> </p>
-                <button className='accountbutton' type="submit" onClick={() => requestRegister()}>Зарегистрироваться</button>
+
+                <p className="login">У меня есть аккаунт <Link to={"/account"}> <a href="">Register</a> </Link> </p>
+                <button className='accountbutton' type="submit" onClick={() => requestLogin()}>Зарегистрироваться</button>
             </form>
             {/* {showAlert && <p>Barcha maydonlar to'ldirilishi kerak!</p>}
             <form onSubmit={handleSubmit}>

@@ -29,6 +29,7 @@ import { AiOutlineStar } from 'react-icons/ai'
 import { RxPerson } from 'react-icons/rx'
 import KorzinkaPustoy from './Korzina/KorzinkaPustoy';
 import Clock from './Clock';
+import Login from './profil/Login';
 // booto bar uchun icoon ================= END
 
 
@@ -317,6 +318,7 @@ function App() {
           images={images} 
           rotationSpeed={[-1, 1]} 
         /> */}
+        
         <Navbar
           addKorzinka={addKorzinka}
           AddLaptop={AddLaptop}
@@ -334,6 +336,7 @@ function App() {
           <Route path='/profilZakaz' element={<MoyZakaz />} />
           <Route path='/xabar' element={<Xabar />} />
           <Route path='/account' element={<Account />} />
+          <Route path='/login' element={<Login />} />
           <Route path='/Избранное' element={<Izb add={add} laptops={laptops} />} />
           <Route path='/korzinkaNoneProduct' element={<KorzinkaPustoy />} />
         </Routes>
