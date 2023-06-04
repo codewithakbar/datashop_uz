@@ -344,9 +344,6 @@
 }
 
 .accountbutton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 303px;
     height: 42px;
     background: #E81D1C;
@@ -359,6 +356,7 @@
     align-items: center;
     cursor: pointer;
     transition: all 0.5s ease;
+    margin: 0 auto;
 }
 
 .accountbutton:hover {
