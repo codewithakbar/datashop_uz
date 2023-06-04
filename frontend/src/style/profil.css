@@ -277,6 +277,10 @@
 }
 
 .accountTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
     font-weight: 700;
     font-size: 25px;
     line-height: 27px;
@@ -287,9 +291,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
-    border-bottom:1px solid #C1C1C1 ;
+    border-bottom: 1px solid #C1C1C1;
     padding-bottom: 40px;
 }
 
@@ -328,14 +332,21 @@
     border-left: 1px solid #C1C1C1;
 }
 
-.login{
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
     color: #000000;
 }
 
-.accountbutton{
+.accountbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 303px;
     height: 42px;
     background: #E81D1C;
@@ -350,15 +361,17 @@
     transition: all 0.5s ease;
 }
 
-.accountbutton:hover{
+.accountbutton:hover {
     background: #b51616;
 }
+
 @media screen and (max-width: 1440px) {
     .Kabinet {
         width: 1140px;
     }
+
     .kabinetInfo {
-        gap:20px;
+        gap: 20px;
     }
 }
 
@@ -367,36 +380,44 @@
 
     /* Account */
 
-    .Accaunt{
-        display: flex!important;
+    .Accaunt {
+        display: flex !important;
         box-shadow: none;
         margin: 0px;
     }
+
     .Kabinet {
         width: 100%;
         padding: 0px 10px;
     }
+
     .kabinetInfo {
         flex-direction: column;
     }
+
     .kabinetProfil {
         width: 100%;
     }
+
     .registerTitle {
         font-weight: 600;
         font-size: 16px;
         line-height: 19px;
         color: #3C3C3C;
     }
+
     .telInput {
         width: 100%;
-    } 
+    }
+
     .userInfo {
         width: 100%;
     }
+
     .userInfo input {
         width: 100%;
     }
+
     .kabinetRegiser {
         padding-bottom: 20px;
     }
