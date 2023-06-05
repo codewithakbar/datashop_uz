@@ -357,6 +357,7 @@
     cursor: pointer;
     transition: all 0.5s ease;
     margin: 0 auto;
+    border: none;
 }
 
 .accountbutton:hover {

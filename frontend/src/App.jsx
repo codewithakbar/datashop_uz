@@ -2,7 +2,7 @@ import Footer from './footer/Footer';
 import Navbar from './navbar/Navbar'
 import snowLogo from './christmas-snowflake-winter-free-png.png'
 import Snowfall from 'react-snowfall'
-import { BrowserRouter, Link, Route, Routes, useNavigate, redirect } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Routes, useNavigate, redirect, Navigate } from 'react-router-dom'
 import WebMenu from './WebMenu';
 import Shop from './shop/Shop';
 import { useState } from 'react';
@@ -312,6 +312,8 @@ function App() {
 
   // TIMER ============================================================================ END
 
+   
+
   return (
     <>
       <BrowserRouter>
@@ -351,6 +353,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/Избранное' element={<Izb add={add} laptops={laptops} />} />
           <Route path='/korzinkaNoneProduct' element={<KorzinkaPustoy />} />
+
         </Routes>
         <Footer fotChange={fotChange} />
         <div className="bottomBar">

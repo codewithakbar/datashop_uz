@@ -12,6 +12,7 @@ export default function Accaunt() {
     const [password, setPassword] = useState('');
     const [password1, setPassword1] = useState('');
     const [showAlert, setShowAlert] = useState(false);
+    const [link , setLink] = useState("/account")
 
     const nameRef = useRef()
     const passwordRef = useRef()
@@ -55,13 +56,15 @@ export default function Accaunt() {
             password: password,
             password2: password1
         }
+
         try{
             const postRegister = await axios.post(url ,body)
-            console.log(postRegister.data);
-
+            console.log(postRegister.data );
+            setLink("/login")
         }
         catch(err){
             console.log(err);
+            setLink("/account")
         }
     }
 
@@ -91,7 +94,7 @@ export default function Accaunt() {
                     </div>
                 </div>
                 <p className="login">У меня есть аккаунт <Link to={"/login"}> Войти</Link> </p>
-                <button className='accountbutton' type="submit" onClick={() => requestRegister()}>Зарегистрироваться</button>
+               <Link to={link} > <button className='accountbutton' type="submit" onClick={() => requestRegister()}>Зарегистрироваться</button></Link>
             </form>
             {/* {showAlert && <p>Barcha maydonlar to'ldirilishi kerak!</p>}
             <form onSubmit={handleSubmit}>
