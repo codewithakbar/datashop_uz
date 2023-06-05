@@ -48,7 +48,7 @@ function Main({ laptops, monitors, add }) {
                 <div className="laptops">
                     {
                         laptops.map(laptop => (
-                            <div className="servicess">
+                            <div className="servicess" key={laptop.id}>
                                 <div className="laptop">
                                     <div className="content">
                                         <div className="box">
@@ -86,7 +86,7 @@ function Main({ laptops, monitors, add }) {
                 <div className="laptops">
                     {
                         monitors.map(monitor => (
-                            <div className="servicess">
+                            <div className="servicess" key={monitor.id}>
                                 <div className="laptop">
                                     <div className="content">
                                         <div className="box">
@@ -240,8 +240,8 @@ function Main({ laptops, monitors, add }) {
                 </div>
                 <div className="laptops">
                     {
-                        laptops.map(laptop => (
-                            <div className="servicess">
+                        laptops.map((laptop , index) => (
+                            <div className="servicess" key={laptop.id}>
                                 <div className="laptop">
                                     <div className="content">
                                         <div className="box">

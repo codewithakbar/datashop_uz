@@ -23,41 +23,49 @@ function Header() {
 
     const [Categors , setCategors] = useState([
         {
+            id:1,
             bc: 'linear-gradient(180deg, #60B3FF 0%, rgba(41, 90, 185, 0.76) 100%)' ,
             name: 'Ноутбуки' ,
             img: CategoryLaptop
         },
         {
+            id:2,
             bc: 'linear-gradient(180deg, #6B3C81 0%, #AC44A2 100%)' ,
             name: 'Смартфоны' ,
             img: CategoryPhone
         },
         {
+            id:3,
             bc: 'linear-gradient(180deg, #47BEE3 0%, rgba(0, 26, 255, 0.39) 100%)' ,
             name: 'Телевизоры' ,
             img: CategoryTv
         },
         {
+            id:4,
             bc: 'linear-gradient(180deg, #D89551 0%, #BD7C3A 100%)' ,
             name: 'Электроника' ,
             img: CategoryAcses
         },
         {
+            id:5,
             bc: 'linear-gradient(180deg, #D89551 0%, #BD7C3A 100%)' ,
             name: 'Электроника' ,
             img: CategoryAcses
         },
         {
+            id:6,
             bc: 'linear-gradient(180deg, #47BEE3 0%, rgba(0, 26, 255, 0.39) 100%)' ,
             name: 'Телевизоры' ,
             img: CategoryTv
         },
         {
+            id:7,
             bc: 'linear-gradient(180deg, #6B3C81 0%, #AC44A2 100%)' ,
             name: 'Смартфоны' ,
             img: CategoryPhone
         },
         {
+            id:8,
             bc: 'linear-gradient(180deg, #60B3FF 0%, rgba(41, 90, 185, 0.76) 100%)' ,
             name: 'Ноутбуки' ,
             img: CategoryLaptop
@@ -119,8 +127,8 @@ function Header() {
             </Swiper>
             <div className="headerCategory">
 {                                                                           
-                    Categors.map(category => (
-                    <div className="headerCategory-card" style={{background: category.bc}}>
+                    Categors.map((category,index) => (
+                    <div className="headerCategory-card" style={{background: category.bc}} key={category.id}>
                         <h2>{category.name}</h2>
                         <div className="headerCategory-img">
                             <img src={category.img} alt="" />
@@ -142,9 +150,9 @@ function Header() {
             className="mySwiper mySwiper2"
             >
             {
-                Categors.map(category => (
+                Categors.map((category,index) => (
                     <SwiperSlide>
-                        <div className="headerCategory-card" style={{background: category.bc}}>
+                        <div className="headerCategory-card" style={{background: category.bc}} key={category.id}>
                             <h2>{category.name}</h2>
                             <div className="headerCategory-img">
                                 <img src={category.img} alt="" />

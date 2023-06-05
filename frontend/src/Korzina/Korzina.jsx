@@ -27,7 +27,7 @@ function Korzinka({addKorzinka , Delete , setAddKorzinka , CountPlus , count , C
                         <div className="korzinkaProducts">
                             {
                                 addKorzinka.map(addKorzin => (
-                                <div className="Kproduct">
+                                <div className="Kproduct" key={addKorzin.id}>
                                     <div className="KproductInfo">
                                         <div className="KproductImg">
                                             <img src={addKorzin.img} alt="" />
