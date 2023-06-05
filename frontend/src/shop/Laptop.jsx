@@ -116,7 +116,7 @@ export default function Laptop({ adds , setAddKorzinka , FilterAdd}) {
                             <span>Видео карта</span>
                             <p>RTX 3050</p>
                         </div>
-                        <span className='drection'>Все характеристики</span>
+                        {/* <span className='drection'>Все характеристики</span> */}
                     </div>
                     <div className="LaptopMoneyDiv">
                         <div className="LaptopKupit">
