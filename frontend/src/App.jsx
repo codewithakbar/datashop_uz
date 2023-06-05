@@ -122,51 +122,61 @@ function App() {
 
   const [monitors, setMonitors] = useState([
     {
+      id:1,
       img: m1,
       name: 'Gigabyte — 32″ G32QC-EK Curved...',
       prise: '????'
     },
     {
+      id:2,
       img: m2,
       name: 'Gigabyte — 32″ G32QC-EK Curved...',
       prise: '????'
     },
     {
+      id:3,
       img: m3,
       name: 'Gigabyte — 32″ G32QC-EK Curved...',
       prise: '????'
     },
     {
+      id:4,
       img: m4,
       name: 'Gigabyte — 32″ G32QC-EK Curved...',
       prise: '????'
     },
     {
+      id:5,
       img: m1,
       name: 'Gigabyte — 32″ G32QC-EK Curved...',
       prise: '????'
     },
     {
+      id:6,
       img: m2,
       name: 'Gigabyte — 32″ G32QC-EK Curved...',
       prise: '????'
     },
     {
+      id:7,
       img: m3,
       name: 'Gigabyte — 32″ G32QC-EK Curved...',
       prise: '????'
     },
     {
+      id:8,
       img: m4,
       name: 'Gigabyte — 32″ G32QC-EK Curved...',
       prise: '????'
     },
     {
+      id:9,
       img: m1,
       name: 'Gigabyte — 32″ G32QC-EK Curved...',
       prise: '????'
     },
     {
+      id:10,
       img: m2,
       name: 'Gigabyte — 32″ G32QC-EK Curved...',
       prise: '????'
@@ -175,6 +185,7 @@ function App() {
 
   const [smartfon, setSmartfon] = useState([
     {
+      id:1,
       img: 'https://free-png.ru/wp-content/uploads/2021/02/TENC_6.5_iPhone_11_PC-658CC-3_1024x1024-7ccac3cc.png',
       name: 'Iphone 14 Pro Max',
       prise: '14.500'
@@ -183,6 +194,7 @@ function App() {
 
   const [aksesuar, setAksesuar] = useState([
     {
+      id:1,
       img: 'https://img.cgaxis.com/2021/11/airpods_max_silver_a.webp',
       name: 'AirPods Max',
       prise: '14.500'
