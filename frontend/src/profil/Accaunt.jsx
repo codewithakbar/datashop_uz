@@ -50,9 +50,9 @@ export default function Accaunt() {
 
 
     const requestRegister = async () => {
-        const url = "https://api.datashop.uz/api/register/"
+        const url = "https://api.datashop.uz/register/"
         const body = {
-            username: name,
+            email: name,
             password: password,
             password2: password1
         }

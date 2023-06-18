@@ -2,7 +2,7 @@ import profilIcon1 from '../media/🦆 icon _user_.png'
 import profilIcon2 from '../media/boxtick.png'
 import profilIcon3 from '../media/bell.png'
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 
 
@@ -10,23 +10,71 @@ export default function Kabinet() {
 
     const token = JSON.parse(localStorage.getItem('token'))
     console.log(token);
+    console.log(token.tokens.access);
 
-    // const [user, setUser] = useState()
+    // // const [user, setUser] = useState()
 
-    useEffect(() => {
-        axios.get("https://api.datashop.uz/api/profile/", {
-            headers: {
-                "Authorization": "Bearer" + token.access
-            }.then(response =>  localStorage.setItem('user', JSON.stringify(response)))
-        })
+    // useEffect(() => {
+    //     const ap = async () => {
+    //         axios.get("https://api.datashop.uz/profile/", {
+    //             headers: {
+    //                 "Authorization": "Bearer" + token.access
+    //             }
+    //         })
+    //     }
+    // }, [])
 
-    }, [])
+        const [bio , setBio] = useState() 
+        console.log(bio);
 
-    const ApiUser = JSON.parse(localStorage.getItem('user'))
-    console.error(ApiUser);
+        useEffect(() => {
+          const fetchProfile = async () => {
+            try {
+              const response = await axios.get("https://api.datashop.uz/profile/", {
+                headers: {
+                    Authorization: `Bearer ${token.tokens.access}`, // accessToken o'zgartirilishi kerak
+                  },
+              });
+              console.log(response.data);
+              setBio(response.data.bio)
+            } catch (error) {
+              console.log(error);
+            }
+          };
+      
+          fetchProfile();
+        }, []);
+        const nameRef = useRef()
+        const putRequest = async () => {
+            try {
+              const response = await axios.put(
+                "https://api.datashop.uz/profile/",
+                { bio: nameRef.current.value }, // Update bio using the input value
+                {
+                  headers: {
+                    Authorization: `Bearer ${token.tokens.access}`,
+                  },
+                }
+              );
+              console.log(response.data);
+              setBio(response.data.bio);
+            } catch (error) {
+              console.log(error);
+            }
+          };
+    
+
+    // const ApiUser = JSON.parse(localStorage.getItem('username'))
+    // console.error(ApiUser);
 
 
-    const [name , setName] = useState(ApiUser.username)
+    // const [name , setName] = useState(ApiUser.username)
+    // console.log(name);
+
+    // const token = JSON.parse(localStorage.getItem('token'))
+    // console.log(token.username);
+
+    // const name = token.username
 
     return (
         <div className="Kabinet">
@@ -51,7 +99,7 @@ export default function Kabinet() {
                         <div className="userInfo">
                             <div className="inputFic">
                                 <span>Имя</span>
-                                <input className='input' type="text" placeholder='Введите Имя' defaultValue={name}/>
+                                <input className='input' type="text" placeholder='Введите Имя' ref={nameRef} defaultValue={bio}/>
                             </div>
 
                             <div className="inputFic">
@@ -117,7 +165,7 @@ export default function Kabinet() {
                     </div>
 
 
-                    <span className='saveButton'>Сохранить</span>
+                    <span className='saveButton' onClick={putRequest}>Сохранить</span>
 
 
                 </div>

@@ -44,9 +44,9 @@ export default function Login() {
     const navigate = useNavigate()
 
     const requestLogin = async () => {
-        const url = "https://api.datashop.uz/api/token/"
+        const url = "https://api.datashop.uz/login/"
         const body = {
-            username: name,
+            email: name,
             password: password,
         }
         try {
