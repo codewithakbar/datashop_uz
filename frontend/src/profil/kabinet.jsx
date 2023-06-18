@@ -44,12 +44,13 @@ export default function Kabinet() {
       
           fetchProfile();
         }, []);
+
         const nameRef = useRef()
         const putRequest = async () => {
             try {
               const response = await axios.put(
                 "https://api.datashop.uz/profile/",
-                { bio: nameRef.current.value }, // Update bio using the input value
+                { bio: nameRef.current.value },
                 {
                   headers: {
                     Authorization: `Bearer ${token.tokens.access}`,
