@@ -64,11 +64,12 @@ export default function Accaunt() {
         }
         catch(err){
             console.log(err);
+            alert(err)
             setLink("/account")
         }
     }
 
-    
+
     return (
         <div className="Accaunt">
             
@@ -86,7 +87,6 @@ export default function Accaunt() {
                         <img src={lockIcon} alt="" />   <input type="password" id="password" value={password} onChange={handlePasswordChange} placeholder='password' ref={passwordRef} />
                     </div>
                 </div>
-
                 <div className="inputInfo">
                     <p>Подтвердите пароль</p>
                     <div className="inputIcon">

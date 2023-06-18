@@ -54,10 +54,10 @@ export default function Login() {
             localStorage.setItem('token', JSON.stringify(postLogin.data))
             console.log(postLogin.data);
             navigate('/kabinet')
-
         }
         catch (err) {
             console.log(err);
+            alert(err)
         }
     }
     return (
