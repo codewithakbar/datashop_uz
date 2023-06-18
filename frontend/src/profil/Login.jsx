@@ -3,7 +3,7 @@ import emailIcon from '../media/mail.svg'
 import lockIcon from '../media/lock.svg'
 import { useRef, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 
 
 export default function Login() {
@@ -41,6 +41,7 @@ export default function Login() {
     };
     { showAlert && alert("Barcha maydonlar to'ldirilishi kerak!") }
 
+    const navigate = useNavigate()
 
     const requestLogin = async () => {
         const url = "https://api.datashop.uz/api/token/"
@@ -52,6 +53,7 @@ export default function Login() {
             const postLogin = await axios.post(url, body)
             localStorage.setItem('token', JSON.stringify(postLogin.data))
             console.log(postLogin.data);
+            navigate('/kabinet')
 
         }
         catch (err) {

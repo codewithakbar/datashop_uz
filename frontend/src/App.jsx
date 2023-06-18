@@ -18,7 +18,7 @@ import m3 from './texnoimg/m3.png'
 import m4 from './texnoimg/m4.png'
 import Korzinka from './Korzina/Korzina';
 import Zakaz from './Zakaz/Zakaz';
-import Kabinet from './profil/kabinet';
+import Kabinet from './profil/Kabinet';
 import Account from './profil/Accaunt';
 import MoyZakaz from './profil/MoyZakaz';
 import Xabar from './profil/Xabar';
