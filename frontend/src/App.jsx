@@ -18,7 +18,6 @@ import m3 from './texnoimg/m3.png'
 import m4 from './texnoimg/m4.png'
 import Korzinka from './Korzina/Korzina';
 import Zakaz from './Zakaz/Zakaz';
-import Kabinet from './profil/Kabinet';
 import Account from './profil/Accaunt';
 import MoyZakaz from './profil/MoyZakaz';
 import Xabar from './profil/Xabar';
@@ -27,9 +26,10 @@ import Izb from './izbronoe/Izb'
 import { FiHome, FiShoppingCart } from 'react-icons/fi'
 import { AiOutlineStar } from 'react-icons/ai'
 import { RxPerson } from 'react-icons/rx'
-import KorzinkaPustoy from './Korzina/KorzinkaPustoy';
+import KorzinkaPustoy from './Korzina/KorzinkaPustoy';                                                    
 import Clock from './Clock';
 import Login from './profil/Login';
+import Kabinet from './profil/MoyZakaz';
 // booto bar uchun icoon ================= END
 
 
